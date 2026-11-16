@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pub Quiz Cards – 1,150 questions with answers</title>
+<meta name="description" content="1,150 pub quiz questions with answers and short explanations, as flip cards. Multiple choice, round builder, team scoreboard, timer, printable answer sheets, English and German.">
+<meta name="theme-color" content="#1f5d47">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pub Quiz Cards">
+<meta property="og:description" content="1,150 pub quiz questions with answers, flip cards, multiple choice, a round builder and a host mode with scoreboard and timer.">
+<meta property="og:url" content="https://brahimiarlinda.github.io/pub-quiz-cards/">
+<meta property="og:image" content="https://brahimiarlinda.github.io/pub-quiz-cards/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brahimiarlinda.github.io/pub-quiz-cards/og.png">
+<style>
+  :root{
+    --bg:#f6f1e7; --panel:#fffdf8; --ink:#1f2a24; --muted:#6b7068; --line:#e3dccd;
+    --accent:#1f5d47; --accent-ink:#fff; --back:#1f5d47; --back-ink:#f6f1e7;
+    --easy:#2e7d4f; --medium:#b07a12; --hard:#b23a3a; --good:#2e7d4f; --bad:#b23a3a;
+    --shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#141815;--panel:#1d221e;--ink:#ece8de;--muted:#9aa096;--line:#2e352f;
+      --accent:#6fc39a;--accent-ink:#0f1411;--back:#24453a;--back-ink:#f1ece0;
+      --easy:#6fc39a;--medium:#e0b14c;--hard:#ef7f7f;--good:#6fc39a;--bad:#ef7f7f;--shadow:0 1px 2px rgba(0,0,0,.4)}
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:inherit}
+  header.app{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .wrap{max-width:1180px;margin:0 auto;padding:12px 18px}
+  .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  h1{font:700 1.4rem/1.1 Georgia,"Times New Roman",serif;margin:0;letter-spacing:-.01em}
+  h1 span{color:var(--accent)}
+  .tabs{display:flex;gap:4px;margin-left:8px}
+  .tab{border:none;background:none;padding:6px 10px;border-radius:8px;cursor:pointer;color:var(--muted);font:inherit;font-weight:600}
+  .tab[aria-current=true]{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+  .spacer{flex:1}
+  .count{color:var(--muted);font-size:.88rem}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px;align-items:center}
+  input[type=search],input[type=text],input[type=number],select{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit;font-size:.95rem}
+  input[type=search]{flex:1 1 220px;min-width:0}
+  button,.chip{font:inherit;font-size:.86rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+  button:hover,.chip:hover{border-color:var(--accent)}
+  .chip[aria-pressed=true],.seg [aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn{border-radius:10px;padding:8px 12px}
+  .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn.small{padding:5px 9px;font-size:.8rem}
+  .chips{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin;padding-bottom:2px}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .seg button{border:none;border-radius:0;padding:7px 11px}
+  .label{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .stats{font-size:.85rem;color:var(--muted)}
+  .stats b.good{color:var(--good)} .stats b.bad{color:var(--bad)}
+  .linkbtn{border:none;background:none;padding:0;text-decoration:underline;color:var(--muted);cursor:pointer;font-size:.85rem}
+  main .wrap{padding-top:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
+  .card{perspective:1000px;height:250px;cursor:pointer;outline:none;position:relative}
+  .inner{position:relative;width:100%;height:100%;transition:transform .45s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+  .card.flipped .inner{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .front{background:var(--panel);border:1px solid var(--line)}
+  .back{background:var(--back);color:var(--back-ink);transform:rotateY(180deg)}
+  .meta{display:flex;justify-content:space-between;gap:8px;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .back .meta{color:color-mix(in srgb,var(--back-ink) 70%,transparent)}
+  .lvl{font-weight:700}
+  .lvl.Easy{color:var(--easy)}.lvl.Medium{color:var(--medium)}.lvl.Hard{color:var(--hard)}
+  .back .lvl{color:inherit}
+  .mark{font-weight:700;margin-left:6px}
+  .mark.got{color:var(--good)} .mark.missed{color:var(--bad)}
+  .q{font:600 1.04rem/1.35 Georgia,serif;margin:auto 0;padding:8px 0}
+  .bq{font-size:.78rem;opacity:.75;margin-top:6px;line-height:1.3}
+  .a{font:700 1.12rem/1.3 Georgia,serif;margin:8px 0 4px}
+  .s{font-size:.86rem;opacity:.92;overflow:auto;flex:1}
+  .hint{font-size:.74rem;color:var(--muted);text-align:right}
+  .actions{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .actions button{font-size:.78rem;padding:4px 9px;background:transparent;color:inherit;border-color:color-mix(in srgb,var(--back-ink) 40%,transparent)}
+  .actions button[aria-pressed=true]{background:var(--back-ink);color:var(--back)}
+  .actions a{font-size:.74rem;margin-left:auto;opacity:.8}
+  .card:focus-visible .face,.mc:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  /* Multiple choice cards */
+  .mc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+  .mc .q{margin:4px 0;padding:0}
+  .opts{display:grid;gap:6px}
+  .opt{text-align:left;border-radius:10px;padding:7px 10px;white-space:normal;line-height:1.3;display:flex;gap:8px}
+  .opt b{color:var(--muted)}
+  .opt.right{background:color-mix(in srgb,var(--good) 18%,var(--panel));border-color:var(--good)}
+  .opt.wrong{background:color-mix(in srgb,var(--bad) 15%,var(--panel));border-color:var(--bad)}
+  .mc .s{font-size:.85rem;color:var(--muted);flex:none}
+  .mc .actions{margin-top:0}
+  .mc .actions a{color:var(--muted)}
+  .empty{text-align:center;color:var(--muted);padding:60px 0}
+  .more{display:block;margin:22px auto 40px}
+  /* Round builder */
+  .builder{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:20px;align-items:start}
+  @media (max-width:820px){.builder{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .panel h2{font:700 1.15rem Georgia,serif;margin:0 0 10px}
+  .field{margin:12px 0}
+  .field>label,.field>.label{display:block;margin-bottom:5px}
+  .check{display:flex;gap:8px;align-items:flex-start;font-size:.9rem;margin:8px 0}
+  .roundsel{display:grid;gap:6px}
+  .roundsel div{display:flex;align-items:center;gap:8px}
+  .roundsel span{width:68px;font-size:.85rem;color:var(--muted)}
+  .roundsel select{flex:1}
+  .quiz h3{font:700 1.05rem Georgia,serif;margin:18px 0 6px;display:flex;align-items:baseline;gap:8px}
+  .quiz h3 small{font:400 .8rem system-ui;color:var(--muted)}
+  .quiz ol{margin:0;padding-left:24px}
+  .quiz li{margin:4px 0}
+  .quiz .ans{color:var(--accent);font-weight:600}
+  .quiz.hide-ans .ans{display:none}
+  .msg{color:var(--bad);font-size:.9rem;margin-top:8px}
+  /* Host mode */
+  #host{position:fixed;inset:0;z-index:20;background:var(--bg);display:none;flex-direction:column}
+  #host.on{display:flex}
+  #host .bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  #host .pos{font-weight:700}
+  #host .body{flex:1;display:flex;min-height:0}
+  #host .stage{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;gap:14px;min-width:0}
+  #host .card{height:min(56vh,440px);width:min(780px,100%)}
+  #host .q{font-size:clamp(1.25rem,3.2vw,2rem)}
+  #host .a{font-size:clamp(1.35rem,3.4vw,2.2rem)}
+  #host .s{font-size:clamp(.95rem,1.7vw,1.12rem)}
+  #host .bq{font-size:clamp(.85rem,1.5vw,1rem)}
+  #host .hostopts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+  #host .hostopts div{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:clamp(.9rem,1.7vw,1.1rem)}
+  #host .back .hostopts div{border-color:color-mix(in srgb,var(--back-ink) 30%,transparent)}
+  #host .back .hostopts div.right{background:var(--back-ink);color:var(--back);font-weight:700}
+  .slide{width:min(780px,100%);text-align:center;padding:30px}
+  .slide h2{font:700 clamp(2rem,6vw,3.4rem)/1.1 Georgia,serif;margin:0 0 8px}
+  .slide p{color:var(--muted);font-size:1.15rem;margin:0}
+  .board{width:min(560px,100%);margin:18px auto 0;display:grid;gap:8px;text-align:left}
+  .board div{display:flex;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:1.2rem}
+  .board div:first-child{border-color:var(--accent);font-weight:700}
+  #host .nav{display:flex;justify-content:center;gap:10px;padding:0 18px 18px;flex-wrap:wrap}
+  .timer{display:inline-flex;align-items:center;gap:6px}
+  .ring{width:46px;height:46px;position:relative;cursor:pointer}
+  .ring svg{transform:rotate(-90deg)}
+  .ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem}
+  .ring.done span{color:var(--bad)}
+  #teams{width:280px;border-left:1px solid var(--line);padding:14px;overflow:auto;display:none;background:var(--panel)}
+  #teams.on{display:block}
+  #teams h3{margin:0 0 10px;font:700 1rem Georgia,serif}
+  .team{display:flex;align-items:center;gap:6px;margin:6px 0}
+  .team .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .team .sc{width:34px;text-align:center;font-weight:700}
+  .team button{padding:3px 9px}
+  @media (max-width:700px){#teams{position:absolute;right:0;top:0;bottom:0;z-index:3;width:min(300px,85vw);box-shadow:var(--shadow)}}
+  /* Print */
+  #printArea{display:none}
+  @media print{
+    body.printing > *:not(#printArea){display:none !important}
+    body.printing #printArea{display:block;color:#000;background:#fff;font:12pt/1.4 Georgia,serif}
+    #printArea h1{font-size:20pt;margin:0 0 4pt}
+    #printArea h2{font-size:14pt;margin:14pt 0 6pt;border-bottom:1px solid #000;padding-bottom:2pt}
+    #printArea .team-line{margin:8pt 0 4pt;font-size:12pt}
+    #printArea section{break-inside:avoid;page-break-inside:avoid}
+    #printArea section.newpage{break-before:page;page-break-before:always}
+    #printArea ol{margin:0;padding-left:22pt}
+    #printArea li{margin:0 0 9pt}
+    #printArea .blank{border-bottom:1px solid #999;height:16pt}
+    #printArea .ch{font-size:10.5pt;color:#333}
+    #printArea .key{font-weight:700}
+    #printArea .sm{font-size:10pt;color:#444}
+  }
+  @media (max-width:560px){.card{height:240px}h1{font-size:1.15rem}.tabs{margin-left:0}}
+  @media (max-width:700px){header.app{position:static}}
+</style>
+</head>
+<body>
+<header class="app">
+  <div class="wrap">
+    <div class="top">
+      <h1>Pub Quiz <span>Cards</span></h1>
+      <nav class="tabs" aria-label="Views">
+        <button class="tab" id="tabCards" data-i18n="cards"></button>
+        <button class="tab" id="tabRounds" data-i18n="rounds"></button>
+      </nav>
+      <span class="spacer"></span>
+      <span class="count" id="count"></span>
+      <button class="btn small" id="langBtn" aria-label="Language"></button>
+    </div>
+    <div id="cardControls">
+      <div class="row">
+        <input type="search" id="search" aria-label="Search">
+        <div class="seg" role="group" aria-label="Mode">
+          <button id="modeFlip" data-i18n="flip"></button><button id="modeMC" data-i18n="mc"></button>
+        </div>
+        <button class="btn" id="shuffle" data-i18n="shuffle"></button>
+        <button class="btn" id="flipAll"></button>
+        <button class="btn primary" id="hostBtn" data-i18n="host"></button>
+      </div>
+      <div class="row chips" id="cats" role="group" aria-label="Category"></div>
+      <div class="row">
+        <div class="row" id="lvls" role="group" aria-label="Level" style="margin:0"></div>
+        <span class="spacer"></span>
+        <div class="row" id="statusChips" role="group" aria-label="Progress" style="margin:0"></div>
+      </div>
+      <div class="row stats" id="stats"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" id="cardsView">
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden></div>
+    <button class="btn more" id="more" hidden></button>
+  </div>
+  <div class="wrap" id="roundsView" hidden>
+    <div class="builder">
+      <form class="panel" id="builderForm">
+        <h2 data-i18n="buildTitle"></h2>
+        <div class="field"><label for="nRounds" class="label" data-i18n="numRounds"></label>
+          <input type="number" id="nRounds" min="1" max="10" value="5" style="width:90px"></div>
+        <div class="field"><label for="perRound" class="label" data-i18n="perRound"></label>
+          <select id="perRound"><option>5</option><option>8</option><option selected>10</option><option>12</option><option>15</option><option>20</option></select></div>
+        <div class="field"><span class="label" data-i18n="difficulty"></span>
+          <div class="row" id="diffChips" style="margin:0"></div></div>
+        <div class="field"><span class="label" data-i18n="roundCats"></span>
+          <div class="roundsel" id="roundSel"></div></div>
+        <label class="check"><input type="checkbox" id="avoidUsed" checked> <span data-i18n="avoidUsed"></span></label>
+        <div class="stats" id="usedInfo"></div>
+        <label class="check"><input type="checkbox" id="printChoices"> <span data-i18n="printChoices"></span></label>
+        <button class="btn primary" type="submit" data-i18n="generate"></button>
+        <div class="msg" id="buildMsg"></div>
+      </form>
+      <div class="panel" id="quizPanel">
+        <h2 data-i18n="yourQuiz"></h2>
+        <div id="quizEmpty" class="stats" data-i18n="noQuiz"></div>
+        <div id="quizBody" hidden>
+          <div class="row">
+            <button class="btn primary" id="hostQuiz" data-i18n="hostQuiz"></button>
+            <button class="btn" id="printSheets" data-i18n="printSheets"></button>
+            <button class="btn" id="printKey" data-i18n="printKey"></button>
+            <button class="btn" id="toggleAns"></button>
+          </div>
+          <div class="quiz hide-ans" id="quizList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="host" role="dialog" aria-label="Host mode">
+  <div class="bar">
+    <button class="btn" id="hostClose"></button>
+    <span class="pos" id="hostPos"></span>
+    <span class="spacer"></span>
+    <span class="timer"><label class="label" for="timerSel" data-i18n="timer"></label>
+      <select id="timerSel"><option value="0"></option><option value="15">15 s</option><option value="30">30 s</option><option value="60">60 s</option></select>
+      <span class="ring" id="ring" hidden title=""><svg width="46" height="46" viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="none" stroke="var(--line)" stroke-width="4"/><circle id="ringArc" cx="23" cy="23" r="20" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="0"/></svg><span id="ringNum"></span></span>
+    </span>
+    <button class="btn" id="choicesBtn" aria-pressed="false" data-i18n="showChoices"></button>
+    <button class="btn" id="teamsBtn" data-i18n="teams"></button>
+    <button class="btn" id="fsBtn" data-i18n="fullscreen"></button>
+  </div>
+  <div class="body" style="position:relative">
+    <div class="stage" id="stage"></div>
+    <aside id="teams">
+      <h3 data-i18n="scoreboard"></h3>
+      <div id="teamList"></div>
+      <form class="row" id="teamForm"><input type="text" id="teamName" style="flex:1;min-width:0" maxlength="30"><button class="btn small" type="submit" data-i18n="add"></button></form>
+      <div class="row"><button class="btn small" id="showBoard" data-i18n="showBoard"></button><button class="btn small" id="resetScores"></button></div>
+    </aside>
+  </div>
+  <div class="nav">
+    <button class="btn" id="prev"></button>
+    <button class="btn primary" id="reveal"></button>
+    <button class="btn" id="next"></button>
+  </div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+const PACK = __DATA__;
+const DATA = PACK.items;
+const CATS = PACK.cats;
+const REPO = "https://github.com/brahimiarlinda/pub-quiz-cards";
+const STR = {
+  en:{cards:"Cards",rounds:"Round builder",flip:"Flip",mc:"Multiple choice",shuffle:"Shuffle",showAll:"Show all answers",hideAll:"Hide all answers",
+    host:"Host mode",search:"Search questions, answers, summaries…",all:"All",Easy:"Easy",Medium:"Medium",Hard:"Hard",
+    stAll:"All",stNew:"Not tried",stMissed:"Missed",stGot:"Got it",of:"of",questions:"questions",tap:"Tap to reveal",
+    got:"✓ Got it",missed:"✗ Missed",report:"Report a mistake",gotN:"Got it",missedN:"Missed",reset:"Reset progress",resetSure:"Click again to reset",
+    none:"No questions match.",more:"Show more",left:"left",correct:"Correct!",wrong:"Not quite – the answer is",
+    buildTitle:"Build a quiz",numRounds:"Number of rounds",perRound:"Questions per round",difficulty:"Difficulty",roundCats:"Category for each round",
+    random:"Random category",mixed:"Mixed categories",avoidUsed:"Avoid questions from my earlier quizzes",printChoices:"Print multiple-choice options on answer sheets",
+    generate:"Generate quiz",yourQuiz:"Your quiz",noQuiz:"Choose your settings and press “Generate quiz”.",hostQuiz:"Host this quiz",printSheets:"Print answer sheets",
+    printKey:"Print answer key",showAns:"Show answers",hideAns:"Hide answers",round:"Round",notEnough:"Not enough questions for these settings – try fewer questions, other categories or more difficulty levels.",
+    used:"questions used in earlier quizzes",clearUsed:"Clear history",timer:"Timer",off:"Off",showChoices:"Show choices",teams:"Teams",fullscreen:"Full screen",
+    scoreboard:"Scoreboard",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
+    close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
+    leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
+    answerSheet:"Answer sheet",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
+  de:{cards:"Karten",rounds:"Runden-Planer",flip:"Umdrehen",mc:"Multiple Choice",shuffle:"Mischen",showAll:"Alle Antworten zeigen",hideAll:"Antworten verbergen",
+    host:"Moderationsmodus",search:"Fragen, Antworten, Erklärungen suchen …",all:"Alle",Easy:"Leicht",Medium:"Mittel",Hard:"Schwer",
+    stAll:"Alle",stNew:"Noch nicht versucht",stMissed:"Falsch",stGot:"Gewusst",of:"von",questions:"Fragen",tap:"Tippen zum Aufdecken",
+    got:"✓ Gewusst",missed:"✗ Falsch",report:"Fehler melden",gotN:"Gewusst",missedN:"Falsch",reset:"Fortschritt zurücksetzen",resetSure:"Zum Bestätigen erneut klicken",
+    none:"Keine passenden Fragen.",more:"Mehr anzeigen",left:"übrig",correct:"Richtig!",wrong:"Leider nicht – richtig ist",
+    buildTitle:"Quiz zusammenstellen",numRounds:"Anzahl der Runden",perRound:"Fragen pro Runde",difficulty:"Schwierigkeit",roundCats:"Kategorie pro Runde",
+    random:"Zufällige Kategorie",mixed:"Gemischte Kategorien",avoidUsed:"Fragen aus früheren Quizzen vermeiden",printChoices:"Antwortoptionen auf die Antwortbögen drucken",
+    generate:"Quiz erstellen",yourQuiz:"Dein Quiz",noQuiz:"Wähle die Einstellungen und klicke auf „Quiz erstellen“.",hostQuiz:"Dieses Quiz moderieren",printSheets:"Antwortbögen drucken",
+    printKey:"Lösungsblatt drucken",showAns:"Antworten zeigen",hideAns:"Antworten verbergen",round:"Runde",notEnough:"Nicht genug Fragen für diese Einstellungen – versuche weniger Fragen, andere Kategorien oder mehr Schwierigkeitsstufen.",
+    used:"Fragen in früheren Quizzen verwendet",clearUsed:"Verlauf löschen",timer:"Timer",off:"Aus",showChoices:"Optionen zeigen",teams:"Teams",fullscreen:"Vollbild",
+    scoreboard:"Punktestand",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
+    close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
+    leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
+    answerSheet:"Antwortbogen",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
+};
+const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}}};
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const S = {
+  lang: LS.get("lang", (navigator.language||"").toLowerCase().startsWith("de")?"de":"en"),
+  view:"cards", cat:"all", lvl:"all", status:"all", q:"", mode:LS.get("mode","flip"),
+  order: DATA.map((_,i)=>i), allFlipped:false, shown:120,
+  progress: LS.get("progress",{}), teams: LS.get("teams",[]), used: LS.get("used",[]),
+  quiz: LS.get("quiz",null), timer: LS.get("timer",0), choices: LS.get("choices",false)
+};
+const t = k => (STR[S.lang][k] ?? STR.en[k] ?? k);
+const F = (d,f) => S.lang==="de" ? d.de[f] : d[f];
+const catOf = d => CATS.find(c=>c.en===d.c);
+const catName = c => S.lang==="de" ? c.de : c.en;
+const lvlName = l => t(l);
+const idx = {}; DATA.forEach((d,i)=>idx[d.id]=i);
+
+// Stable option order per question (seeded by its id)
+function seeded(str){let h=2166136261;for(const ch of str){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}return()=>{h^=h<<13;h^=h>>>17;h^=h<<5;return((h>>>0)%1e6)/1e6}}
+function options(d){const r=seeded(d.id);const arr=[F(d,"a"),...F(d,"o")].map((txt,i)=>({txt,ok:i===0}));for(let i=arr.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function reportURL(d){
+  const title=`Mistake in ${d.id}: ${d.q}`.slice(0,120);
+  const body=`**Question (${d.id}):** ${d.q}\n**Answer shown:** ${d.a}\n**German:** ${d.de.q} → ${d.de.a}\n\n**What's wrong?**\n\n**Source (if you have one):**\n`;
+  return `${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=mistake`;
+}
+function setMark(id,val){ if(S.progress[id]===val) delete S.progress[id]; else S.progress[id]=val; LS.set("progress",S.progress); renderStats(); }
+
+/* ---------- i18n static text ---------- */
+function applyI18n(){
+  document.documentElement.lang=S.lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
+  $("langBtn").textContent=S.lang==="de"?"EN":"DE";
+  $("langBtn").title=S.lang==="de"?"Switch to English":"Auf Deutsch umschalten";
+  $("search").placeholder=t("search");
+  $("teamName").placeholder=t("teamPh");
+  $("timerSel").options[0].textContent=t("off");
+  $("hostClose").textContent=t("close"); $("prev").textContent=t("prev"); $("next").textContent=t("next");
+  $("resetScores").textContent=t("resetScores");
+  $("flipAll").textContent=S.allFlipped?t("hideAll"):t("showAll");
+}
+
+/* ---------- Cards view ---------- */
+function chip(label,on,fn,cls="chip"){const b=document.createElement("button");b.className=cls;b.textContent=label;b.setAttribute("aria-pressed",on);b.onclick=fn;return b}
+function renderChips(){
+  $("cats").replaceChildren(chip(t("all"),S.cat==="all",()=>setCat("all")),...CATS.map(c=>chip(catName(c),S.cat===c.slug,()=>setCat(c.slug))));
+  $("lvls").replaceChildren(...["all","Easy","Medium","Hard"].map(l=>chip(l==="all"?t("all"):lvlName(l),S.lvl===l,()=>{S.lvl=l;S.shown=120;renderChips();render()})));
+  $("statusChips").replaceChildren(...[["all","stAll"],["new","stNew"],["missed","stMissed"],["got","stGot"]].map(([v,k])=>chip(t(k),S.status===v,()=>{S.status=v;S.shown=120;renderChips();render()})));
+  $("modeFlip").setAttribute("aria-pressed",S.mode==="flip"); $("modeMC").setAttribute("aria-pressed",S.mode==="mc");
+  $("flipAll").hidden=S.mode==="mc";
+}
+function setCat(slug){S.cat=slug;S.shown=120;const h=slug==="all"?"":"#"+slug;if(location.hash!==h){history.replaceState(null,"",h||location.pathname+location.search)}renderChips();render()}
+function filtered(){
+  const q=S.q.toLowerCase();
+  return S.order.map(i=>DATA[i]).filter(d=>{
+    if(S.cat!=="all"&&catOf(d).slug!==S.cat) return false;
+    if(S.lvl!=="all"&&d.l!==S.lvl) return false;
+    const p=S.progress[d.id];
+    if(S.status==="new"&&p) return false; if(S.status==="missed"&&p!=="missed") return false; if(S.status==="got"&&p!=="got") return false;
+    if(q && !(d.q+" "+d.a+" "+d.s+" "+d.de.q+" "+d.de.a+" "+d.de.s).toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+function numOf(d){return d.id.split("-").pop()}
+function markHTML(d){const p=S.progress[d.id];return p?`<span class="mark ${p}">${p==="got"?"✓":"✗"}</span>`:""}
+function flipCard(d){
+  const el=document.createElement("div"); el.className="card"+(S.allFlipped?" flipped":""); el.tabIndex=0; el.dataset.id=d.id;
+  const c=catOf(d);
+  el.innerHTML=`<div class="inner">
+    <div class="face front"><div class="meta"><span>${esc(catName(c))} · #${numOf(d)}${markHTML(d)}</span><span class="lvl ${d.l}">${lvlName(d.l)}</span></div>
+      <div class="q">${esc(F(d,"q"))}</div><div class="hint">${t("tap")}</div></div>
+    <div class="face back"><div class="meta"><span>${esc(catName(c))}</span><span class="lvl">${lvlName(d.l)}</span></div>
+      <div class="bq">${esc(F(d,"q"))}</div><div class="a">${esc(F(d,"a"))}</div><div class="s">${esc(F(d,"s"))}</div>
+      <div class="actions"><button data-m="got" aria-pressed="${S.progress[d.id]==="got"}">${t("got")}</button><button data-m="missed" aria-pressed="${S.progress[d.id]==="missed"}">${t("missed")}</button>
+      <a href="${reportURL(d)}" target="_blank" rel="noopener">${t("report")}</a></div></div></div>`;
+  const toggle=()=>el.classList.toggle("flipped");
+  el.onclick=e=>{if(e.target.closest("button,a"))return;toggle()};
+  el.onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target===el){e.preventDefault();toggle()}};
+  el.querySelectorAll("[data-m]").forEach(b=>b.onclick=e=>{e.stopPropagation();setMark(d.id,b.dataset.m);
+    el.querySelectorAll("[data-m]").forEach(x=>x.setAttribute("aria-pressed",S.progress[d.id]===x.dataset.m));
+    el.querySelector(".front .meta span").innerHTML=`${esc(catName(c))} · #${numOf(d)}${markHTML(d)}`});
+  return el;
+}
+function mcCard(d){
+  const el=document.createElement("div"); el.className="mc"; const c=catOf(d); const opts=options(d);
+  el.innerHTML=`<div class="meta"><span>${esc(catName(c))} · #${numOf(d)}${markHTML(d)}</span><span class="lvl ${d.l}">${lvlName(d.l)}</span></div>
+    <div class="q">${esc(F(d,"q"))}</div>
+    <div class="opts">${opts.map((o,i)=>`<button class="opt" data-ok="${o.ok}"><b>${"ABCD"[i]}</b><span>${esc(o.txt)}</span></button>`).join("")}</div>
+    <div class="s" hidden></div>
+    <div class="actions" hidden><a href="${reportURL(d)}" target="_blank" rel="noopener">${t("report")}</a></div>`;
+  el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    if(el.dataset.done) return; el.dataset.done=1;
+    const ok=b.dataset.ok==="true";
+    el.querySelectorAll(".opt").forEach(x=>{if(x.dataset.ok==="true")x.classList.add("right")}); if(!ok) b.classList.add("wrong");
+    const s=el.querySelector(".s"); s.hidden=false; s.innerHTML=`<b>${ok?t("correct"):t("wrong")+" "+esc(F(d,"a"))+"."}</b> ${esc(F(d,"s"))}`;
+    el.querySelector(".actions").hidden=false;
+    S.progress[d.id]=ok?"got":"missed"; LS.set("progress",S.progress); renderStats();
+    el.querySelector(".meta span").innerHTML=`${esc(catName(c))} · #${numOf(d)}${markHTML(d)}`;
+  });
+  return el;
+}
+function render(){
+  const list=filtered();
+  $("count").textContent=`${list.length} ${t("of")} ${DATA.length} ${t("questions")}`;
+  const frag=document.createDocumentFragment();
+  list.slice(0,S.shown).forEach(d=>frag.appendChild(S.mode==="mc"?mcCard(d):flipCard(d)));
+  $("grid").replaceChildren(frag);
+  $("empty").hidden=list.length>0; $("empty").textContent=t("none");
+  $("more").hidden=list.length<=S.shown; $("more").textContent=`${t("more")} (${list.length-S.shown} ${t("left")})`;
+}
+function renderStats(){
+  const v=Object.values(S.progress); const g=v.filter(x=>x==="got").length, m=v.filter(x=>x==="missed").length;
+  const box=$("stats"); box.innerHTML=`<span><b class="good">${g}</b> ${t("gotN")} · <b class="bad">${m}</b> ${t("missedN")}</span>`;
+  if(g+m){const b=document.createElement("button");b.className="linkbtn";b.textContent=t("reset");let armed=false;
+    b.onclick=()=>{if(!armed){armed=true;b.textContent=t("resetSure");setTimeout(()=>{armed=false;b.textContent=t("reset")},3000);return}
+      S.progress={};LS.set("progress",S.progress);renderStats();render()};box.append(b)}
+}
+
+/* ---------- Round builder ---------- */
+const diffSel=new Set(LS.get("diff",["Easy","Medium","Hard"]));
+function renderBuilder(){
+  $("diffChips").replaceChildren(...["Easy","Medium","Hard"].map(l=>chip(lvlName(l),diffSel.has(l),()=>{diffSel.has(l)?diffSel.delete(l):diffSel.add(l);if(!diffSel.size)diffSel.add(l);LS.set("diff",[...diffSel]);renderBuilder()})));
+  const n=Math.max(1,Math.min(10,+$("nRounds").value||5)); const prev=[...$("roundSel").querySelectorAll("select")].map(s=>s.value);
+  const saved=LS.get("roundCats",[]);
+  $("roundSel").replaceChildren(...Array.from({length:n},(_,i)=>{const row=document.createElement("div");
+    const sel=document.createElement("select"); sel.innerHTML=`<option value="random">${t("random")}</option><option value="mixed">${t("mixed")}</option>`+CATS.map(c=>`<option value="${c.slug}">${esc(catName(c))}</option>`).join("");
+    sel.value=prev[i]||saved[i]||"random"; sel.onchange=()=>LS.set("roundCats",[...$("roundSel").querySelectorAll("select")].map(s=>s.value));
+    row.innerHTML=`<span>${t("round")} ${i+1}</span>`; row.append(sel); return row}));
+  const u=S.used.length; $("usedInfo").innerHTML=u?`${u} ${t("used")} · `:""; if(u){const b=document.createElement("button");b.type="button";b.className="linkbtn";b.textContent=t("clearUsed");b.onclick=()=>{S.used=[];LS.set("used",S.used);renderBuilder()};$("usedInfo").append(b)}
+  $("printChoices").checked=LS.get("printChoices",false);
+  renderQuiz();
+}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function generate(e){
+  e.preventDefault(); $("buildMsg").textContent="";
+  const per=+$("perRound").value; const choices=[...$("roundSel").querySelectorAll("select")].map(s=>s.value);
+  const used=new Set($("avoidUsed").checked?S.used:[]); const taken=new Set();
+  const pool=d=>diffSel.has(d.l)&&!used.has(d.id)&&!taken.has(d.id);
+  // Pick specific categories first, then random ones from what's left
+  const specific=new Set(choices.filter(c=>c!=="random"&&c!=="mixed"));
+  const randomCats=shuffle(CATS.filter(c=>!specific.has(c.slug)&&c.slug!=="kids").map(c=>c.slug));
+  const rounds=[];
+  for(const ch of choices){
+    let cat=ch; if(ch==="random"){cat=randomCats.find(s=>DATA.filter(d=>catOf(d).slug===s&&pool(d)).length>=per); if(cat) randomCats.splice(randomCats.indexOf(cat),1)}
+    if(!cat){$("buildMsg").textContent=t("notEnough");return}
+    let cand=DATA.filter(d=>pool(d)&&(cat==="mixed"?catOf(d).slug!=="kids":catOf(d).slug===cat));
+    if(cat==="mixed"){ // spread across categories
+      const by={}; shuffle(cand).forEach(d=>(by[d.c]=by[d.c]||[]).push(d)); const keys=shuffle(Object.keys(by)); cand=[];
+      while(cand.length<per&&keys.some(k=>by[k].length)) for(const k of keys){if(by[k].length&&cand.length<per)cand.push(by[k].pop())}
+    } else cand=shuffle(cand).slice(0,per);
+    if(cand.length<per){$("buildMsg").textContent=t("notEnough");return}
+    // Order within a round: easier first
+    const rank={Easy:0,Medium:1,Hard:2}; cand.sort((a,b)=>rank[a.l]-rank[b.l]);
+    cand.forEach(d=>taken.add(d.id));
+    rounds.push({cat,ids:cand.map(d=>d.id)});
+  }
+  S.quiz={rounds,created:Date.now()}; LS.set("quiz",S.quiz);
+  S.used=[...new Set([...S.used,...taken])]; LS.set("used",S.used);
+  renderBuilder();
+}
+function roundTitle(r,i){const c=CATS.find(c=>c.slug===r.cat);return `${t("round")} ${i+1} · ${c?catName(c):t("mixed")}`}
+function renderQuiz(){
+  const q=S.quiz; $("quizEmpty").hidden=!!q; $("quizBody").hidden=!q; if(!q) return;
+  const list=$("quizList"); $("toggleAns").textContent=list.classList.contains("hide-ans")?t("showAns"):t("hideAns");
+  list.innerHTML=q.rounds.map((r,i)=>`<h3>${esc(roundTitle(r,i))} <small>${r.ids.length} ${t("qs")}</small></h3><ol>${r.ids.map(id=>{const d=DATA[idx[id]];return d?`<li>${esc(F(d,"q"))} <span class="ans">→ ${esc(F(d,"a"))}</span></li>`:""}).join("")}</ol>`).join("");
+}
+$("toggleAns").onclick=()=>{$("quizList").classList.toggle("hide-ans");renderQuiz()};
+
+/* ---------- Printing ---------- */
+function doPrint(kind){
+  const q=S.quiz; if(!q) return; const withCh=$("printChoices").checked; LS.set("printChoices",withCh);
+  const head=`<h1>${t("quizTitle")} — ${kind==="key"?t("answerKey"):t("answerSheet")}</h1>`;
+  let html=head;
+  if(kind==="sheets"){
+    html+=`<div class="team-line">${t("team")}: ______________________________ &nbsp;&nbsp; ${t("total")}: ______</div>`;
+    q.rounds.forEach((r,i)=>{html+=`<section><h2>${esc(roundTitle(r,i))}</h2><ol>`+r.ids.map(id=>{const d=DATA[idx[id]];
+      if(withCh){const o=options(d);return `<li><span class="ch">${o.map((x,j)=>`${"ABCD"[j]}) ${esc(x.txt)}`).join(" &nbsp;·&nbsp; ")}</span><div class="blank"></div></li>`}
+      return `<li><div class="blank"></div></li>`}).join("")+`</ol><p class="sm">${t("round")} ${i+1} ${t("total")}: ______</p></section>`});
+  } else {
+    q.rounds.forEach((r,i)=>{html+=`<section${i?' class="newpage"':""}><h2>${esc(roundTitle(r,i))}</h2><ol>`+r.ids.map(id=>{const d=DATA[idx[id]];const o=options(d);const L="ABCD"[o.findIndex(x=>x.ok)];
+      return `<li>${esc(F(d,"q"))}<br><span class="key">${esc(F(d,"a"))}</span>${withCh?` <span class="sm">(${L})</span>`:""}<br><span class="sm">${esc(F(d,"s"))}</span></li>`}).join("")+`</ol></section>`});
+  }
+  $("printArea").innerHTML=html; document.body.classList.add("printing");
+  const done=()=>{document.body.classList.remove("printing");window.removeEventListener("afterprint",done)};
+  window.addEventListener("afterprint",done);
+  try{window.print()}catch(e){} setTimeout(()=>{if(!matchMedia("print").matches)done()},1500);
+}
+$("printSheets").onclick=()=>doPrint("sheets"); $("printKey").onclick=()=>doPrint("key");
+
+/* ---------- Host mode ---------- */
+let slides=[], si=0, revealed=false, tmr=null, tLeft=0, audio=null;
+function buildSlides(fromQuiz){
+  slides=[];
+  if(fromQuiz&&S.quiz){
+    const R=S.quiz.rounds;
+    R.forEach((r,ri)=>{slides.push({type:"title",ri,title:roundTitle(r,ri),n:r.ids.length});
+      r.ids.forEach((id,qi)=>slides.push({type:"q",d:DATA[idx[id]],ri,qi,n:r.ids.length,title:roundTitle(r,ri)}));
+      slides.push({type:"scores",ri,last:ri===R.length-1})});
+  } else {
+    const list=filtered(); list.forEach((d,qi)=>slides.push({type:"q",d,qi,n:list.length}));
+    slides.push({type:"scores",last:true});
+  }
+}
+function openHost(fromQuiz){
+  buildSlides(fromQuiz); if(!slides.length) return; si=0; $("host").classList.add("on"); document.body.style.overflow="hidden";
+  $("timerSel").value=String(S.timer); $("choicesBtn").setAttribute("aria-pressed",S.choices); renderTeams(); showSlide();
+}
+function closeHost(){stopTimer();$("host").classList.remove("on");document.body.style.overflow="";if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
+function board(){const ts=[...S.teams].sort((a,b)=>b.s-a.s);return ts.length?`<div class="board">${ts.map((x,i)=>`<div><span>${i+1}. ${esc(x.n)}</span><span>${x.s}</span></div>`).join("")}</div>`:`<p>${t("noTeams")}</p>`}
+function showSlide(){
+  stopTimer(); revealed=false; const s=slides[si]; const st=$("stage");
+  $("reveal").hidden=s.type!=="q"; $("reveal").textContent=t("reveal");
+  $("prev").disabled=si===0; $("next").disabled=si===slides.length-1;
+  if(s.type==="title"){ $("hostPos").textContent=s.title;
+    st.innerHTML=`<div class="slide"><p>${t("ready")}</p><h2>${esc(s.title)}</h2><p>${s.n} ${t("qs")}</p></div>`; return }
+  if(s.type==="scores"){ $("hostPos").textContent=s.last?t("finalScores"):`${t("endRound")} ${s.ri+1}`;
+    st.innerHTML=`<div class="slide"><h2>${s.last?t("finalScores"):t("leaderboard")}</h2>${board()}</div>`; return }
+  const d=s.d, c=catOf(d), o=options(d);
+  $("hostPos").textContent=(s.title?s.title+" — ":"")+`${t("question")} ${s.qi+1}/${s.n}`;
+  const optsHTML=(cls)=>S.choices?`<div class="hostopts">${o.map((x,i)=>`<div class="${cls&&x.ok?"right":""}">${"ABCD"[i]}) ${esc(x.txt)}</div>`).join("")}</div>`:"";
+  st.innerHTML=`<div class="card" id="hostCard" tabindex="0"><div class="inner">
+    <div class="face front"><div class="meta"><span>${esc(catName(c))}</span><span class="lvl ${d.l}">${lvlName(d.l)}</span></div><div class="q">${esc(F(d,"q"))}</div>${optsHTML(false)}</div>
+    <div class="face back"><div class="meta"><span>${esc(catName(c))}</span><span class="lvl">${lvlName(d.l)}</span></div><div class="bq">${esc(F(d,"q"))}</div>
+      <div class="a">${esc(F(d,"a"))}</div>${optsHTML(true)}<div class="s">${esc(F(d,"s"))}</div></div></div></div>`;
+  $("hostCard").onclick=flip; startTimer();
+}
+function flip(){const c=$("hostCard");if(!c)return;revealed=!revealed;c.classList.toggle("flipped",revealed);$("reveal").textContent=revealed?t("hideAnswer"):t("reveal");if(revealed)stopTimer(true)}
+function move(n){const j=si+n;if(j<0||j>=slides.length)return;si=j;showSlide()}
+function beep(){try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();const o=audio.createOscillator(),g=audio.createGain();o.connect(g);g.connect(audio.destination);o.frequency.value=880;g.gain.setValueAtTime(.2,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.6);o.start();o.stop(audio.currentTime+.6)}catch(e){}}
+function drawRing(total){const f=total?tLeft/total:0;$("ringArc").setAttribute("stroke-dashoffset",(125.66*(1-f)).toFixed(2));$("ringNum").textContent=tLeft;$("ring").classList.toggle("done",tLeft===0)}
+function startTimer(){const total=S.timer;$("ring").hidden=!total||slides[si].type!=="q";if(!total||slides[si].type!=="q")return;tLeft=total;drawRing(total);
+  tmr=setInterval(()=>{tLeft--;drawRing(total);if(tLeft<=0){clearInterval(tmr);tmr=null;beep();$("ring").title=t("timeUp")}},1000)}
+function stopTimer(keep){if(tmr){clearInterval(tmr);tmr=null}if(!keep)$("ring").hidden=true}
+$("ring").onclick=()=>{stopTimer();startTimer()};
+$("timerSel").onchange=e=>{S.timer=+e.target.value;LS.set("timer",S.timer);if(audio==null){try{audio=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}stopTimer();startTimer()};
+$("choicesBtn").onclick=()=>{S.choices=!S.choices;LS.set("choices",S.choices);$("choicesBtn").setAttribute("aria-pressed",S.choices);const r=revealed;showSlide();if(r)flip()};
+$("teamsBtn").onclick=()=>$("teams").classList.toggle("on");
+$("fsBtn").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():$("host").requestFullscreen()}catch(e){}};
+$("hostBtn").onclick=()=>openHost(false); $("hostQuiz").onclick=()=>openHost(true);
+$("hostClose").onclick=closeHost; $("reveal").onclick=flip; $("next").onclick=()=>move(1); $("prev").onclick=()=>move(-1);
+document.addEventListener("keydown",e=>{
+  if(!$("host").classList.contains("on")||e.target.matches("input,select,textarea")) return;
+  if(e.key==="ArrowRight") move(1); else if(e.key==="ArrowLeft") move(-1);
+  else if(e.key===" "||e.key==="Enter"){e.preventDefault();if(slides[si].type==="q")flip();else move(1)}
+  else if(e.key==="Escape"&&!document.fullscreenElement) closeHost();
+  else if(e.key.toLowerCase()==="t") $("teams").classList.toggle("on");
+});
+function renderTeams(){
+  $("teamList").replaceChildren(...S.teams.map((tm,i)=>{const r=document.createElement("div");r.className="team";
+    r.innerHTML=`<span class="nm" title="${esc(tm.n)}">${esc(tm.n)}</span><button aria-label="minus">−</button><span class="sc">${tm.s}</span><button aria-label="plus">+</button><button aria-label="remove" class="linkbtn">✕</button>`;
+    const [m,p,x]=r.querySelectorAll("button"); m.onclick=()=>{tm.s--;saveTeams()}; p.onclick=()=>{tm.s++;saveTeams()}; x.onclick=()=>{S.teams.splice(i,1);saveTeams()}; return r}));
+}
+function saveTeams(){LS.set("teams",S.teams);renderTeams();const s=slides[si];if(s&&s.type==="scores")showSlide()}
+$("teamForm").onsubmit=e=>{e.preventDefault();const n=$("teamName").value.trim();if(!n)return;S.teams.push({n,s:0});$("teamName").value="";saveTeams()};
+$("showBoard").onclick=()=>{stopTimer();$("stage").innerHTML=`<div class="slide"><h2>${t("leaderboard")}</h2>${board()}</div>`};
+(()=>{let armed=false;$("resetScores").onclick=()=>{if(!armed){armed=true;$("resetScores").textContent=t("resetScoresSure");setTimeout(()=>{armed=false;$("resetScores").textContent=t("resetScores")},3000);return}
+  S.teams.forEach(x=>x.s=0);saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
+
+/* ---------- Views, hash links, language ---------- */
+function setView(v){S.view=v;$("cardsView").hidden=v!=="cards";$("cardControls").hidden=v!=="cards";$("roundsView").hidden=v!=="rounds";$("count").hidden=v!=="cards";
+  $("tabCards").setAttribute("aria-current",v==="cards");$("tabRounds").setAttribute("aria-current",v==="rounds");if(v==="rounds")renderBuilder()}
+$("tabCards").onclick=()=>{if(location.hash==="#rounds")history.replaceState(null,"",S.cat==="all"?location.pathname+location.search:"#"+S.cat);setView("cards")};
+$("tabRounds").onclick=()=>{history.replaceState(null,"","#rounds");setView("rounds")};
+function fromHash(){const h=decodeURIComponent(location.hash.slice(1));
+  if(h==="rounds"){setView("rounds");return}
+  setView("cards"); const c=CATS.find(c=>c.slug===h); if(c&&S.cat!==c.slug){S.cat=c.slug;S.shown=120;renderChips();render()} else if(!h&&S.cat!=="all"){S.cat="all";renderChips();render()}}
+window.addEventListener("hashchange",fromHash);
+$("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";LS.set("lang",S.lang);applyI18n();renderChips();render();renderStats();if(S.view==="rounds")renderBuilder();if($("host").classList.contains("on")){const r=revealed;showSlide();if(r)flip()}};
+$("modeFlip").onclick=()=>{S.mode="flip";LS.set("mode",S.mode);renderChips();render()};
+$("modeMC").onclick=()=>{S.mode="mc";LS.set("mode",S.mode);renderChips();render()};
+$("more").onclick=()=>{S.shown+=120;render()};
+$("search").oninput=e=>{S.q=e.target.value.trim();S.shown=120;render()};
+$("shuffle").onclick=()=>{shuffle(S.order);render()};
+$("flipAll").onclick=()=>{S.allFlipped=!S.allFlipped;applyI18n();render()};
+$("nRounds").oninput=renderBuilder;
+$("builderForm").onsubmit=generate;
+$("printChoices").onchange=e=>LS.set("printChoices",e.target.checked);
+
+applyI18n(); renderChips(); renderStats();
+{const h=location.hash.slice(1);const c=CATS.find(c=>c.slug===h);if(c)S.cat=c.slug;renderChips()}
+render(); fromHash();
+
+if("serviceWorker" in navigator && location.protocol==="https:"){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))}
+</script>
+</body>
+</html>
