@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pub Quiz Cards</title>
+<style>
+  :root{
+    --bg:#f6f1e7; --panel:#fffdf8; --ink:#1f2a24; --muted:#6b7068; --line:#e3dccd;
+    --accent:#1f5d47; --accent-ink:#fff; --back:#1f5d47; --back-ink:#f6f1e7;
+    --easy:#2e7d4f; --medium:#b07a12; --hard:#b23a3a;
+    --shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#141815;--panel:#1d221e;--ink:#ece8de;--muted:#9aa096;--line:#2e352f;
+      --accent:#6fc39a;--accent-ink:#0f1411;--back:#24453a;--back-ink:#f1ece0;
+      --easy:#6fc39a;--medium:#e0b14c;--hard:#ef7f7f;--shadow:0 1px 2px rgba(0,0,0,.4)}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .wrap{max-width:1180px;margin:0 auto;padding:14px 18px}
+  .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  h1{font:700 1.45rem/1.1 Georgia,"Times New Roman",serif;margin:0;letter-spacing:-.01em}
+  h1 span{color:var(--accent)}
+  .count{color:var(--muted);font-size:.9rem;margin-left:auto}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
+  input[type=search]{flex:1 1 220px;min-width:0;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font-size:.95rem}
+  button,.chip{font:inherit;font-size:.86rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+  button:hover,.chip:hover{border-color:var(--accent)}
+  .chip[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn{border-radius:10px;padding:8px 12px}
+  .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .chips{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin;padding-bottom:2px}
+  main .wrap{padding-top:18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .card{perspective:1000px;height:230px;cursor:pointer;outline:none}
+  .inner{position:relative;width:100%;height:100%;transition:transform .45s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+  .card.flipped .inner{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .front{background:var(--panel);border:1px solid var(--line)}
+  .back{background:var(--back);color:var(--back-ink);transform:rotateY(180deg)}
+  .meta{display:flex;justify-content:space-between;gap:8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .back .meta{color:color-mix(in srgb,var(--back-ink) 70%,transparent)}
+  .lvl{font-weight:700}
+  .lvl.Easy{color:var(--easy)}.lvl.Medium{color:var(--medium)}.lvl.Hard{color:var(--hard)}
+  .back .lvl{color:inherit}
+  .q{font:600 1.05rem/1.35 Georgia,serif;margin:auto 0;padding:8px 0}
+  .a{font:700 1.15rem/1.3 Georgia,serif;margin:10px 0 6px}
+  .bq{font-size:.8rem;opacity:.75;margin-top:8px;line-height:1.3}
+  #host .bq{font-size:clamp(.9rem,1.7vw,1.1rem)}
+  .s{font-size:.88rem;opacity:.9;overflow:auto}
+  .hint{font-size:.75rem;color:var(--muted);text-align:right}
+  .card:focus-visible .face{outline:3px solid var(--accent);outline-offset:2px}
+  .empty{text-align:center;color:var(--muted);padding:60px 0}
+  .more{display:block;margin:22px auto 40px}
+  /* Host mode */
+  #host{position:fixed;inset:0;z-index:20;background:var(--bg);display:none;flex-direction:column}
+  #host.on{display:flex}
+  #host .bar{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+  #host .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:18px}
+  #host .card{height:min(62vh,460px);width:min(760px,100%)}
+  #host .q{font-size:clamp(1.3rem,3.4vw,2.1rem)}
+  #host .a{font-size:clamp(1.4rem,3.6vw,2.3rem)}
+  #host .s{font-size:clamp(.95rem,1.8vw,1.15rem)}
+  #host .nav{display:flex;justify-content:center;gap:10px;padding:0 18px 22px}
+  .score{margin-left:auto;font-size:.9rem;color:var(--muted)}
+  @media (max-width:560px){.card{height:220px}h1{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <h1>Pub Quiz <span>Cards</span></h1>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="row">
+      <input type="search" id="search" placeholder="Search questions, answers, summaries…" aria-label="Search">
+      <button class="btn" id="shuffle">Shuffle</button>
+      <button class="btn" id="flipAll">Show all answers</button>
+      <button class="btn primary" id="hostBtn">Host mode</button>
+    </div>
+    <div class="row chips" id="cats" role="group" aria-label="Category"></div>
+    <div class="row" id="lvls" role="group" aria-label="Level"></div>
+  </div>
+</header>
+<main><div class="wrap"><div class="grid" id="grid"></div><div class="empty" id="empty" hidden>No questions match.</div><button class="btn more" id="more" hidden>Show more</button></div></main>
+
+<div id="host" role="dialog" aria-label="Host mode">
+  <div class="bar">
+    <button class="btn" id="hostClose">✕ Close</button>
+    <strong id="hostPos"></strong>
+    <span class="score" id="hostScore"></span>
+  </div>
+  <div class="stage"><div class="card" id="hostCard" tabindex="0"></div></div>
+  <div class="nav">
+    <button class="btn" id="prev">← Previous</button>
+    <button class="btn primary" id="reveal">Reveal answer</button>
+    <button class="btn" id="next">Next →</button>
+  </div>
+</div>
+
+<script>
+const DATA = __DATA__;
+const CATS = [...new Set(DATA.map(d=>d.c))];
+const LVLS = ["Easy","Medium","Hard"];
+const state = {cat:"All", lvl:"All", q:"", order:DATA.map((_,i)=>i), allFlipped:false, shown:120, hostIdx:0};
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function chip(label, group){
+  const b=document.createElement("button"); b.className="chip"; b.textContent=label;
+  b.setAttribute("aria-pressed", state[group]===label);
+  b.onclick=()=>{state[group]=label; state.shown=120; renderChips(); render();};
+  return b;
+}
+function renderChips(){
+  $("cats").replaceChildren(...["All",...CATS].map(c=>chip(c,"cat")));
+  $("lvls").replaceChildren(...["All",...LVLS].map(l=>chip(l,"lvl")));
+}
+function filtered(){
+  const q=state.q.toLowerCase();
+  return state.order.map(i=>DATA[i]).filter(d=>
+    (state.cat==="All"||d.c===state.cat)&&(state.lvl==="All"||d.l===state.lvl)&&
+    (!q||(d.q+" "+d.a+" "+d.s).toLowerCase().includes(q)));
+}
+function cardHTML(d,n){
+  return `<div class="inner">
+    <div class="face front"><div class="meta"><span>${esc(d.c)} · #${n}</span><span class="lvl ${d.l}">${d.l}</span></div>
+      <div class="q">${esc(d.q)}</div><div class="hint">Tap to reveal</div></div>
+    <div class="face back"><div class="meta"><span>${esc(d.c)}</span><span class="lvl">${d.l}</span></div>
+      <div class="bq">${esc(d.q)}</div><div class="a">${esc(d.a)}</div><div class="s">${esc(d.s)}</div></div></div>`;
+}
+function render(){
+  const list=filtered();
+  $("count").textContent=`${list.length} of ${DATA.length} questions`;
+  const frag=document.createDocumentFragment();
+  list.slice(0,state.shown).forEach((d,i)=>{
+    const el=document.createElement("div"); el.className="card"+(state.allFlipped?" flipped":""); el.tabIndex=0;
+    el.innerHTML=cardHTML(d,DATA.indexOf(d)%100+1);
+    const t=()=>el.classList.toggle("flipped");
+    el.onclick=t; el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();t();}};
+    frag.appendChild(el);
+  });
+  $("grid").replaceChildren(frag);
+  $("empty").hidden=list.length>0;
+  $("more").hidden=list.length<=state.shown;
+  $("more").textContent=`Show more (${list.length-state.shown} left)`;
+}
+$("more").onclick=()=>{state.shown+=120; render();};
+$("search").oninput=e=>{state.q=e.target.value.trim(); state.shown=120; render();};
+$("shuffle").onclick=()=>{const o=state.order; for(let i=o.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]];} render();};
+$("flipAll").onclick=()=>{state.allFlipped=!state.allFlipped; $("flipAll").textContent=state.allFlipped?"Hide all answers":"Show all answers"; render();};
+
+// Host mode: one big card at a time, using the current filters and order
+let hostList=[];
+function hostShow(){
+  const d=hostList[state.hostIdx]; const c=$("hostCard");
+  c.classList.remove("flipped"); c.innerHTML=cardHTML(d,DATA.indexOf(d)%100+1);
+  $("hostPos").textContent=`Question ${state.hostIdx+1} of ${hostList.length}`;
+  $("hostScore").textContent=state.cat==="All"?"All categories":state.cat;
+  $("reveal").textContent="Reveal answer";
+}
+function hostFlip(){const c=$("hostCard"); c.classList.toggle("flipped"); $("reveal").textContent=c.classList.contains("flipped")?"Hide answer":"Reveal answer";}
+function hostMove(n){state.hostIdx=(state.hostIdx+n+hostList.length)%hostList.length; hostShow();}
+$("hostBtn").onclick=()=>{hostList=filtered(); if(!hostList.length) return; state.hostIdx=0; $("host").classList.add("on"); hostShow(); $("hostCard").focus();};
+$("hostClose").onclick=()=>$("host").classList.remove("on");
+$("hostCard").onclick=hostFlip; $("reveal").onclick=hostFlip;
+$("next").onclick=()=>hostMove(1); $("prev").onclick=()=>hostMove(-1);
+document.addEventListener("keydown",e=>{
+  if(!$("host").classList.contains("on")) return;
+  if(e.key==="ArrowRight") hostMove(1);
+  else if(e.key==="ArrowLeft") hostMove(-1);
+  else if(e.key===" "||e.key==="Enter"){e.preventDefault(); hostFlip();}
+  else if(e.key==="Escape") $("host").classList.remove("on");
+});
+
+renderChips(); render();
+</script>
+</body>
+</html>
