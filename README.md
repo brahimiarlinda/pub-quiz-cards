@@ -2,14 +2,14 @@
 
 **Live app: https://brahimiarlinda.github.io/pub-quiz-cards/**
 
-1,200 pub quiz questions with answers and short explanations, as flip cards. Run a full quiz night with the round builder, team scoreboard and timer, or practise alone with multiple choice. In English and German.
+1,400 pub quiz questions with answers and short explanations, as flip cards. Run a full quiz night with the round builder, team scoreboard and timer, or practise alone with multiple choice. In English and German.
 
 ![Pub Quiz Cards](og.png)
 
 ## Features
 
 **Cards**
-- 14 categories: General knowledge, Geography, History, Science & nature, Film & TV, Music, Sport, Food & drink, Books, language & art, Germany & Europe (100 each), plus Politics, 90s, Kids and Albania (50 each)
+- 14 categories: General knowledge, Geography, History, Science & nature, Film & TV, Music, Sport, Food & drink, Books, language & art, Germany & Europe, Politics, 90s, Kids and Albania – 100 each
 - Every question has an answer, a short summary and a level (Easy, Medium, Hard)
 - **Flip mode**: tap a card to see the answer
 - **Multiple-choice mode**: pick from four options; every question has three wrong answers

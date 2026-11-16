@@ -24223,6 +24223,1156 @@
 }
 },
 {
+"id": "politics-51",
+"c": "Politics",
+"l": "Easy",
+"q": "What is the official residence of the French president called?",
+"a": "The Élysée Palace",
+"s": "In Paris, near the Champs-Élysées; presidents have lived there since 1848.",
+"o": [
+"The Louvre",
+"Versailles",
+"Matignon"
+],
+"de": {
+"q": "Wie heißt der Amtssitz des französischen Präsidenten?",
+"a": "Der Élysée-Palast",
+"s": "In Paris nahe den Champs-Élysées; Präsidenten wohnen dort seit 1848.",
+"o": [
+"Der Louvre",
+"Versailles",
+"Matignon"
+]
+}
+},
+{
+"id": "politics-52",
+"c": "Politics",
+"l": "Medium",
+"q": "How long is a French president's term of office?",
+"a": "5 years",
+"s": "It was cut from seven years in 2002.",
+"o": [
+"4 years",
+"6 years",
+"7 years"
+],
+"de": {
+"q": "Wie lange dauert die Amtszeit des französischen Präsidenten?",
+"a": "5 Jahre",
+"s": "2002 wurde sie von sieben Jahren verkürzt.",
+"o": [
+"4 Jahre",
+"6 Jahre",
+"7 Jahre"
+]
+}
+},
+{
+"id": "politics-53",
+"c": "Politics",
+"l": "Easy",
+"q": "In which Berlin building does the Bundestag meet?",
+"a": "The Reichstag building",
+"s": "It was completed in 1894 and has housed the Bundestag since 1999.",
+"o": [
+"The Chancellery",
+"Bellevue Palace",
+"The Red City Hall"
+],
+"de": {
+"q": "In welchem Berliner Gebäude tagt der Bundestag?",
+"a": "Im Reichstagsgebäude",
+"s": "1894 fertiggestellt; seit 1999 Sitz des Bundestags.",
+"o": [
+"Im Kanzleramt",
+"Im Schloss Bellevue",
+"Im Roten Rathaus"
+]
+}
+},
+{
+"id": "politics-54",
+"c": "Politics",
+"l": "Hard",
+"q": "Which British architect designed the Reichstag's glass dome?",
+"a": "Norman Foster",
+"s": "Visitors can walk up it and look down into the debating chamber.",
+"o": [
+"Zaha Hadid",
+"Richard Rogers",
+"David Chipperfield"
+],
+"de": {
+"q": "Welcher britische Architekt entwarf die Glaskuppel des Reichstags?",
+"a": "Norman Foster",
+"s": "Besucher können hinaufgehen und von oben in den Plenarsaal schauen.",
+"o": [
+"Zaha Hadid",
+"Richard Rogers",
+"David Chipperfield"
+]
+}
+},
+{
+"id": "politics-55",
+"c": "Politics",
+"l": "Hard",
+"q": "Which body elects the German Federal President?",
+"a": "The Federal Convention (Bundesversammlung)",
+"s": "It is made up of all Bundestag members plus the same number of delegates from the states.",
+"o": [
+"The Bundesrat",
+"The people directly",
+"The Federal Constitutional Court"
+],
+"de": {
+"q": "Welches Gremium wählt den Bundespräsidenten?",
+"a": "Die Bundesversammlung",
+"s": "Sie besteht aus allen Bundestagsabgeordneten und ebenso vielen Delegierten der Länder.",
+"o": [
+"Der Bundesrat",
+"Das Volk direkt",
+"Das Bundesverfassungsgericht"
+]
+}
+},
+{
+"id": "politics-56",
+"c": "Politics",
+"l": "Medium",
+"q": "How long is the German Federal President's term?",
+"a": "5 years",
+"s": "A president can serve at most two terms in a row.",
+"o": [
+"4 years",
+"6 years",
+"7 years"
+],
+"de": {
+"q": "Wie lange dauert die Amtszeit des Bundespräsidenten?",
+"a": "5 Jahre",
+"s": "Ein Bundespräsident kann höchstens zweimal hintereinander gewählt werden.",
+"o": [
+"4 Jahre",
+"6 Jahre",
+"7 Jahre"
+]
+}
+},
+{
+"id": "politics-57",
+"c": "Politics",
+"l": "Easy",
+"q": "What is a \"vote of no confidence\"?",
+"a": "A vote on whether parliament still supports the government",
+"s": "If the government loses, it may have to resign or call an election.",
+"o": [
+"A vote to change the constitution",
+"A vote to leave the EU",
+"A vote on the budget"
+],
+"de": {
+"q": "Was ist ein „Misstrauensvotum“?",
+"a": "Eine Abstimmung, ob das Parlament der Regierung noch vertraut",
+"s": "Verliert die Regierung, muss sie womöglich zurücktreten oder Neuwahlen ansetzen.",
+"o": [
+"Eine Abstimmung über eine Verfassungsänderung",
+"Eine Abstimmung über den EU-Austritt",
+"Eine Abstimmung über den Haushalt"
+]
+}
+},
+{
+"id": "politics-58",
+"c": "Politics",
+"l": "Hard",
+"q": "What is special about Germany's \"constructive\" vote of no confidence?",
+"a": "Parliament must elect a new chancellor at the same time",
+"s": "Designed to avoid the instability of the Weimar Republic; it has succeeded only once, in 1982.",
+"o": [
+"It needs a two-thirds majority",
+"It must be approved by the president",
+"It can only be held once per term"
+],
+"de": {
+"q": "Was ist das Besondere am konstruktiven Misstrauensvotum in Deutschland?",
+"a": "Der Bundestag muss gleichzeitig einen neuen Kanzler wählen",
+"s": "Gedacht gegen die Instabilität der Weimarer Republik; erfolgreich war es nur einmal, 1982.",
+"o": [
+"Es braucht eine Zweidrittelmehrheit",
+"Der Bundespräsident muss zustimmen",
+"Es darf nur einmal pro Wahlperiode stattfinden"
+]
+}
+},
+{
+"id": "politics-59",
+"c": "Politics",
+"l": "Easy",
+"q": "In the UK, what does \"MP\" stand for?",
+"a": "Member of Parliament",
+"s": "There are 650 MPs in the House of Commons.",
+"o": [
+"Minister of Policy",
+"Mayor of the Parish",
+"Military Police"
+],
+"de": {
+"q": "Wofür steht in Großbritannien „MP“?",
+"a": "Member of Parliament (Abgeordneter)",
+"s": "Im Unterhaus sitzen 650 Abgeordnete.",
+"o": [
+"Minister of Policy",
+"Mayor of the Parish",
+"Military Police"
+]
+}
+},
+{
+"id": "politics-60",
+"c": "Politics",
+"l": "Medium",
+"q": "How many justices sit on the US Supreme Court?",
+"a": "9",
+"s": "The number has been nine since 1869.",
+"o": [
+"7",
+"11",
+"12"
+],
+"de": {
+"q": "Wie viele Richter sitzen am Obersten Gerichtshof der USA?",
+"a": "9",
+"s": "Seit 1869 sind es neun.",
+"o": [
+"7",
+"11",
+"12"
+]
+}
+},
+{
+"id": "politics-61",
+"c": "Politics",
+"l": "Medium",
+"q": "For how long are US Supreme Court justices appointed?",
+"a": "For life",
+"s": "They serve until they retire, resign, die or are removed.",
+"o": [
+"10 years",
+"12 years",
+"Until age 70"
+],
+"de": {
+"q": "Für wie lange werden Richter am US Supreme Court ernannt?",
+"a": "Auf Lebenszeit",
+"s": "Sie bleiben im Amt, bis sie in den Ruhestand gehen, zurücktreten, sterben oder abgesetzt werden.",
+"o": [
+"10 Jahre",
+"12 Jahre",
+"Bis zum 70. Lebensjahr"
+]
+}
+},
+{
+"id": "politics-62",
+"c": "Politics",
+"l": "Medium",
+"q": "What are the first ten amendments to the US Constitution called?",
+"a": "The Bill of Rights",
+"s": "Ratified in 1791 to protect individual freedoms.",
+"o": [
+"The Federalist Papers",
+"The Declaration of Rights",
+"The Articles of Confederation"
+],
+"de": {
+"q": "Wie heißen die ersten zehn Zusatzartikel der US-Verfassung?",
+"a": "Die Bill of Rights",
+"s": "1791 ratifiziert, um die Freiheiten des Einzelnen zu schützen.",
+"o": [
+"Die Federalist Papers",
+"Die Erklärung der Rechte",
+"Die Konföderationsartikel"
+]
+}
+},
+{
+"id": "politics-63",
+"c": "Politics",
+"l": "Medium",
+"q": "Which amendment to the US Constitution protects freedom of speech?",
+"a": "The First Amendment",
+"s": "It also covers religion, the press, assembly and petition.",
+"o": [
+"The Second Amendment",
+"The Fifth Amendment",
+"The Tenth Amendment"
+],
+"de": {
+"q": "Welcher Zusatzartikel der US-Verfassung schützt die Redefreiheit?",
+"a": "Der Erste Zusatzartikel",
+"s": "Er umfasst auch Religion, Presse, Versammlung und Petition.",
+"o": [
+"Der Zweite Zusatzartikel",
+"Der Fünfte Zusatzartikel",
+"Der Zehnte Zusatzartikel"
+]
+}
+},
+{
+"id": "politics-64",
+"c": "Politics",
+"l": "Hard",
+"q": "How long is a US senator's term?",
+"a": "6 years",
+"s": "About a third of the Senate is elected every two years.",
+"o": [
+"2 years",
+"4 years",
+"8 years"
+],
+"de": {
+"q": "Wie lange dauert die Amtszeit eines US-Senators?",
+"a": "6 Jahre",
+"s": "Etwa ein Drittel des Senats wird alle zwei Jahre gewählt.",
+"o": [
+"2 Jahre",
+"4 Jahre",
+"8 Jahre"
+]
+}
+},
+{
+"id": "politics-65",
+"c": "Politics",
+"l": "Medium",
+"q": "How often is the whole US House of Representatives elected?",
+"a": "Every 2 years",
+"s": "So representatives are almost always campaigning.",
+"o": [
+"Every 4 years",
+"Every 3 years",
+"Every 6 years"
+],
+"de": {
+"q": "Wie oft wird das gesamte US-Repräsentantenhaus gewählt?",
+"a": "Alle 2 Jahre",
+"s": "Die Abgeordneten sind daher fast ständig im Wahlkampf.",
+"o": [
+"Alle 4 Jahre",
+"Alle 3 Jahre",
+"Alle 6 Jahre"
+]
+}
+},
+{
+"id": "politics-66",
+"c": "Politics",
+"l": "Medium",
+"q": "What are US elections held halfway through a president's term called?",
+"a": "The midterms",
+"s": "All House seats and about a third of Senate seats are contested.",
+"o": [
+"The primaries",
+"The caucuses",
+"The by-elections"
+],
+"de": {
+"q": "Wie heißen die US-Wahlen zur Hälfte der Amtszeit eines Präsidenten?",
+"a": "Die Midterms (Zwischenwahlen)",
+"s": "Alle Sitze im Repräsentantenhaus und etwa ein Drittel im Senat werden neu vergeben.",
+"o": [
+"Die Vorwahlen",
+"Die Caucuses",
+"Die Nachwahlen"
+]
+}
+},
+{
+"id": "politics-67",
+"c": "Politics",
+"l": "Medium",
+"q": "On which date is a new US president sworn in?",
+"a": "20 January",
+"s": "Inauguration Day, set by the 20th Amendment in 1933.",
+"o": [
+"1 January",
+"4 July",
+"4 March"
+],
+"de": {
+"q": "An welchem Datum wird ein neuer US-Präsident vereidigt?",
+"a": "Am 20. Januar",
+"s": "Der Inauguration Day, festgelegt durch den 20. Zusatzartikel von 1933.",
+"o": [
+"Am 1. Januar",
+"Am 4. Juli",
+"Am 4. März"
+]
+}
+},
+{
+"id": "politics-68",
+"c": "Politics",
+"l": "Medium",
+"q": "Which founding document begins with the words \"We the People\"?",
+"a": "The US Constitution",
+"s": "Signed in Philadelphia in 1787.",
+"o": [
+"The Declaration of Independence",
+"The Magna Carta",
+"The Bill of Rights"
+],
+"de": {
+"q": "Welches Gründungsdokument beginnt mit den Worten „We the People“?",
+"a": "Die US-Verfassung",
+"s": "1787 in Philadelphia unterzeichnet.",
+"o": [
+"Die Unabhängigkeitserklärung",
+"Die Magna Carta",
+"Die Bill of Rights"
+]
+}
+},
+{
+"id": "politics-69",
+"c": "Politics",
+"l": "Medium",
+"q": "Which country's head of state is a Grand Duke?",
+"a": "Luxembourg",
+"s": "It is the world's only remaining grand duchy.",
+"o": [
+"Liechtenstein",
+"Monaco",
+"Andorra"
+],
+"de": {
+"q": "Welches Land hat einen Großherzog als Staatsoberhaupt?",
+"a": "Luxemburg",
+"s": "Es ist das einzige noch bestehende Großherzogtum der Welt.",
+"o": [
+"Liechtenstein",
+"Monaco",
+"Andorra"
+]
+}
+},
+{
+"id": "politics-70",
+"c": "Politics",
+"l": "Hard",
+"q": "Which country's parliament is called the Cortes Generales?",
+"a": "Spain",
+"s": "It has two chambers: the Congress of Deputies and the Senate.",
+"o": [
+"Portugal",
+"Mexico",
+"Italy"
+],
+"de": {
+"q": "Wie heißt das Parlament welches Landes Cortes Generales?",
+"a": "Spanien",
+"s": "Es hat zwei Kammern: den Abgeordnetenkongress und den Senat.",
+"o": [
+"Portugal",
+"Mexiko",
+"Italien"
+]
+}
+},
+{
+"id": "politics-71",
+"c": "Politics",
+"l": "Medium",
+"q": "Which country's lower house of parliament is called the Sejm?",
+"a": "Poland",
+"s": "It has 460 members and meets in Warsaw.",
+"o": [
+"Czechia",
+"Lithuania",
+"Slovakia"
+],
+"de": {
+"q": "In welchem Land heißt das Unterhaus des Parlaments Sejm?",
+"a": "Polen",
+"s": "Er hat 460 Mitglieder und tagt in Warschau.",
+"o": [
+"Tschechien",
+"Litauen",
+"Slowakei"
+]
+}
+},
+{
+"id": "politics-72",
+"c": "Politics",
+"l": "Hard",
+"q": "Which country's parliament, the Althing, was founded in 930 and is one of the oldest in the world?",
+"a": "Iceland",
+"s": "It first met outdoors at Þingvellir.",
+"o": [
+"Norway",
+"Denmark",
+"The Faroe Islands"
+],
+"de": {
+"q": "Welches Land hat mit dem 930 gegründeten Althing eines der ältesten Parlamente der Welt?",
+"a": "Island",
+"s": "Es tagte zuerst unter freiem Himmel in Þingvellir.",
+"o": [
+"Norwegen",
+"Dänemark",
+"Die Färöer"
+]
+}
+},
+{
+"id": "politics-73",
+"c": "Politics",
+"l": "Hard",
+"q": "What is the Dutch parliament called?",
+"a": "The States General (Staten-Generaal)",
+"s": "It has two chambers and meets in The Hague.",
+"o": [
+"The Riksdag",
+"The Folketing",
+"The Bundesrat"
+],
+"de": {
+"q": "Wie heißt das niederländische Parlament?",
+"a": "Generalstaaten (Staten-Generaal)",
+"s": "Es hat zwei Kammern und tagt in Den Haag.",
+"o": [
+"Reichstag (Riksdag)",
+"Folketing",
+"Bundesrat"
+]
+}
+},
+{
+"id": "politics-74",
+"c": "Politics",
+"l": "Medium",
+"q": "In which Dutch city do the government and parliament sit, although it is not the capital?",
+"a": "The Hague",
+"s": "Amsterdam is the official capital.",
+"o": [
+"Rotterdam",
+"Utrecht",
+"Amsterdam"
+],
+"de": {
+"q": "In welcher niederländischen Stadt sitzen Regierung und Parlament, obwohl sie nicht die Hauptstadt ist?",
+"a": "Den Haag",
+"s": "Amsterdam ist die offizielle Hauptstadt.",
+"o": [
+"Rotterdam",
+"Utrecht",
+"Amsterdam"
+]
+}
+},
+{
+"id": "politics-75",
+"c": "Politics",
+"l": "Medium",
+"q": "In which city is the UN's International Court of Justice?",
+"a": "The Hague",
+"s": "It sits in the Peace Palace and settles disputes between states.",
+"o": [
+"Geneva",
+"New York",
+"Strasbourg"
+],
+"de": {
+"q": "In welcher Stadt sitzt der Internationale Gerichtshof der UN?",
+"a": "Den Haag",
+"s": "Er tagt im Friedenspalast und entscheidet Streitigkeiten zwischen Staaten.",
+"o": [
+"Genf",
+"New York",
+"Straßburg"
+]
+}
+},
+{
+"id": "politics-76",
+"c": "Politics",
+"l": "Medium",
+"q": "In which city is the European Court of Human Rights?",
+"a": "Strasbourg",
+"s": "It belongs to the Council of Europe, not the EU.",
+"o": [
+"Brussels",
+"Luxembourg",
+"The Hague"
+],
+"de": {
+"q": "In welcher Stadt sitzt der Europäische Gerichtshof für Menschenrechte?",
+"a": "Straßburg",
+"s": "Er gehört zum Europarat, nicht zur EU.",
+"o": [
+"Brüssel",
+"Luxemburg",
+"Den Haag"
+]
+}
+},
+{
+"id": "politics-77",
+"c": "Politics",
+"l": "Hard",
+"q": "In which city is the EU's Court of Justice?",
+"a": "Luxembourg",
+"s": "It makes sure EU law is applied the same way in every member state.",
+"o": [
+"Brussels",
+"Strasbourg",
+"Frankfurt"
+],
+"de": {
+"q": "In welcher Stadt sitzt der Gerichtshof der Europäischen Union?",
+"a": "Luxemburg",
+"s": "Er sorgt dafür, dass EU-Recht in allen Mitgliedstaaten gleich angewendet wird.",
+"o": [
+"Brüssel",
+"Straßburg",
+"Frankfurt"
+]
+}
+},
+{
+"id": "politics-78",
+"c": "Politics",
+"l": "Hard",
+"q": "Which human-rights organisation, founded in 1949, has 46 member states and is separate from the EU?",
+"a": "The Council of Europe",
+"s": "Russia was expelled in 2022.",
+"o": [
+"The OSCE",
+"The European Council",
+"The Nordic Council"
+],
+"de": {
+"q": "Welche 1949 gegründete Menschenrechtsorganisation hat 46 Mitgliedstaaten und ist unabhängig von der EU?",
+"a": "Der Europarat",
+"s": "Russland wurde 2022 ausgeschlossen.",
+"o": [
+"Die OSZE",
+"Der Europäische Rat",
+"Der Nordische Rat"
+]
+}
+},
+{
+"id": "politics-79",
+"c": "Politics",
+"l": "Medium",
+"q": "Which city is home to the UN's European headquarters, the Palais des Nations?",
+"a": "Geneva",
+"s": "The building was first used by the League of Nations.",
+"o": [
+"Vienna",
+"Paris",
+"Brussels"
+],
+"de": {
+"q": "Welche Stadt beherbergt mit dem Palais des Nations den europäischen Sitz der UN?",
+"a": "Genf",
+"s": "Das Gebäude wurde zuerst vom Völkerbund genutzt.",
+"o": [
+"Wien",
+"Paris",
+"Brüssel"
+]
+}
+},
+{
+"id": "politics-80",
+"c": "Politics",
+"l": "Easy",
+"q": "What does WHO stand for?",
+"a": "World Health Organization",
+"s": "A UN agency founded in 1948, based in Geneva.",
+"o": [
+"World Humanitarian Office",
+"Western Health Organisation",
+"World Hospital Order"
+],
+"de": {
+"q": "Wofür steht WHO?",
+"a": "World Health Organization (Weltgesundheitsorganisation)",
+"s": "Eine 1948 gegründete UN-Organisation mit Sitz in Genf.",
+"o": [
+"World Humanitarian Office",
+"Western Health Organisation",
+"World Hospital Order"
+]
+}
+},
+{
+"id": "politics-81",
+"c": "Politics",
+"l": "Medium",
+"q": "Which UN agency protects refugees?",
+"a": "UNHCR",
+"s": "The UN Refugee Agency has won the Nobel Peace Prize twice.",
+"o": [
+"UNICEF",
+"UNESCO",
+"WFP"
+],
+"de": {
+"q": "Welche UN-Organisation schützt Flüchtlinge?",
+"a": "UNHCR",
+"s": "Das UN-Flüchtlingshilfswerk hat zweimal den Friedensnobelpreis erhalten.",
+"o": [
+"UNICEF",
+"UNESCO",
+"WFP"
+]
+}
+},
+{
+"id": "politics-82",
+"c": "Politics",
+"l": "Medium",
+"q": "Which UN body gives every member state one vote?",
+"a": "The General Assembly",
+"s": "It meets every September in New York.",
+"o": [
+"The Security Council",
+"The Secretariat",
+"The Economic and Social Council"
+],
+"de": {
+"q": "In welchem UN-Organ hat jeder Mitgliedstaat eine Stimme?",
+"a": "In der Generalversammlung",
+"s": "Sie tritt jeden September in New York zusammen.",
+"o": [
+"Im Sicherheitsrat",
+"Im Sekretariat",
+"Im Wirtschafts- und Sozialrat"
+]
+}
+},
+{
+"id": "politics-83",
+"c": "Politics",
+"l": "Medium",
+"q": "Which 1985 agreement began removing border checks between European countries?",
+"a": "The Schengen Agreement",
+"s": "Today the Schengen Area covers 29 countries.",
+"o": [
+"The Maastricht Treaty",
+"The Lisbon Treaty",
+"The Dublin Regulation"
+],
+"de": {
+"q": "Welches Abkommen von 1985 leitete die Abschaffung der Grenzkontrollen in Europa ein?",
+"a": "Das Schengener Abkommen",
+"s": "Heute umfasst der Schengen-Raum 29 Länder.",
+"o": [
+"Der Vertrag von Maastricht",
+"Der Vertrag von Lissabon",
+"Die Dublin-Verordnung"
+]
+}
+},
+{
+"id": "politics-84",
+"c": "Politics",
+"l": "Hard",
+"q": "In which country is the village of Schengen?",
+"a": "Luxembourg",
+"s": "It lies where Luxembourg, France and Germany meet.",
+"o": [
+"Belgium",
+"Germany",
+"France"
+],
+"de": {
+"q": "In welchem Land liegt das Dorf Schengen?",
+"a": "Luxemburg",
+"s": "Es liegt am Dreiländereck von Luxemburg, Frankreich und Deutschland.",
+"o": [
+"Belgien",
+"Deutschland",
+"Frankreich"
+]
+}
+},
+{
+"id": "politics-85",
+"c": "Politics",
+"l": "Medium",
+"q": "Which 1957 treaty founded the European Economic Community?",
+"a": "The Treaty of Rome",
+"s": "Signed by six countries, including West Germany.",
+"o": [
+"The Treaty of Paris",
+"The Maastricht Treaty",
+"The Treaty of Lisbon"
+],
+"de": {
+"q": "Welcher Vertrag von 1957 gründete die Europäische Wirtschaftsgemeinschaft?",
+"a": "Die Römischen Verträge",
+"s": "Unterzeichnet von sechs Ländern, darunter Westdeutschland.",
+"o": [
+"Der Vertrag von Paris",
+"Der Vertrag von Maastricht",
+"Der Vertrag von Lissabon"
+]
+}
+},
+{
+"id": "politics-86",
+"c": "Politics",
+"l": "Hard",
+"q": "Which territory voted to leave the European Community and left in 1985?",
+"a": "Greenland",
+"s": "It is part of the Kingdom of Denmark, which stayed in.",
+"o": [
+"The Faroe Islands",
+"Norway",
+"Gibraltar"
+],
+"de": {
+"q": "Welches Gebiet stimmte für den Austritt aus der Europäischen Gemeinschaft und verließ sie 1985?",
+"a": "Grönland",
+"s": "Es gehört zum Königreich Dänemark, das Mitglied blieb.",
+"o": [
+"Die Färöer",
+"Norwegen",
+"Gibraltar"
+]
+}
+},
+{
+"id": "politics-87",
+"c": "Politics",
+"l": "Hard",
+"q": "Where do the political terms \"left\" and \"right\" come from?",
+"a": "Seating in France's National Assembly in 1789",
+"s": "Supporters of the king sat on the right, those wanting change on the left.",
+"o": [
+"The British House of Commons",
+"Ancient Rome's Senate",
+"The US Congress"
+],
+"de": {
+"q": "Woher stammen die politischen Begriffe „links“ und „rechts“?",
+"a": "Von der Sitzordnung in Frankreichs Nationalversammlung 1789",
+"s": "Anhänger des Königs saßen rechts, Befürworter von Veränderungen links.",
+"o": [
+"Vom britischen Unterhaus",
+"Vom römischen Senat",
+"Vom US-Kongress"
+]
+}
+},
+{
+"id": "politics-88",
+"c": "Politics",
+"l": "Easy",
+"q": "What is a party's \"manifesto\" (election programme)?",
+"a": "Its published list of plans and promises",
+"s": "Voters can use it to compare what parties say they will do.",
+"o": [
+"Its list of members",
+"Its financial report",
+"Its party song"
+],
+"de": {
+"q": "Was ist das „Wahlprogramm“ einer Partei?",
+"a": "Ihre veröffentlichten Pläne und Versprechen",
+"s": "Wähler können damit vergleichen, was die Parteien vorhaben.",
+"o": [
+"Ihre Mitgliederliste",
+"Ihr Finanzbericht",
+"Ihr Parteilied"
+]
+}
+},
+{
+"id": "politics-89",
+"c": "Politics",
+"l": "Medium",
+"q": "What does the word \"suffrage\" mean?",
+"a": "The right to vote",
+"s": "\"Universal suffrage\" means every adult citizen can vote.",
+"o": [
+"The right to strike",
+"Freedom of speech",
+"The right to stand for election"
+],
+"de": {
+"q": "Was bedeutet das Wort „Suffrage“?",
+"a": "Das Wahlrecht",
+"s": "„Allgemeines Wahlrecht“ heißt, dass alle erwachsenen Staatsbürger wählen dürfen.",
+"o": [
+"Das Streikrecht",
+"Die Redefreiheit",
+"Das Recht, gewählt zu werden"
+]
+}
+},
+{
+"id": "politics-90",
+"c": "Politics",
+"l": "Medium",
+"q": "Which British campaigner founded the Women's Social and Political Union in 1903?",
+"a": "Emmeline Pankhurst",
+"s": "Her \"suffragettes\" used protest to win votes for women.",
+"o": [
+"Millicent Fawcett",
+"Emily Davison",
+"Mary Wollstonecraft"
+],
+"de": {
+"q": "Welche britische Aktivistin gründete 1903 die Women's Social and Political Union?",
+"a": "Emmeline Pankhurst",
+"s": "Ihre „Suffragetten“ kämpften mit Protesten für das Frauenwahlrecht.",
+"o": [
+"Millicent Fawcett",
+"Emily Davison",
+"Mary Wollstonecraft"
+]
+}
+},
+{
+"id": "politics-91",
+"c": "Politics",
+"l": "Hard",
+"q": "Who became Austria's first female chancellor, in 2019?",
+"a": "Brigitte Bierlein",
+"s": "She led a caretaker government of experts for about seven months.",
+"o": [
+"Pamela Rendi-Wagner",
+"Johanna Mikl-Leitner",
+"Karin Kneissl"
+],
+"de": {
+"q": "Wer wurde 2019 Österreichs erste Bundeskanzlerin?",
+"a": "Brigitte Bierlein",
+"s": "Sie führte rund sieben Monate eine Übergangsregierung aus Fachleuten.",
+"o": [
+"Pamela Rendi-Wagner",
+"Johanna Mikl-Leitner",
+"Karin Kneissl"
+]
+}
+},
+{
+"id": "politics-92",
+"c": "Politics",
+"l": "Medium",
+"q": "Who was West Germany's first Federal President?",
+"a": "Theodor Heuss",
+"s": "He served from 1949 to 1959.",
+"o": [
+"Konrad Adenauer",
+"Heinrich Lübke",
+"Richard von Weizsäcker"
+],
+"de": {
+"q": "Wer war der erste Bundespräsident der Bundesrepublik?",
+"a": "Theodor Heuss",
+"s": "Er amtierte von 1949 bis 1959.",
+"o": [
+"Konrad Adenauer",
+"Heinrich Lübke",
+"Richard von Weizsäcker"
+]
+}
+},
+{
+"id": "politics-93",
+"c": "Politics",
+"l": "Medium",
+"q": "Which German chancellor was in office from 1974 to 1982?",
+"a": "Helmut Schmidt",
+"s": "He lost the 1982 constructive vote of no confidence to Helmut Kohl.",
+"o": [
+"Willy Brandt",
+"Ludwig Erhard",
+"Kurt Georg Kiesinger"
+],
+"de": {
+"q": "Welcher Bundeskanzler war von 1974 bis 1982 im Amt?",
+"a": "Helmut Schmidt",
+"s": "Er verlor 1982 das konstruktive Misstrauensvotum gegen Helmut Kohl.",
+"o": [
+"Willy Brandt",
+"Ludwig Erhard",
+"Kurt Georg Kiesinger"
+]
+}
+},
+{
+"id": "politics-94",
+"c": "Politics",
+"l": "Easy",
+"q": "Who was the first Black president of the United States?",
+"a": "Barack Obama",
+"s": "He served two terms, from 2009 to 2017.",
+"o": [
+"Colin Powell",
+"Jesse Jackson",
+"Martin Luther King Jr."
+],
+"de": {
+"q": "Wer war der erste schwarze Präsident der USA?",
+"a": "Barack Obama",
+"s": "Er regierte zwei Amtszeiten, von 2009 bis 2017.",
+"o": [
+"Colin Powell",
+"Jesse Jackson",
+"Martin Luther King Jr."
+]
+}
+},
+{
+"id": "politics-95",
+"c": "Politics",
+"l": "Medium",
+"q": "Which US president gave the Gettysburg Address in 1863?",
+"a": "Abraham Lincoln",
+"s": "One of the most famous speeches in history, under 300 words long.",
+"o": [
+"George Washington",
+"Ulysses S. Grant",
+"Thomas Jefferson"
+],
+"de": {
+"q": "Welcher US-Präsident hielt 1863 die Gettysburg Address?",
+"a": "Abraham Lincoln",
+"s": "Eine der berühmtesten Reden der Geschichte, kürzer als 300 Wörter.",
+"o": [
+"George Washington",
+"Ulysses S. Grant",
+"Thomas Jefferson"
+]
+}
+},
+{
+"id": "politics-96",
+"c": "Politics",
+"l": "Medium",
+"q": "Which US president launched the \"New Deal\" in the 1930s?",
+"a": "Franklin D. Roosevelt",
+"s": "A set of programmes to fight the Great Depression.",
+"o": [
+"Herbert Hoover",
+"Harry S. Truman",
+"Woodrow Wilson"
+],
+"de": {
+"q": "Welcher US-Präsident startete in den 1930ern den „New Deal“?",
+"a": "Franklin D. Roosevelt",
+"s": "Ein Bündel von Programmen gegen die Weltwirtschaftskrise.",
+"o": [
+"Herbert Hoover",
+"Harry S. Truman",
+"Woodrow Wilson"
+]
+}
+},
+{
+"id": "politics-97",
+"c": "Politics",
+"l": "Hard",
+"q": "How many presidential elections did Franklin D. Roosevelt win?",
+"a": "4",
+"s": "He is the only US president to serve more than two terms.",
+"o": [
+"2",
+"3",
+"5"
+],
+"de": {
+"q": "Wie viele Präsidentschaftswahlen gewann Franklin D. Roosevelt?",
+"a": "4",
+"s": "Er ist der einzige US-Präsident mit mehr als zwei Amtszeiten.",
+"o": [
+"2",
+"3",
+"5"
+]
+}
+},
+{
+"id": "politics-98",
+"c": "Politics",
+"l": "Hard",
+"q": "Who shared the 1993 Nobel Peace Prize with Nelson Mandela?",
+"a": "F. W. de Klerk",
+"s": "South Africa's last apartheid-era president, who freed Mandela.",
+"o": [
+"Desmond Tutu",
+"P. W. Botha",
+"Thabo Mbeki"
+],
+"de": {
+"q": "Wer teilte sich 1993 den Friedensnobelpreis mit Nelson Mandela?",
+"a": "F. W. de Klerk",
+"s": "Südafrikas letzter Präsident der Apartheid-Zeit, der Mandela freiließ.",
+"o": [
+"Desmond Tutu",
+"P. W. Botha",
+"Thabo Mbeki"
+]
+}
+},
+{
+"id": "politics-99",
+"c": "Politics",
+"l": "Medium",
+"q": "Which Soviet leader introduced \"glasnost\" (openness) and \"perestroika\" (restructuring)?",
+"a": "Mikhail Gorbachev",
+"s": "He won the Nobel Peace Prize in 1990.",
+"o": [
+"Leonid Brezhnev",
+"Boris Yeltsin",
+"Yuri Andropov"
+],
+"de": {
+"q": "Welcher sowjetische Staatschef führte „Glasnost“ (Offenheit) und „Perestroika“ (Umbau) ein?",
+"a": "Michail Gorbatschow",
+"s": "Er erhielt 1990 den Friedensnobelpreis.",
+"o": [
+"Leonid Breschnew",
+"Boris Jelzin",
+"Juri Andropow"
+]
+}
+},
+{
+"id": "politics-100",
+"c": "Politics",
+"l": "Medium",
+"q": "Who led Albania's first government after independence in 1912?",
+"a": "Ismail Qemali",
+"s": "He declared independence in Vlorë and is seen as a founding father.",
+"o": [
+"Ahmet Zogu",
+"Fan Noli",
+"Enver Hoxha"
+],
+"de": {
+"q": "Wer führte Albaniens erste Regierung nach der Unabhängigkeit 1912?",
+"a": "Ismail Qemali",
+"s": "Er rief in Vlora die Unabhängigkeit aus und gilt als Gründervater.",
+"o": [
+"Ahmet Zogu",
+"Fan Noli",
+"Enver Hoxha"
+]
+}
+},
+{
 "id": "90s-1",
 "c": "90s",
 "l": "Medium",
@@ -25369,6 +26519,1156 @@
 "Snap!",
 "Haddaway",
 "La Bouche"
+]
+}
+},
+{
+"id": "90s-51",
+"c": "90s",
+"l": "Medium",
+"q": "Which country won Euro 96 in England?",
+"a": "Germany",
+"s": "Oliver Bierhoff scored the first golden goal in a major final.",
+"o": [
+"England",
+"Czech Republic",
+"France"
+],
+"de": {
+"q": "Welches Land gewann die EM 1996 in England?",
+"a": "Deutschland",
+"s": "Oliver Bierhoff erzielte das erste Golden Goal in einem großen Finale.",
+"o": [
+"England",
+"Tschechien",
+"Frankreich"
+]
+}
+},
+{
+"id": "90s-52",
+"c": "90s",
+"l": "Medium",
+"q": "Which country won the 1994 World Cup in the USA?",
+"a": "Brazil",
+"s": "They beat Italy on penalties after a 0–0 draw.",
+"o": [
+"Italy",
+"Germany",
+"Sweden"
+],
+"de": {
+"q": "Welches Land gewann die WM 1994 in den USA?",
+"a": "Brasilien",
+"s": "Es schlug Italien im Elfmeterschießen nach einem 0:0.",
+"o": [
+"Italien",
+"Deutschland",
+"Schweden"
+]
+}
+},
+{
+"id": "90s-53",
+"c": "90s",
+"l": "Medium",
+"q": "Which driver won the Formula 1 titles of 1994 and 1995 with Benetton?",
+"a": "Michael Schumacher",
+"s": "He was Germany's first Formula 1 world champion.",
+"o": [
+"Damon Hill",
+"Ayrton Senna",
+"Mika Häkkinen"
+],
+"de": {
+"q": "Welcher Fahrer gewann 1994 und 1995 mit Benetton die Formel-1-WM?",
+"a": "Michael Schumacher",
+"s": "Er war Deutschlands erster Formel-1-Weltmeister.",
+"o": [
+"Damon Hill",
+"Ayrton Senna",
+"Mika Häkkinen"
+]
+}
+},
+{
+"id": "90s-54",
+"c": "90s",
+"l": "Easy",
+"q": "Which boxer bit Evander Holyfield's ear during a fight in 1997?",
+"a": "Mike Tyson",
+"s": "He was disqualified and his licence was suspended.",
+"o": [
+"Lennox Lewis",
+"Riddick Bowe",
+"George Foreman"
+],
+"de": {
+"q": "Welcher Boxer biss Evander Holyfield 1997 im Kampf ins Ohr?",
+"a": "Mike Tyson",
+"s": "Er wurde disqualifiziert und seine Lizenz gesperrt.",
+"o": [
+"Lennox Lewis",
+"Riddick Bowe",
+"George Foreman"
+]
+}
+},
+{
+"id": "90s-55",
+"c": "90s",
+"l": "Easy",
+"q": "In which 1997 film do Will Smith and Tommy Lee Jones police aliens in black suits?",
+"a": "Men in Black",
+"s": "Its memory-wiping \"neuralyzer\" became famous.",
+"o": [
+"Independence Day",
+"Wild Wild West",
+"Bad Boys"
+],
+"de": {
+"q": "In welchem Film von 1997 überwachen Will Smith und Tommy Lee Jones in schwarzen Anzügen Außerirdische?",
+"a": "Men in Black",
+"s": "Ihr Gedächtnis löschender „Blitzdings“ wurde berühmt.",
+"o": [
+"Independence Day",
+"Wild Wild West",
+"Bad Boys"
+]
+}
+},
+{
+"id": "90s-56",
+"c": "90s",
+"l": "Easy",
+"q": "In which 1992 Disney film did Robin Williams voice the Genie?",
+"a": "Aladdin",
+"s": "He improvised many of the Genie's lines.",
+"o": [
+"Hercules",
+"The Lion King",
+"Pocahontas"
+],
+"de": {
+"q": "In welchem Disney-Film von 1992 sprach Robin Williams im Original den Dschinni?",
+"a": "Aladdin",
+"s": "Er improvisierte viele Sätze des Dschinni.",
+"o": [
+"Hercules",
+"Der König der Löwen",
+"Pocahontas"
+]
+}
+},
+{
+"id": "90s-57",
+"c": "90s",
+"l": "Medium",
+"q": "Which 1998 romantic comedy has Tom Hanks and Meg Ryan falling in love by email?",
+"a": "You've Got Mail",
+"s": "A remake of the 1940 film \"The Shop Around the Corner\".",
+"o": [
+"Sleepless in Seattle",
+"Notting Hill",
+"When Harry Met Sally"
+],
+"de": {
+"q": "In welcher Liebeskomödie von 1998 verlieben sich Tom Hanks und Meg Ryan per E-Mail?",
+"a": "e-m@il für Dich (You've Got Mail)",
+"s": "Ein Remake des Films „Rendezvous nach Ladenschluss“ von 1940.",
+"o": [
+"Schlaflos in Seattle",
+"Notting Hill",
+"Harry und Sally"
+]
+}
+},
+{
+"id": "90s-58",
+"c": "90s",
+"l": "Medium",
+"q": "Which 1997 comedy starred Mike Myers as a swinging 1960s spy?",
+"a": "Austin Powers",
+"s": "\"International Man of Mystery\" was followed by two sequels.",
+"o": [
+"Johnny English",
+"Spy Hard",
+"The Pink Panther"
+],
+"de": {
+"q": "In welcher Komödie von 1997 spielte Mike Myers einen Spion aus den Swinging Sixties?",
+"a": "Austin Powers",
+"s": "„Das schärfste Geschoss“ bekam zwei Fortsetzungen.",
+"o": [
+"Johnny English",
+"Agent 00",
+"Der rosarote Panther"
+]
+}
+},
+{
+"id": "90s-59",
+"c": "90s",
+"l": "Easy",
+"q": "In which 1999 film does the hero choose between a red pill and a blue pill?",
+"a": "The Matrix",
+"s": "The red pill shows him the truth about his world.",
+"o": [
+"Total Recall",
+"Dark City",
+"eXistenZ"
+],
+"de": {
+"q": "In welchem Film von 1999 wählt der Held zwischen einer roten und einer blauen Pille?",
+"a": "Matrix",
+"s": "Die rote Pille zeigt ihm die Wahrheit über seine Welt.",
+"o": [
+"Total Recall",
+"Dark City",
+"eXistenZ"
+]
+}
+},
+{
+"id": "90s-60",
+"c": "90s",
+"l": "Medium",
+"q": "Which sitcom, often called \"a show about nothing\", ended in 1998?",
+"a": "Seinfeld",
+"s": "Jerry Seinfeld played a version of himself in New York.",
+"o": [
+"Frasier",
+"Mad About You",
+"Cheers"
+],
+"de": {
+"q": "Welche Sitcom, oft „eine Serie über nichts“ genannt, endete 1998?",
+"a": "Seinfeld",
+"s": "Jerry Seinfeld spielte eine Version von sich selbst in New York.",
+"o": [
+"Frasier",
+"Verrückt nach dir",
+"Cheers"
+]
+}
+},
+{
+"id": "90s-61",
+"c": "90s",
+"l": "Easy",
+"q": "Which 1990s TV series followed lifeguards on a California beach?",
+"a": "Baywatch",
+"s": "David Hasselhoff starred; it was one of the most-watched shows worldwide.",
+"o": [
+"Saved by the Bell",
+"Beverly Hills, 90210",
+"Melrose Place"
+],
+"de": {
+"q": "Welche Serie der 1990er folgte Rettungsschwimmern an einem Strand in Kalifornien?",
+"a": "Baywatch",
+"s": "Mit David Hasselhoff; eine der weltweit meistgesehenen Serien.",
+"o": [
+"California High School",
+"Beverly Hills, 90210",
+"Melrose Place"
+]
+}
+},
+{
+"id": "90s-62",
+"c": "90s",
+"l": "Medium",
+"q": "Which animated series about four boys in Colorado began in 1997?",
+"a": "South Park",
+"s": "Known for its crude cut-out style and satire.",
+"o": [
+"King of the Hill",
+"Beavis and Butt-Head",
+"Daria"
+],
+"de": {
+"q": "Welche Zeichentrickserie über vier Jungs in Colorado startete 1997?",
+"a": "South Park",
+"s": "Bekannt für ihren groben Scherenschnitt-Stil und ihre Satire.",
+"o": [
+"King of the Hill",
+"Beavis and Butt-Head",
+"Daria"
+]
+}
+},
+{
+"id": "90s-63",
+"c": "90s",
+"l": "Easy",
+"q": "Which actor starred in \"The Fresh Prince of Bel-Air\"?",
+"a": "Will Smith",
+"s": "The show made him a star before his film career took off.",
+"o": [
+"Eddie Murphy",
+"Martin Lawrence",
+"Jamie Foxx"
+],
+"de": {
+"q": "Welcher Schauspieler spielte die Hauptrolle in „Der Prinz von Bel-Air“?",
+"a": "Will Smith",
+"s": "Die Serie machte ihn bekannt, bevor seine Filmkarriere begann.",
+"o": [
+"Eddie Murphy",
+"Martin Lawrence",
+"Jamie Foxx"
+]
+}
+},
+{
+"id": "90s-64",
+"c": "90s",
+"l": "Medium",
+"q": "Ronan Keating was the lead singer of which Irish boy band?",
+"a": "Boyzone",
+"s": "They had six UK number ones in the 1990s.",
+"o": [
+"Westlife",
+"Take That",
+"East 17"
+],
+"de": {
+"q": "Ronan Keating war Sänger welcher irischen Boyband?",
+"a": "Boyzone",
+"s": "Sie hatten in den 1990ern sechs Nummer-eins-Hits in Großbritannien.",
+"o": [
+"Westlife",
+"Take That",
+"East 17"
+]
+}
+},
+{
+"id": "90s-65",
+"c": "90s",
+"l": "Medium",
+"q": "Who had a 1995 worldwide hit with \"Gangsta's Paradise\"?",
+"a": "Coolio",
+"s": "The song was on the soundtrack of \"Dangerous Minds\".",
+"o": [
+"Dr. Dre",
+"Ice Cube",
+"Warren G"
+],
+"de": {
+"q": "Wer hatte 1995 einen weltweiten Hit mit „Gangsta's Paradise“?",
+"a": "Coolio",
+"s": "Der Song war auf dem Soundtrack von „Dangerous Minds“.",
+"o": [
+"Dr. Dre",
+"Ice Cube",
+"Warren G"
+]
+}
+},
+{
+"id": "90s-66",
+"c": "90s",
+"l": "Medium",
+"q": "Which band had a 1991 hit with \"Losing My Religion\"?",
+"a": "R.E.M.",
+"s": "The band came from Athens, Georgia.",
+"o": [
+"U2",
+"The Smashing Pumpkins",
+"Counting Crows"
+],
+"de": {
+"q": "Welche Band hatte 1991 einen Hit mit „Losing My Religion“?",
+"a": "R.E.M.",
+"s": "Die Band stammte aus Athens, Georgia.",
+"o": [
+"U2",
+"The Smashing Pumpkins",
+"Counting Crows"
+]
+}
+},
+{
+"id": "90s-67",
+"c": "90s",
+"l": "Medium",
+"q": "Which singer released \"Vogue\" in 1990?",
+"a": "Madonna",
+"s": "The song made the dance style \"voguing\" famous.",
+"o": [
+"Janet Jackson",
+"Paula Abdul",
+"Cher"
+],
+"de": {
+"q": "Welche Sängerin veröffentlichte 1990 „Vogue“?",
+"a": "Madonna",
+"s": "Der Song machte den Tanzstil „Voguing“ berühmt.",
+"o": [
+"Janet Jackson",
+"Paula Abdul",
+"Cher"
+]
+}
+},
+{
+"id": "90s-68",
+"c": "90s",
+"l": "Hard",
+"q": "Which rapper released the debut album \"Ready to Die\" in 1994?",
+"a": "The Notorious B.I.G.",
+"s": "Also known as Biggie Smalls, from Brooklyn.",
+"o": [
+"Nas",
+"Jay-Z",
+"Tupac Shakur"
+],
+"de": {
+"q": "Welcher Rapper veröffentlichte 1994 das Debütalbum „Ready to Die“?",
+"a": "The Notorious B.I.G.",
+"s": "Auch bekannt als Biggie Smalls, aus Brooklyn.",
+"o": [
+"Nas",
+"Jay-Z",
+"Tupac Shakur"
+]
+}
+},
+{
+"id": "90s-69",
+"c": "90s",
+"l": "Medium",
+"q": "Which Italian group had a 1999 hit with \"Blue (Da Ba Dee)\"?",
+"a": "Eiffel 65",
+"s": "The song reached number one in many European countries.",
+"o": [
+"Gigi D'Agostino",
+"Alexia",
+"Corona"
+],
+"de": {
+"q": "Welche italienische Gruppe hatte 1999 einen Hit mit „Blue (Da Ba Dee)“?",
+"a": "Eiffel 65",
+"s": "Der Song kam in vielen europäischen Ländern auf Platz eins.",
+"o": [
+"Gigi D'Agostino",
+"Alexia",
+"Corona"
+]
+}
+},
+{
+"id": "90s-70",
+"c": "90s",
+"l": "Easy",
+"q": "Which Danish-Norwegian group sang \"Barbie Girl\" in 1997?",
+"a": "Aqua",
+"s": "Toy maker Mattel sued over the song but lost.",
+"o": [
+"Ace of Base",
+"Vengaboys",
+"Whigfield"
+],
+"de": {
+"q": "Welche dänisch-norwegische Gruppe sang 1997 „Barbie Girl“?",
+"a": "Aqua",
+"s": "Spielzeughersteller Mattel klagte gegen den Song, verlor aber.",
+"o": [
+"Ace of Base",
+"Vengaboys",
+"Whigfield"
+]
+}
+},
+{
+"id": "90s-71",
+"c": "90s",
+"l": "Medium",
+"q": "Who sang the 1993 dance hit \"What Is Love\"?",
+"a": "Haddaway",
+"s": "Born in Trinidad, he made his career in Germany.",
+"o": [
+"Dr. Alban",
+"Captain Hollywood",
+"2 Unlimited"
+],
+"de": {
+"q": "Wer sang 1993 den Dancehit „What Is Love“?",
+"a": "Haddaway",
+"s": "In Trinidad geboren, machte er in Deutschland Karriere.",
+"o": [
+"Dr. Alban",
+"Captain Hollywood",
+"2 Unlimited"
+]
+}
+},
+{
+"id": "90s-72",
+"c": "90s",
+"l": "Medium",
+"q": "Which band of three brothers had a 1997 hit with \"MMMBop\"?",
+"a": "Hanson",
+"s": "The youngest, Zac, was 11 when it came out.",
+"o": [
+"The Moffatts",
+"Jonas Brothers",
+"Savage Garden"
+],
+"de": {
+"q": "Welche Band aus drei Brüdern hatte 1997 einen Hit mit „MMMBop“?",
+"a": "Hanson",
+"s": "Der Jüngste, Zac, war 11, als er erschien.",
+"o": [
+"The Moffatts",
+"Jonas Brothers",
+"Savage Garden"
+]
+}
+},
+{
+"id": "90s-73",
+"c": "90s",
+"l": "Medium",
+"q": "Which German techno band had hits with \"Hyper Hyper\" and \"How Much Is the Fish?\"?",
+"a": "Scooter",
+"s": "Fronted by H.P. Baxxter, they started in Hamburg in 1993.",
+"o": [
+"Mr. President",
+"Fun Factory",
+"Marusha"
+],
+"de": {
+"q": "Welche deutsche Technoband hatte Hits mit „Hyper Hyper“ und „How Much Is the Fish?“?",
+"a": "Scooter",
+"s": "Mit Frontmann H.P. Baxxter; gegründet 1993 in Hamburg.",
+"o": [
+"Mr. President",
+"Fun Factory",
+"Marusha"
+]
+}
+},
+{
+"id": "90s-74",
+"c": "90s",
+"l": "Easy",
+"q": "In which 1996 video game series did adventurer Lara Croft first appear?",
+"a": "Tomb Raider",
+"s": "She became one of the most famous video game characters.",
+"o": [
+"Uncharted",
+"Resident Evil",
+"Prince of Persia"
+],
+"de": {
+"q": "In welcher Videospielreihe von 1996 trat die Abenteurerin Lara Croft erstmals auf?",
+"a": "Tomb Raider",
+"s": "Sie wurde eine der bekanntesten Videospielfiguren.",
+"o": [
+"Uncharted",
+"Resident Evil",
+"Prince of Persia"
+]
+}
+},
+{
+"id": "90s-75",
+"c": "90s",
+"l": "Easy",
+"q": "Which blue hedgehog was Sega's mascot in the 1990s?",
+"a": "Sonic",
+"s": "He was created to rival Nintendo's Mario.",
+"o": [
+"Crash",
+"Spyro",
+"Knuckles"
+],
+"de": {
+"q": "Welcher blaue Igel war in den 1990ern Segas Maskottchen?",
+"a": "Sonic",
+"s": "Er wurde als Konkurrent zu Nintendos Mario erfunden.",
+"o": [
+"Crash",
+"Spyro",
+"Knuckles"
+]
+}
+},
+{
+"id": "90s-76",
+"c": "90s",
+"l": "Hard",
+"q": "In 1996 Pokémon launched in Japan with two Game Boy games: Red and which other colour?",
+"a": "Green",
+"s": "Outside Japan, the first pair was released as Red and Blue.",
+"o": [
+"Blue",
+"Yellow",
+"Gold"
+],
+"de": {
+"q": "1996 startete Pokémon in Japan mit zwei Game-Boy-Spielen: Rot und welcher anderen Farbe?",
+"a": "Grün",
+"s": "Außerhalb Japans erschien das erste Paar als Rot und Blau.",
+"o": [
+"Blau",
+"Gelb",
+"Gold"
+]
+}
+},
+{
+"id": "90s-77",
+"c": "90s",
+"l": "Medium",
+"q": "Which web directory was started by two Stanford students in 1994?",
+"a": "Yahoo!",
+"s": "It began as \"Jerry and David's Guide to the World Wide Web\".",
+"o": [
+"Google",
+"AltaVista",
+"Lycos"
+],
+"de": {
+"q": "Welches Webverzeichnis gründeten 1994 zwei Stanford-Studenten?",
+"a": "Yahoo!",
+"s": "Es begann als „Jerry and David's Guide to the World Wide Web“.",
+"o": [
+"Google",
+"AltaVista",
+"Lycos"
+]
+}
+},
+{
+"id": "90s-78",
+"c": "90s",
+"l": "Medium",
+"q": "What does SMS, first sent in 1992, stand for?",
+"a": "Short Message Service",
+"s": "The very first text message said \"Merry Christmas\".",
+"o": [
+"Simple Mobile System",
+"Send My Sentence",
+"Standard Message Signal"
+],
+"de": {
+"q": "Wofür steht SMS, zum ersten Mal 1992 verschickt?",
+"a": "Short Message Service",
+"s": "Die allererste SMS lautete „Merry Christmas“.",
+"o": [
+"Simple Mobile System",
+"Send My Sentence",
+"Standard Message Signal"
+]
+}
+},
+{
+"id": "90s-79",
+"c": "90s",
+"l": "Easy",
+"q": "Which online auction site was founded in 1995?",
+"a": "eBay",
+"s": "It started as \"AuctionWeb\"; the first item sold was a broken laser pointer.",
+"o": [
+"Amazon",
+"Craigslist",
+"Etsy"
+],
+"de": {
+"q": "Welche Online-Auktionsseite wurde 1995 gegründet?",
+"a": "eBay",
+"s": "Sie begann als „AuctionWeb“; der erste verkaufte Artikel war ein kaputter Laserpointer.",
+"o": [
+"Amazon",
+"Craigslist",
+"Etsy"
+]
+}
+},
+{
+"id": "90s-80",
+"c": "90s",
+"l": "Hard",
+"q": "Which 1996 instant messenger was famous for its \"uh-oh\" sound?",
+"a": "ICQ",
+"s": "The name sounds like \"I seek you\".",
+"o": [
+"MSN Messenger",
+"AIM",
+"Yahoo! Messenger"
+],
+"de": {
+"q": "Welcher Instant Messenger von 1996 war für sein „Uh-oh“-Geräusch bekannt?",
+"a": "ICQ",
+"s": "Der Name klingt wie „I seek you“.",
+"o": [
+"MSN Messenger",
+"AIM",
+"Yahoo! Messenger"
+]
+}
+},
+{
+"id": "90s-81",
+"c": "90s",
+"l": "Easy",
+"q": "Which company launched the colourful iMac G3 in 1998?",
+"a": "Apple",
+"s": "Its see-through plastic case started a design craze.",
+"o": [
+"Compaq",
+"IBM",
+"Dell"
+],
+"de": {
+"q": "Welche Firma brachte 1998 den bunten iMac G3 heraus?",
+"a": "Apple",
+"s": "Sein durchsichtiges Kunststoffgehäuse löste einen Designtrend aus.",
+"o": [
+"Compaq",
+"IBM",
+"Dell"
+]
+}
+},
+{
+"id": "90s-82",
+"c": "90s",
+"l": "Medium",
+"q": "The first module of which space station was launched in 1998?",
+"a": "The International Space Station",
+"s": "The Russian module Zarya went up first; crews have lived aboard since 2000.",
+"o": [
+"Mir",
+"Skylab",
+"Tiangong"
+],
+"de": {
+"q": "Das erste Modul welcher Raumstation wurde 1998 gestartet?",
+"a": "Der Internationalen Raumstation (ISS)",
+"s": "Zuerst startete das russische Modul Sarja; seit 2000 leben dort Crews.",
+"o": [
+"Mir",
+"Skylab",
+"Tiangong"
+]
+}
+},
+{
+"id": "90s-83",
+"c": "90s",
+"l": "Hard",
+"q": "What was the name of the small rover that drove on Mars in 1997?",
+"a": "Sojourner",
+"s": "It was part of NASA's Mars Pathfinder mission.",
+"o": [
+"Spirit",
+"Curiosity",
+"Opportunity"
+],
+"de": {
+"q": "Wie hieß der kleine Rover, der 1997 auf dem Mars fuhr?",
+"a": "Sojourner",
+"s": "Er gehörte zur NASA-Mission Mars Pathfinder.",
+"o": [
+"Spirit",
+"Curiosity",
+"Opportunity"
+]
+}
+},
+{
+"id": "90s-84",
+"c": "90s",
+"l": "Hard",
+"q": "Which bright comet could be seen without a telescope for months in 1997?",
+"a": "Hale-Bopp",
+"s": "It was visible to the naked eye for a record 18 months.",
+"o": [
+"Halley's Comet",
+"Shoemaker-Levy 9",
+"Hyakutake"
+],
+"de": {
+"q": "Welcher helle Komet war 1997 monatelang ohne Teleskop zu sehen?",
+"a": "Hale-Bopp",
+"s": "Er war rekordverdächtige 18 Monate mit bloßem Auge sichtbar.",
+"o": [
+"Der Halleysche Komet",
+"Shoemaker-Levy 9",
+"Hyakutake"
+]
+}
+},
+{
+"id": "90s-85",
+"c": "90s",
+"l": "Medium",
+"q": "Which city hosted the 1996 Summer Olympics?",
+"a": "Atlanta",
+"s": "They marked 100 years of the modern Games.",
+"o": [
+"Athens",
+"Los Angeles",
+"Sydney"
+],
+"de": {
+"q": "Welche Stadt richtete die Olympischen Sommerspiele 1996 aus?",
+"a": "Atlanta",
+"s": "Sie feierten 100 Jahre moderne Olympische Spiele.",
+"o": [
+"Athen",
+"Los Angeles",
+"Sydney"
+]
+}
+},
+{
+"id": "90s-86",
+"c": "90s",
+"l": "Hard",
+"q": "Which Norwegian town hosted the 1994 Winter Olympics?",
+"a": "Lillehammer",
+"s": "They were held just two years after the previous Winter Games, to change the cycle.",
+"o": [
+"Oslo",
+"Trondheim",
+"Bergen"
+],
+"de": {
+"q": "Welche norwegische Stadt richtete die Olympischen Winterspiele 1994 aus?",
+"a": "Lillehammer",
+"s": "Sie fanden nur zwei Jahre nach den vorigen Winterspielen statt, um den Rhythmus zu ändern.",
+"o": [
+"Oslo",
+"Trondheim",
+"Bergen"
+]
+}
+},
+{
+"id": "90s-87",
+"c": "90s",
+"l": "Medium",
+"q": "Which war's main 1991 operation was called \"Desert Storm\"?",
+"a": "The Gulf War",
+"s": "A US-led coalition drove Iraqi forces out of Kuwait.",
+"o": [
+"The Iraq War",
+"The Bosnian War",
+"The Kosovo War"
+],
+"de": {
+"q": "Die Hauptoperation welches Krieges hieß 1991 „Desert Storm“?",
+"a": "Der Zweite Golfkrieg",
+"s": "Eine US-geführte Koalition vertrieb irakische Truppen aus Kuwait.",
+"o": [
+"Der Irakkrieg",
+"Der Bosnienkrieg",
+"Der Kosovokrieg"
+]
+}
+},
+{
+"id": "90s-88",
+"c": "90s",
+"l": "Medium",
+"q": "Which 1998 agreement brought peace to Northern Ireland?",
+"a": "The Good Friday Agreement",
+"s": "It was approved by voters in both parts of Ireland.",
+"o": [
+"The Anglo-Irish Treaty",
+"The Hillsborough Agreement",
+"The Downing Street Declaration"
+],
+"de": {
+"q": "Welches Abkommen von 1998 brachte Frieden nach Nordirland?",
+"a": "Das Karfreitagsabkommen",
+"s": "Es wurde von Wählern in beiden Teilen Irlands angenommen.",
+"o": [
+"Der Anglo-Irische Vertrag",
+"Das Hillsborough-Abkommen",
+"Die Downing-Street-Erklärung"
+]
+}
+},
+{
+"id": "90s-89",
+"c": "90s",
+"l": "Medium",
+"q": "In which country did a genocide take place in 1994?",
+"a": "Rwanda",
+"s": "Around 800,000 people, mostly Tutsi, were killed in about 100 days.",
+"o": [
+"Burundi",
+"Uganda",
+"Sudan"
+],
+"de": {
+"q": "In welchem Land fand 1994 ein Völkermord statt?",
+"a": "Ruanda",
+"s": "Rund 800.000 Menschen, überwiegend Tutsi, wurden in etwa 100 Tagen getötet.",
+"o": [
+"Burundi",
+"Uganda",
+"Sudan"
+]
+}
+},
+{
+"id": "90s-90",
+"c": "90s",
+"l": "Medium",
+"q": "Which Polish trade union leader became president of Poland in 1990?",
+"a": "Lech Wałęsa",
+"s": "He had led the Solidarity movement.",
+"o": [
+"Wojciech Jaruzelski",
+"Aleksander Kwaśniewski",
+"Tadeusz Mazowiecki"
+],
+"de": {
+"q": "Welcher polnische Gewerkschaftsführer wurde 1990 Präsident Polens?",
+"a": "Lech Wałęsa",
+"s": "Er hatte die Bewegung Solidarność angeführt.",
+"o": [
+"Wojciech Jaruzelski",
+"Aleksander Kwaśniewski",
+"Tadeusz Mazowiecki"
+]
+}
+},
+{
+"id": "90s-91",
+"c": "90s",
+"l": "Medium",
+"q": "Playwright Václav Havel became president of which country in December 1989?",
+"a": "Czechoslovakia",
+"s": "He later became the first president of the Czech Republic.",
+"o": [
+"Poland",
+"Hungary",
+"Austria"
+],
+"de": {
+"q": "Der Dramatiker Václav Havel wurde im Dezember 1989 Präsident welches Landes?",
+"a": "Der Tschechoslowakei",
+"s": "Später wurde er erster Präsident Tschechiens.",
+"o": [
+"Polens",
+"Ungarns",
+"Österreichs"
+]
+}
+},
+{
+"id": "90s-92",
+"c": "90s",
+"l": "Easy",
+"q": "In 1991 the Bundestag voted to move the seat of government from Bonn to which city?",
+"a": "Berlin",
+"s": "The vote was close: 338 to 320.",
+"o": [
+"Frankfurt",
+"Hamburg",
+"Munich"
+],
+"de": {
+"q": "1991 stimmte der Bundestag für den Umzug des Regierungssitzes von Bonn in welche Stadt?",
+"a": "Berlin",
+"s": "Die Abstimmung war knapp: 338 zu 320.",
+"o": [
+"Frankfurt",
+"Hamburg",
+"München"
+]
+}
+},
+{
+"id": "90s-93",
+"c": "90s",
+"l": "Easy",
+"q": "Which German currency did the euro replace?",
+"a": "The Deutsche Mark",
+"s": "Germans could swap their D-Mark notes and coins for euros from 2002.",
+"o": [
+"The Reichsmark",
+"The Schilling",
+"The Gulden"
+],
+"de": {
+"q": "Welche deutsche Währung wurde durch den Euro ersetzt?",
+"a": "Die D-Mark",
+"s": "Ab 2002 konnten D-Mark-Scheine und -Münzen in Euro getauscht werden.",
+"o": [
+"Die Reichsmark",
+"Der Schilling",
+"Der Gulden"
+]
+}
+},
+{
+"id": "90s-94",
+"c": "90s",
+"l": "Medium",
+"q": "\"The Rachel\" haircut was named after the Friends character played by which actress?",
+"a": "Jennifer Aniston",
+"s": "Millions copied the layered cut in the mid-1990s.",
+"o": [
+"Courteney Cox",
+"Lisa Kudrow",
+"Sarah Jessica Parker"
+],
+"de": {
+"q": "Der Haarschnitt „The Rachel“ war nach der Friends-Figur welcher Schauspielerin benannt?",
+"a": "Jennifer Aniston",
+"s": "Millionen kopierten den Stufenschnitt Mitte der 1990er.",
+"o": [
+"Courteney Cox",
+"Lisa Kudrow",
+"Sarah Jessica Parker"
+]
+}
+},
+{
+"id": "90s-95",
+"c": "90s",
+"l": "Easy",
+"q": "Which TV series about a teenage vampire slayer began in 1997?",
+"a": "Buffy the Vampire Slayer",
+"s": "Sarah Michelle Gellar played Buffy for seven seasons.",
+"o": [
+"Charmed",
+"Sabrina the Teenage Witch",
+"The Vampire Diaries"
+],
+"de": {
+"q": "Welche Serie über eine jugendliche Vampirjägerin startete 1997?",
+"a": "Buffy – Im Bann der Dämonen",
+"s": "Sarah Michelle Gellar spielte Buffy sieben Staffeln lang.",
+"o": [
+"Charmed",
+"Sabrina – Total verhext!",
+"Vampire Diaries"
+]
+}
+},
+{
+"id": "90s-96",
+"c": "90s",
+"l": "Easy",
+"q": "Which 1996 blockbuster by German director Roland Emmerich has aliens attacking on 4 July?",
+"a": "Independence Day",
+"s": "The White House being blown up became one of the decade's most famous film scenes.",
+"o": [
+"Godzilla",
+"Armageddon",
+"Mars Attacks!"
+],
+"de": {
+"q": "Welcher Blockbuster von 1996 des deutschen Regisseurs Roland Emmerich zeigt einen Alien-Angriff am 4. Juli?",
+"a": "Independence Day",
+"s": "Die Explosion des Weißen Hauses wurde eine der bekanntesten Filmszenen des Jahrzehnts.",
+"o": [
+"Godzilla",
+"Armageddon",
+"Mars Attacks!"
+]
+}
+},
+{
+"id": "90s-97",
+"c": "90s",
+"l": "Medium",
+"q": "Gwen Stefani was the lead singer of which 1990s band?",
+"a": "No Doubt",
+"s": "Their 1995 hit \"Don't Speak\" topped charts worldwide.",
+"o": [
+"Garbage",
+"The Cranberries",
+"Hole"
+],
+"de": {
+"q": "Gwen Stefani war Sängerin welcher Band der 1990er?",
+"a": "No Doubt",
+"s": "Ihr Hit „Don't Speak“ von 1995 stand weltweit auf Platz eins.",
+"o": [
+"Garbage",
+"The Cranberries",
+"Hole"
+]
+}
+},
+{
+"id": "90s-98",
+"c": "90s",
+"l": "Medium",
+"q": "Which Seattle grunge band is fronted by Eddie Vedder?",
+"a": "Pearl Jam",
+"s": "Their 1991 debut album was called \"Ten\".",
+"o": [
+"Soundgarden",
+"Alice in Chains",
+"Stone Temple Pilots"
+],
+"de": {
+"q": "Welche Grunge-Band aus Seattle hat Eddie Vedder als Sänger?",
+"a": "Pearl Jam",
+"s": "Ihr Debütalbum von 1991 hieß „Ten“.",
+"o": [
+"Soundgarden",
+"Alice in Chains",
+"Stone Temple Pilots"
+]
+}
+},
+{
+"id": "90s-99",
+"c": "90s",
+"l": "Easy",
+"q": "Which 1998 Disney film is about a young woman who disguises herself as a soldier in ancient China?",
+"a": "Mulan",
+"s": "Based on a Chinese legend more than 1,500 years old.",
+"o": [
+"Pocahontas",
+"Hercules",
+"Tarzan"
+],
+"de": {
+"q": "Welcher Disney-Film von 1998 handelt von einer jungen Frau, die sich im alten China als Soldat verkleidet?",
+"a": "Mulan",
+"s": "Nach einer über 1.500 Jahre alten chinesischen Legende.",
+"o": [
+"Pocahontas",
+"Hercules",
+"Tarzan"
+]
+}
+},
+{
+"id": "90s-100",
+"c": "90s",
+"l": "Hard",
+"q": "Which company made Beanie Babies, the collectable toy craze of the late 1990s?",
+"a": "Ty",
+"s": "Some people paid thousands for rare ones, hoping they would rise in value.",
+"o": [
+"Mattel",
+"Hasbro",
+"Fisher-Price"
+],
+"de": {
+"q": "Welche Firma stellte Beanie Babies her, den Sammeltrend der späten 1990er?",
+"a": "Ty",
+"s": "Manche zahlten Tausende für seltene Exemplare, in der Hoffnung auf Wertsteigerung.",
+"o": [
+"Mattel",
+"Hasbro",
+"Fisher-Price"
 ]
 }
 },
@@ -26523,6 +28823,1156 @@
 }
 },
 {
+"id": "kids-51",
+"c": "Kids",
+"l": "Easy",
+"q": "What colour are ripe strawberries?",
+"a": "Red",
+"s": "Strawberries are white or green before they ripen.",
+"o": [
+"Blue",
+"Yellow",
+"Purple"
+],
+"de": {
+"q": "Welche Farbe haben reife Erdbeeren?",
+"a": "Rot",
+"s": "Bevor sie reif sind, sind Erdbeeren weiß oder grün.",
+"o": [
+"Blau",
+"Gelb",
+"Lila"
+]
+}
+},
+{
+"id": "kids-52",
+"c": "Kids",
+"l": "Easy",
+"q": "How many legs does a bird have?",
+"a": "2",
+"s": "Birds also have two wings.",
+"o": [
+"4",
+"6",
+"0"
+],
+"de": {
+"q": "Wie viele Beine hat ein Vogel?",
+"a": "2",
+"s": "Vögel haben auch zwei Flügel.",
+"o": [
+"4",
+"6",
+"0"
+]
+}
+},
+{
+"id": "kids-53",
+"c": "Kids",
+"l": "Easy",
+"q": "Which animal says \"oink\"?",
+"a": "A pig",
+"s": "Pigs are very clever animals.",
+"o": [
+"A cow",
+"A duck",
+"A goat"
+],
+"de": {
+"q": "Welches Tier macht „Oink“ (Grunz)?",
+"a": "Das Schwein",
+"s": "Schweine sind sehr kluge Tiere.",
+"o": [
+"Die Kuh",
+"Die Ente",
+"Die Ziege"
+]
+}
+},
+{
+"id": "kids-54",
+"c": "Kids",
+"l": "Easy",
+"q": "Which part of your body do you use to see?",
+"a": "Your eyes",
+"s": "You blink about 15 times every minute.",
+"o": [
+"Your ears",
+"Your nose",
+"Your hands"
+],
+"de": {
+"q": "Mit welchem Körperteil siehst du?",
+"a": "Mit den Augen",
+"s": "Du blinzelst etwa 15-mal pro Minute.",
+"o": [
+"Mit den Ohren",
+"Mit der Nase",
+"Mit den Händen"
+]
+}
+},
+{
+"id": "kids-55",
+"c": "Kids",
+"l": "Easy",
+"q": "What is 2 + 2?",
+"a": "4",
+"s": "Two and two more make four.",
+"o": [
+"3",
+"5",
+"22"
+],
+"de": {
+"q": "Was ist 2 + 2?",
+"a": "4",
+"s": "Zwei und noch zwei ergeben vier.",
+"o": [
+"3",
+"5",
+"22"
+]
+}
+},
+{
+"id": "kids-56",
+"c": "Kids",
+"l": "Easy",
+"q": "Which day comes after Tuesday?",
+"a": "Wednesday",
+"s": "Wednesday is in the middle of the working week.",
+"o": [
+"Monday",
+"Thursday",
+"Sunday"
+],
+"de": {
+"q": "Welcher Tag kommt nach Dienstag?",
+"a": "Mittwoch",
+"s": "Der Mittwoch ist die Mitte der Arbeitswoche.",
+"o": [
+"Montag",
+"Donnerstag",
+"Sonntag"
+]
+}
+},
+{
+"id": "kids-57",
+"c": "Kids",
+"l": "Easy",
+"q": "What colour is grass?",
+"a": "Green",
+"s": "Grass gets its green colour from chlorophyll.",
+"o": [
+"Blue",
+"Brown",
+"Red"
+],
+"de": {
+"q": "Welche Farbe hat Gras?",
+"a": "Grün",
+"s": "Gras bekommt seine grüne Farbe vom Chlorophyll.",
+"o": [
+"Blau",
+"Braun",
+"Rot"
+]
+}
+},
+{
+"id": "kids-58",
+"c": "Kids",
+"l": "Easy",
+"q": "What is a baby sheep called?",
+"a": "A lamb",
+"s": "Lambs are usually born in spring.",
+"o": [
+"A calf",
+"A kid",
+"A foal"
+],
+"de": {
+"q": "Wie heißt ein Schafbaby?",
+"a": "Ein Lamm",
+"s": "Lämmer kommen meist im Frühling zur Welt.",
+"o": [
+"Ein Kalb",
+"Ein Zicklein",
+"Ein Fohlen"
+]
+}
+},
+{
+"id": "kids-59",
+"c": "Kids",
+"l": "Easy",
+"q": "What do hens lay?",
+"a": "Eggs",
+"s": "A hen can lay about one egg a day.",
+"o": [
+"Milk",
+"Seeds",
+"Feathers"
+],
+"de": {
+"q": "Was legen Hühner?",
+"a": "Eier",
+"s": "Ein Huhn kann etwa ein Ei pro Tag legen.",
+"o": [
+"Milch",
+"Samen",
+"Federn"
+]
+}
+},
+{
+"id": "kids-60",
+"c": "Kids",
+"l": "Easy",
+"q": "What is the biggest animal in the world?",
+"a": "The blue whale",
+"s": "It is even bigger than the biggest dinosaurs.",
+"o": [
+"The elephant",
+"The giraffe",
+"The shark"
+],
+"de": {
+"q": "Was ist das größte Tier der Welt?",
+"a": "Der Blauwal",
+"s": "Er ist sogar größer als die größten Dinosaurier.",
+"o": [
+"Der Elefant",
+"Die Giraffe",
+"Der Hai"
+]
+}
+},
+{
+"id": "kids-61",
+"c": "Kids",
+"l": "Easy",
+"q": "What shape is a wheel?",
+"a": "A circle",
+"s": "Round wheels can roll smoothly.",
+"o": [
+"A square",
+"A triangle",
+"A star"
+],
+"de": {
+"q": "Welche Form hat ein Rad?",
+"a": "Einen Kreis",
+"s": "Runde Räder können gleichmäßig rollen.",
+"o": [
+"Ein Quadrat",
+"Ein Dreieck",
+"Einen Stern"
+]
+}
+},
+{
+"id": "kids-62",
+"c": "Kids",
+"l": "Easy",
+"q": "What do you wear on your feet?",
+"a": "Shoes (and socks)",
+"s": "Shoes protect your feet when you walk.",
+"o": [
+"Gloves",
+"A hat",
+"A scarf"
+],
+"de": {
+"q": "Was trägst du an den Füßen?",
+"a": "Schuhe (und Socken)",
+"s": "Schuhe schützen deine Füße beim Gehen.",
+"o": [
+"Handschuhe",
+"Eine Mütze",
+"Einen Schal"
+]
+}
+},
+{
+"id": "kids-63",
+"c": "Kids",
+"l": "Easy",
+"q": "Which season is usually the coldest?",
+"a": "Winter",
+"s": "In winter it can snow and lakes can freeze.",
+"o": [
+"Summer",
+"Spring",
+"Autumn"
+],
+"de": {
+"q": "Welche Jahreszeit ist meistens die kälteste?",
+"a": "Winter",
+"s": "Im Winter kann es schneien und Seen können zufrieren.",
+"o": [
+"Sommer",
+"Frühling",
+"Herbst"
+]
+}
+},
+{
+"id": "kids-64",
+"c": "Kids",
+"l": "Easy",
+"q": "What is 6 + 4?",
+"a": "10",
+"s": "Six fingers and four fingers make ten.",
+"o": [
+"9",
+"11",
+"12"
+],
+"de": {
+"q": "Was ist 6 + 4?",
+"a": "10",
+"s": "Sechs Finger und vier Finger ergeben zehn.",
+"o": [
+"9",
+"11",
+"12"
+]
+}
+},
+{
+"id": "kids-65",
+"c": "Kids",
+"l": "Easy",
+"q": "Which animal is black and white and eats bamboo?",
+"a": "The panda",
+"s": "Giant pandas live in the mountains of China.",
+"o": [
+"The zebra",
+"The penguin",
+"The skunk"
+],
+"de": {
+"q": "Welches Tier ist schwarz-weiß und frisst Bambus?",
+"a": "Der Panda",
+"s": "Große Pandas leben in den Bergen Chinas.",
+"o": [
+"Das Zebra",
+"Der Pinguin",
+"Das Stinktier"
+]
+}
+},
+{
+"id": "kids-66",
+"c": "Kids",
+"l": "Easy",
+"q": "What is a bee's home called?",
+"a": "A hive",
+"s": "Thousands of bees can live in one hive.",
+"o": [
+"A nest",
+"A burrow",
+"A den"
+],
+"de": {
+"q": "Wie heißt das Zuhause der Bienen?",
+"a": "Bienenstock",
+"s": "In einem Bienenstock können Tausende Bienen leben.",
+"o": [
+"Nest",
+"Bau",
+"Höhle"
+]
+}
+},
+{
+"id": "kids-67",
+"c": "Kids",
+"l": "Easy",
+"q": "What colour is fresh snow?",
+"a": "White",
+"s": "Snowflakes are made of tiny ice crystals.",
+"o": [
+"Blue",
+"Grey",
+"Silver"
+],
+"de": {
+"q": "Welche Farbe hat frischer Schnee?",
+"a": "Weiß",
+"s": "Schneeflocken bestehen aus winzigen Eiskristallen.",
+"o": [
+"Blau",
+"Grau",
+"Silber"
+]
+}
+},
+{
+"id": "kids-68",
+"c": "Kids",
+"l": "Easy",
+"q": "What is the opposite of big?",
+"a": "Small",
+"s": "An elephant is big and a mouse is small.",
+"o": [
+"Tall",
+"Long",
+"Heavy"
+],
+"de": {
+"q": "Was ist das Gegenteil von groß?",
+"a": "Klein",
+"s": "Ein Elefant ist groß und eine Maus ist klein.",
+"o": [
+"Lang",
+"Weit",
+"Schwer"
+]
+}
+},
+{
+"id": "kids-69",
+"c": "Kids",
+"l": "Easy",
+"q": "Which animal has a very long neck?",
+"a": "The giraffe",
+"s": "Its neck can be about 2 metres long.",
+"o": [
+"The horse",
+"The camel",
+"The ostrich"
+],
+"de": {
+"q": "Welches Tier hat einen sehr langen Hals?",
+"a": "Die Giraffe",
+"s": "Ihr Hals kann etwa 2 Meter lang sein.",
+"o": [
+"Das Pferd",
+"Das Kamel",
+"Der Strauß"
+]
+}
+},
+{
+"id": "kids-70",
+"c": "Kids",
+"l": "Easy",
+"q": "What is a baby horse called?",
+"a": "A foal",
+"s": "Foals can stand up within an hour of being born.",
+"o": [
+"A pony",
+"A calf",
+"A cub"
+],
+"de": {
+"q": "Wie heißt ein Pferdebaby?",
+"a": "Ein Fohlen",
+"s": "Fohlen können schon kurz nach der Geburt stehen.",
+"o": [
+"Ein Pony",
+"Ein Kalb",
+"Ein Junges"
+]
+}
+},
+{
+"id": "kids-71",
+"c": "Kids",
+"l": "Easy",
+"q": "Which small animal carries its house on its back?",
+"a": "The snail",
+"s": "Snails move very slowly and leave a shiny trail.",
+"o": [
+"The ant",
+"The frog",
+"The ladybird"
+],
+"de": {
+"q": "Welches kleine Tier trägt sein Haus auf dem Rücken?",
+"a": "Die Schnecke",
+"s": "Schnecken bewegen sich sehr langsam und hinterlassen eine glänzende Spur.",
+"o": [
+"Die Ameise",
+"Der Frosch",
+"Der Marienkäfer"
+]
+}
+},
+{
+"id": "kids-72",
+"c": "Kids",
+"l": "Easy",
+"q": "What do you use to brush your teeth?",
+"a": "A toothbrush",
+"s": "You should brush your teeth twice a day.",
+"o": [
+"A comb",
+"A spoon",
+"A sponge"
+],
+"de": {
+"q": "Womit putzt du dir die Zähne?",
+"a": "Mit einer Zahnbürste",
+"s": "Man sollte sich zweimal am Tag die Zähne putzen.",
+"o": [
+"Mit einem Kamm",
+"Mit einem Löffel",
+"Mit einem Schwamm"
+]
+}
+},
+{
+"id": "kids-73",
+"c": "Kids",
+"l": "Easy",
+"q": "Which star can we see in the sky during the day?",
+"a": "The Sun",
+"s": "The Sun is a star, just much closer than the others.",
+"o": [
+"The Moon",
+"The North Star",
+"Mars"
+],
+"de": {
+"q": "Welchen Stern sehen wir tagsüber am Himmel?",
+"a": "Die Sonne",
+"s": "Die Sonne ist ein Stern, nur viel näher als die anderen.",
+"o": [
+"Den Mond",
+"Den Polarstern",
+"Den Mars"
+]
+}
+},
+{
+"id": "kids-74",
+"c": "Kids",
+"l": "Easy",
+"q": "What do caterpillars mostly eat?",
+"a": "Leaves",
+"s": "They eat a lot so they can grow and become butterflies.",
+"o": [
+"Meat",
+"Bread",
+"Sand"
+],
+"de": {
+"q": "Was fressen Raupen hauptsächlich?",
+"a": "Blätter",
+"s": "Sie fressen viel, damit sie wachsen und Schmetterlinge werden können.",
+"o": [
+"Fleisch",
+"Brot",
+"Sand"
+]
+}
+},
+{
+"id": "kids-75",
+"c": "Kids",
+"l": "Easy",
+"q": "Which number comes after 99?",
+"a": "100",
+"s": "One hundred is written with a 1 and two zeros.",
+"o": [
+"98",
+"101",
+"1000"
+],
+"de": {
+"q": "Welche Zahl kommt nach 99?",
+"a": "100",
+"s": "Hundert schreibt man mit einer 1 und zwei Nullen.",
+"o": [
+"98",
+"101",
+"1000"
+]
+}
+},
+{
+"id": "kids-76",
+"c": "Kids",
+"l": "Easy",
+"q": "What is 4 + 4?",
+"a": "8",
+"s": "A spider has 4 + 4 = 8 legs.",
+"o": [
+"6",
+"7",
+"9"
+],
+"de": {
+"q": "Was ist 4 + 4?",
+"a": "8",
+"s": "Eine Spinne hat 4 + 4 = 8 Beine.",
+"o": [
+"6",
+"7",
+"9"
+]
+}
+},
+{
+"id": "kids-77",
+"c": "Kids",
+"l": "Easy",
+"q": "How many hours are in a day?",
+"a": "24",
+"s": "The Earth spins around once in about 24 hours.",
+"o": [
+"12",
+"20",
+"60"
+],
+"de": {
+"q": "Wie viele Stunden hat ein Tag?",
+"a": "24",
+"s": "Die Erde dreht sich in etwa 24 Stunden einmal um sich selbst.",
+"o": [
+"12",
+"20",
+"60"
+]
+}
+},
+{
+"id": "kids-78",
+"c": "Kids",
+"l": "Easy",
+"q": "What colour do you get if you mix red and yellow paint?",
+"a": "Orange",
+"s": "The fruit and the colour have the same name.",
+"o": [
+"Green",
+"Purple",
+"Pink"
+],
+"de": {
+"q": "Welche Farbe entsteht, wenn man Rot und Gelb mischt?",
+"a": "Orange",
+"s": "Die Frucht und die Farbe haben den gleichen Namen.",
+"o": [
+"Grün",
+"Lila",
+"Rosa"
+]
+}
+},
+{
+"id": "kids-79",
+"c": "Kids",
+"l": "Easy",
+"q": "In the story of the three little pigs, who tries to blow their houses down?",
+"a": "The big bad wolf",
+"s": "Only the house made of bricks stays standing.",
+"o": [
+"A fox",
+"A bear",
+"A giant"
+],
+"de": {
+"q": "Wer versucht in der Geschichte von den drei kleinen Schweinchen, ihre Häuser umzupusten?",
+"a": "Der große böse Wolf",
+"s": "Nur das Haus aus Ziegelsteinen bleibt stehen.",
+"o": [
+"Ein Fuchs",
+"Ein Bär",
+"Ein Riese"
+]
+}
+},
+{
+"id": "kids-80",
+"c": "Kids",
+"l": "Easy",
+"q": "In Cinderella, what does the fairy godmother turn a pumpkin into?",
+"a": "A carriage",
+"s": "The magic ends at midnight.",
+"o": [
+"A castle",
+"A horse",
+"A dress"
+],
+"de": {
+"q": "Was zaubert die gute Fee in Cinderella aus einem Kürbis?",
+"a": "Eine Kutsche",
+"s": "Um Mitternacht endet der Zauber.",
+"o": [
+"Ein Schloss",
+"Ein Pferd",
+"Ein Kleid"
+]
+}
+},
+{
+"id": "kids-81",
+"c": "Kids",
+"l": "Easy",
+"q": "Which girl in a fairy tale eats the three bears' porridge?",
+"a": "Goldilocks",
+"s": "She also tries their chairs and beds.",
+"o": [
+"Little Red Riding Hood",
+"Snow White",
+"Rapunzel"
+],
+"de": {
+"q": "Welches Mädchen isst im Märchen den Brei der drei Bären?",
+"a": "Goldlöckchen",
+"s": "Sie probiert auch ihre Stühle und Betten aus.",
+"o": [
+"Rotkäppchen",
+"Schneewittchen",
+"Rapunzel"
+]
+}
+},
+{
+"id": "kids-82",
+"c": "Kids",
+"l": "Easy",
+"q": "What do we call a person whose job is to put out fires?",
+"a": "A firefighter",
+"s": "Firefighters also rescue people and animals.",
+"o": [
+"A police officer",
+"A plumber",
+"A pilot"
+],
+"de": {
+"q": "Wie nennt man jemanden, dessen Beruf es ist, Feuer zu löschen?",
+"a": "Feuerwehrmann oder Feuerwehrfrau",
+"s": "Die Feuerwehr rettet auch Menschen und Tiere.",
+"o": [
+"Polizist",
+"Klempner",
+"Pilot"
+]
+}
+},
+{
+"id": "kids-83",
+"c": "Kids",
+"l": "Easy",
+"q": "What is a doctor for animals called?",
+"a": "A vet",
+"s": "Short for veterinarian.",
+"o": [
+"A dentist",
+"A nurse",
+"A zookeeper"
+],
+"de": {
+"q": "Wie heißt ein Arzt für Tiere?",
+"a": "Tierarzt",
+"s": "Auch Veterinär genannt.",
+"o": [
+"Zahnarzt",
+"Krankenpfleger",
+"Tierpfleger"
+]
+}
+},
+{
+"id": "kids-84",
+"c": "Kids",
+"l": "Easy",
+"q": "Which vehicle runs on rails?",
+"a": "A train",
+"s": "Some fast trains can go over 300 km/h.",
+"o": [
+"A bus",
+"A boat",
+"A bicycle"
+],
+"de": {
+"q": "Welches Fahrzeug fährt auf Schienen?",
+"a": "Ein Zug",
+"s": "Manche Schnellzüge fahren über 300 km/h.",
+"o": [
+"Ein Bus",
+"Ein Boot",
+"Ein Fahrrad"
+]
+}
+},
+{
+"id": "kids-85",
+"c": "Kids",
+"l": "Easy",
+"q": "What do fish use to breathe underwater?",
+"a": "Gills",
+"s": "Gills take oxygen out of the water.",
+"o": [
+"Lungs",
+"Fins",
+"Scales"
+],
+"de": {
+"q": "Womit atmen Fische unter Wasser?",
+"a": "Mit Kiemen",
+"s": "Kiemen holen den Sauerstoff aus dem Wasser.",
+"o": [
+"Mit der Lunge",
+"Mit den Flossen",
+"Mit den Schuppen"
+]
+}
+},
+{
+"id": "kids-86",
+"c": "Kids",
+"l": "Easy",
+"q": "Which big cat has orange fur with black stripes?",
+"a": "The tiger",
+"s": "No two tigers have the same stripe pattern.",
+"o": [
+"The lion",
+"The leopard",
+"The cheetah"
+],
+"de": {
+"q": "Welche Großkatze hat orangefarbenes Fell mit schwarzen Streifen?",
+"a": "Der Tiger",
+"s": "Keine zwei Tiger haben das gleiche Streifenmuster.",
+"o": [
+"Der Löwe",
+"Der Leopard",
+"Der Gepard"
+]
+}
+},
+{
+"id": "kids-87",
+"c": "Kids",
+"l": "Easy",
+"q": "How many arms does a starfish usually have?",
+"a": "5",
+"s": "If a starfish loses an arm, it can grow a new one.",
+"o": [
+"3",
+"4",
+"8"
+],
+"de": {
+"q": "Wie viele Arme hat ein Seestern meistens?",
+"a": "5",
+"s": "Wenn ein Seestern einen Arm verliert, kann ihm ein neuer wachsen.",
+"o": [
+"3",
+"4",
+"8"
+]
+}
+},
+{
+"id": "kids-88",
+"c": "Kids",
+"l": "Easy",
+"q": "What are the white fluffy things floating in the sky called?",
+"a": "Clouds",
+"s": "Clouds are made of tiny drops of water.",
+"o": [
+"Smoke",
+"Snowmen",
+"Cotton wool"
+],
+"de": {
+"q": "Wie heißen die weißen, flauschigen Dinge am Himmel?",
+"a": "Wolken",
+"s": "Wolken bestehen aus winzigen Wassertröpfchen.",
+"o": [
+"Rauch",
+"Schneemänner",
+"Watte"
+]
+}
+},
+{
+"id": "kids-89",
+"c": "Kids",
+"l": "Easy",
+"q": "What do you use an umbrella for?",
+"a": "To keep dry in the rain",
+"s": "Some umbrellas also give shade from the sun.",
+"o": [
+"To fly",
+"To catch fish",
+"To sweep the floor"
+],
+"de": {
+"q": "Wofür benutzt man einen Regenschirm?",
+"a": "Um im Regen trocken zu bleiben",
+"s": "Manche Schirme spenden auch Schatten vor der Sonne.",
+"o": [
+"Zum Fliegen",
+"Zum Fischen",
+"Zum Fegen"
+]
+}
+},
+{
+"id": "kids-90",
+"c": "Kids",
+"l": "Easy",
+"q": "What is a baby bear called?",
+"a": "A cub",
+"s": "Baby lions and tigers are also called cubs.",
+"o": [
+"A pup",
+"A kitten",
+"A chick"
+],
+"de": {
+"q": "Wie heißt ein Bärenbaby?",
+"a": "Ein Bärenjunges",
+"s": "Auch junge Löwen und Tiger heißen Junge.",
+"o": [
+"Ein Welpe",
+"Ein Kätzchen",
+"Ein Küken"
+]
+}
+},
+{
+"id": "kids-91",
+"c": "Kids",
+"l": "Easy",
+"q": "Which letter comes after C?",
+"a": "D",
+"s": "A, B, C, D, E…",
+"o": [
+"B",
+"E",
+"G"
+],
+"de": {
+"q": "Welcher Buchstabe kommt nach C?",
+"a": "D",
+"s": "A, B, C, D, E …",
+"o": [
+"B",
+"E",
+"G"
+]
+}
+},
+{
+"id": "kids-92",
+"c": "Kids",
+"l": "Easy",
+"q": "What colour is a fire engine usually?",
+"a": "Red",
+"s": "Red is easy to see from far away.",
+"o": [
+"Blue",
+"Green",
+"Yellow"
+],
+"de": {
+"q": "Welche Farbe hat ein Feuerwehrauto meistens?",
+"a": "Rot",
+"s": "Rot sieht man von Weitem gut.",
+"o": [
+"Blau",
+"Grün",
+"Gelb"
+]
+}
+},
+{
+"id": "kids-93",
+"c": "Kids",
+"l": "Easy",
+"q": "Which animal gives us wool for jumpers?",
+"a": "The sheep",
+"s": "Sheep are sheared once a year, which doesn't hurt them.",
+"o": [
+"The cow",
+"The pig",
+"The chicken"
+],
+"de": {
+"q": "Welches Tier gibt uns Wolle für Pullover?",
+"a": "Das Schaf",
+"s": "Schafe werden einmal im Jahr geschoren, das tut ihnen nicht weh.",
+"o": [
+"Die Kuh",
+"Das Schwein",
+"Das Huhn"
+]
+}
+},
+{
+"id": "kids-94",
+"c": "Kids",
+"l": "Easy",
+"q": "What is 10 + 10?",
+"a": "20",
+"s": "Ten fingers and ten toes make twenty.",
+"o": [
+"10",
+"15",
+"100"
+],
+"de": {
+"q": "Was ist 10 + 10?",
+"a": "20",
+"s": "Zehn Finger und zehn Zehen ergeben zwanzig.",
+"o": [
+"10",
+"15",
+"100"
+]
+}
+},
+{
+"id": "kids-95",
+"c": "Kids",
+"l": "Easy",
+"q": "Which part of your body do you use to hear?",
+"a": "Your ears",
+"s": "Your ears also help you keep your balance.",
+"o": [
+"Your eyes",
+"Your nose",
+"Your knees"
+],
+"de": {
+"q": "Mit welchem Körperteil hörst du?",
+"a": "Mit den Ohren",
+"s": "Die Ohren helfen dir auch, das Gleichgewicht zu halten.",
+"o": [
+"Mit den Augen",
+"Mit der Nase",
+"Mit den Knien"
+]
+}
+},
+{
+"id": "kids-96",
+"c": "Kids",
+"l": "Easy",
+"q": "In which month is Christmas Day?",
+"a": "December",
+"s": "Christmas Day is on 25 December; in Germany, presents come on the 24th.",
+"o": [
+"November",
+"January",
+"October"
+],
+"de": {
+"q": "In welchem Monat ist Weihnachten?",
+"a": "Im Dezember",
+"s": "In Deutschland gibt es die Geschenke meist am 24. Dezember.",
+"o": [
+"Im November",
+"Im Januar",
+"Im Oktober"
+]
+}
+},
+{
+"id": "kids-97",
+"c": "Kids",
+"l": "Easy",
+"q": "Which day comes after Friday?",
+"a": "Saturday",
+"s": "Saturday and Sunday make the weekend.",
+"o": [
+"Thursday",
+"Sunday",
+"Monday"
+],
+"de": {
+"q": "Welcher Tag kommt nach Freitag?",
+"a": "Samstag",
+"s": "Samstag und Sonntag sind das Wochenende.",
+"o": [
+"Donnerstag",
+"Sonntag",
+"Montag"
+]
+}
+},
+{
+"id": "kids-98",
+"c": "Kids",
+"l": "Easy",
+"q": "How many wheels does a car usually have?",
+"a": "4",
+"s": "Plus a spare wheel in many cars.",
+"o": [
+"2",
+"3",
+"6"
+],
+"de": {
+"q": "Wie viele Räder hat ein Auto normalerweise?",
+"a": "4",
+"s": "Viele Autos haben noch ein Ersatzrad.",
+"o": [
+"2",
+"3",
+"6"
+]
+}
+},
+{
+"id": "kids-99",
+"c": "Kids",
+"l": "Easy",
+"q": "Which animal is known for being very slow and hanging in trees?",
+"a": "The sloth",
+"s": "Sloths sleep up to 15 hours a day.",
+"o": [
+"The monkey",
+"The koala",
+"The squirrel"
+],
+"de": {
+"q": "Welches Tier ist dafür bekannt, sehr langsam zu sein und in Bäumen zu hängen?",
+"a": "Das Faultier",
+"s": "Faultiere schlafen bis zu 15 Stunden am Tag.",
+"o": [
+"Der Affe",
+"Der Koala",
+"Das Eichhörnchen"
+]
+}
+},
+{
+"id": "kids-100",
+"c": "Kids",
+"l": "Easy",
+"q": "What do we call the frozen water that falls from the sky in winter?",
+"a": "Snow",
+"s": "Every snowflake has six sides.",
+"o": [
+"Rain",
+"Fog",
+"Hail of sand"
+],
+"de": {
+"q": "Wie heißt das gefrorene Wasser, das im Winter vom Himmel fällt?",
+"a": "Schnee",
+"s": "Jede Schneeflocke hat sechs Ecken.",
+"o": [
+"Regen",
+"Nebel",
+"Sandhagel"
+]
+}
+},
+{
 "id": "albania-1",
 "c": "Albania",
 "l": "Medium",
@@ -27669,6 +31119,1156 @@
 "Der Grüne See",
 "Die Quelle des Schwarzen Drin",
 "Die Blaue Lagune"
+]
+}
+},
+{
+"id": "albania-51",
+"c": "Albania",
+"l": "Medium",
+"q": "Which ancient Greek city near Fier was a famous centre of learning?",
+"a": "Apollonia",
+"s": "The young Augustus studied there before becoming Roman emperor.",
+"o": [
+"Butrint",
+"Byllis",
+"Dyrrachium"
+],
+"de": {
+"q": "Welche antike griechische Stadt bei Fier war ein berühmtes Bildungszentrum?",
+"a": "Apollonia",
+"s": "Der junge Augustus studierte dort, bevor er römischer Kaiser wurde.",
+"o": [
+"Butrint",
+"Byllis",
+"Dyrrachium"
+]
+}
+},
+{
+"id": "albania-52",
+"c": "Albania",
+"l": "Medium",
+"q": "Which south-eastern Albanian city is called \"the city of serenades\"?",
+"a": "Korçë",
+"s": "Known for its love songs, its cathedral and its beer.",
+"o": [
+"Gjirokastër",
+"Pogradec",
+"Elbasan"
+],
+"de": {
+"q": "Welche Stadt im Südosten Albaniens wird „Stadt der Serenaden“ genannt?",
+"a": "Korça",
+"s": "Bekannt für Liebeslieder, ihre Kathedrale und ihr Bier.",
+"o": [
+"Gjirokastra",
+"Pogradec",
+"Elbasan"
+]
+}
+},
+{
+"id": "albania-53",
+"c": "Albania",
+"l": "Medium",
+"q": "Which Albanian beer has been brewed in Korçë since 1928?",
+"a": "Birra Korça",
+"s": "The city also holds a popular beer festival every August.",
+"o": [
+"Birra Tirana",
+"Birra Peja",
+"Birra Stela"
+],
+"de": {
+"q": "Welches albanische Bier wird seit 1928 in Korça gebraut?",
+"a": "Birra Korça",
+"s": "Die Stadt feiert jeden August auch ein beliebtes Bierfest.",
+"o": [
+"Birra Tirana",
+"Birra Peja",
+"Birra Stela"
+]
+}
+},
+{
+"id": "albania-54",
+"c": "Albania",
+"l": "Hard",
+"q": "Which lakeside town is famous for the Lake Ohrid trout, the koran?",
+"a": "Pogradec",
+"s": "The koran is found only in Lake Ohrid and is protected.",
+"o": [
+"Shkodër",
+"Korçë",
+"Librazhd"
+],
+"de": {
+"q": "Welche Stadt am See ist für die Ohrid-Forelle (Koran) bekannt?",
+"a": "Pogradec",
+"s": "Die Koran-Forelle kommt nur im Ohridsee vor und ist geschützt.",
+"o": [
+"Shkodra",
+"Korça",
+"Librazhd"
+]
+}
+},
+{
+"id": "albania-55",
+"c": "Albania",
+"l": "Hard",
+"q": "What is the name of the trout found only in Lake Ohrid?",
+"a": "Koran",
+"s": "A protected species, once served to kings and presidents.",
+"o": [
+"Belvica",
+"Krap",
+"Ngjala"
+],
+"de": {
+"q": "Wie heißt die Forelle, die es nur im Ohridsee gibt?",
+"a": "Koran",
+"s": "Eine geschützte Art, einst Königen und Präsidenten serviert.",
+"o": [
+"Belvica",
+"Krap",
+"Ngjala"
+]
+}
+},
+{
+"id": "albania-56",
+"c": "Albania",
+"l": "Hard",
+"q": "Which coastal city was Albania's capital from 1914 to 1920?",
+"a": "Durrës",
+"s": "Tirana became the capital at the Congress of Lushnjë in 1920.",
+"o": [
+"Vlorë",
+"Shkodër",
+"Lushnjë"
+],
+"de": {
+"q": "Welche Küstenstadt war von 1914 bis 1920 Albaniens Hauptstadt?",
+"a": "Durrës",
+"s": "Beim Kongress von Lushnja 1920 wurde Tirana Hauptstadt.",
+"o": [
+"Vlora",
+"Shkodra",
+"Lushnja"
+]
+}
+},
+{
+"id": "albania-57",
+"c": "Albania",
+"l": "Hard",
+"q": "Which German prince briefly ruled Albania in 1914?",
+"a": "Wilhelm of Wied",
+"s": "He left after about six months as the First World War began.",
+"o": [
+"Ferdinand of Bulgaria",
+"Prince Otto of Greece",
+"Prince Albert of Monaco"
+],
+"de": {
+"q": "Welcher deutsche Fürst regierte 1914 kurzzeitig Albanien?",
+"a": "Wilhelm zu Wied",
+"s": "Er ging nach etwa sechs Monaten, als der Erste Weltkrieg begann.",
+"o": [
+"Ferdinand von Bulgarien",
+"Prinz Otto von Griechenland",
+"Fürst Albert von Monaco"
+]
+}
+},
+{
+"id": "albania-58",
+"c": "Albania",
+"l": "Hard",
+"q": "Which national poet wrote \"Bagëti e Bujqësi\" (Herds and Crops)?",
+"a": "Naim Frashëri",
+"s": "A leading figure of the Albanian National Awakening, the Rilindja.",
+"o": [
+"Gjergj Fishta",
+"Ismail Kadare",
+"Migjeni"
+],
+"de": {
+"q": "Welcher Nationaldichter schrieb „Bagëti e Bujqësi“ (Herden und Felder)?",
+"a": "Naim Frashëri",
+"s": "Eine führende Figur der albanischen Nationalbewegung, der Rilindja.",
+"o": [
+"Gjergj Fishta",
+"Ismail Kadare",
+"Migjeni"
+]
+}
+},
+{
+"id": "albania-59",
+"c": "Albania",
+"l": "Medium",
+"q": "What is the 19th-century Albanian National Awakening called in Albanian?",
+"a": "Rilindja",
+"s": "The word means \"rebirth\".",
+"o": [
+"Kanuni",
+"Besëlidhja",
+"Zgjimi"
+],
+"de": {
+"q": "Wie heißt die albanische Nationalbewegung des 19. Jahrhunderts auf Albanisch?",
+"a": "Rilindja",
+"s": "Das Wort bedeutet „Wiedergeburt“.",
+"o": [
+"Kanuni",
+"Besëlidhja",
+"Zgjimi"
+]
+}
+},
+{
+"id": "albania-60",
+"c": "Albania",
+"l": "Hard",
+"q": "Which 1878 league met to defend Albanian-populated lands?",
+"a": "The League of Prizren",
+"s": "It met in Prizren, in today's Kosovo.",
+"o": [
+"The League of Lezhë",
+"The League of Peja",
+"The League of Vlorë"
+],
+"de": {
+"q": "Welche Liga von 1878 setzte sich für die Verteidigung albanisch besiedelter Gebiete ein?",
+"a": "Die Liga von Prizren",
+"s": "Sie tagte in Prizren im heutigen Kosovo.",
+"o": [
+"Die Liga von Lezha",
+"Die Liga von Peja",
+"Die Liga von Vlora"
+]
+}
+},
+{
+"id": "albania-61",
+"c": "Albania",
+"l": "Hard",
+"q": "Which 1908 congress agreed on the Latin-based Albanian alphabet?",
+"a": "The Congress of Manastir",
+"s": "Manastir is today Bitola in North Macedonia.",
+"o": [
+"The Congress of Lushnjë",
+"The Congress of Berlin",
+"The Congress of Durrës"
+],
+"de": {
+"q": "Welcher Kongress legte 1908 das lateinische albanische Alphabet fest?",
+"a": "Der Kongress von Manastir",
+"s": "Manastir ist heute Bitola in Nordmazedonien.",
+"o": [
+"Der Kongress von Lushnja",
+"Der Berliner Kongress",
+"Der Kongress von Durrës"
+]
+}
+},
+{
+"id": "albania-62",
+"c": "Albania",
+"l": "Easy",
+"q": "What colour is the background of the Albanian flag?",
+"a": "Red",
+"s": "With a black double-headed eagle in the middle.",
+"o": [
+"Black",
+"Blue",
+"White"
+],
+"de": {
+"q": "Welche Hintergrundfarbe hat die albanische Flagge?",
+"a": "Rot",
+"s": "Mit einem schwarzen Doppeladler in der Mitte.",
+"o": [
+"Schwarz",
+"Blau",
+"Weiß"
+]
+}
+},
+{
+"id": "albania-63",
+"c": "Albania",
+"l": "Medium",
+"q": "In which year did Albania first play at a major football tournament?",
+"a": "2016",
+"s": "At Euro 2016 in France.",
+"o": [
+"2004",
+"2012",
+"2020"
+],
+"de": {
+"q": "In welchem Jahr spielte Albanien zum ersten Mal bei einem großen Fußballturnier?",
+"a": "2016",
+"s": "Bei der EM 2016 in Frankreich.",
+"o": [
+"2004",
+"2012",
+"2020"
+]
+}
+},
+{
+"id": "albania-64",
+"c": "Albania",
+"l": "Hard",
+"q": "Who scored Albania's first goal at a European Championship?",
+"a": "Armando Sadiku",
+"s": "His header beat Romania 1–0 at Euro 2016.",
+"o": [
+"Lorik Cana",
+"Taulant Xhaka",
+"Elseid Hysaj"
+],
+"de": {
+"q": "Wer erzielte Albaniens erstes Tor bei einer Europameisterschaft?",
+"a": "Armando Sadiku",
+"s": "Sein Kopfball brachte 2016 den 1:0-Sieg gegen Rumänien.",
+"o": [
+"Lorik Cana",
+"Taulant Xhaka",
+"Elseid Hysaj"
+]
+}
+},
+{
+"id": "albania-65",
+"c": "Albania",
+"l": "Medium",
+"q": "Which country did Albania beat at Euro 2016?",
+"a": "Romania",
+"s": "It was Albania's first win at a major tournament.",
+"o": [
+"Switzerland",
+"France",
+"Wales"
+],
+"de": {
+"q": "Welches Land besiegte Albanien bei der EM 2016?",
+"a": "Rumänien",
+"s": "Es war Albaniens erster Sieg bei einem großen Turnier.",
+"o": [
+"Schweiz",
+"Frankreich",
+"Wales"
+]
+}
+},
+{
+"id": "albania-66",
+"c": "Albania",
+"l": "Medium",
+"q": "What is \"fërgesë\"?",
+"a": "A baked dish of peppers, tomatoes and cottage cheese",
+"s": "A Tirana speciality, often eaten with bread.",
+"o": [
+"A meat soup",
+"A honey dessert",
+"A corn bread"
+],
+"de": {
+"q": "Was ist „Fërgesë“?",
+"a": "Ein überbackenes Gericht aus Paprika, Tomaten und Quark",
+"s": "Eine Spezialität aus Tirana, oft mit Brot gegessen.",
+"o": [
+"Eine Fleischsuppe",
+"Ein Honigdessert",
+"Ein Maisbrot"
+]
+}
+},
+{
+"id": "albania-67",
+"c": "Albania",
+"l": "Medium",
+"q": "What is \"flija\"?",
+"a": "Thin batter layers slowly baked under a hot lid",
+"s": "It takes hours to make and is popular in northern Albania and Kosovo.",
+"o": [
+"A fish stew",
+"A cheese pie",
+"A fruit brandy"
+],
+"de": {
+"q": "Was ist „Flija“?",
+"a": "Dünne Teigschichten, langsam unter einem heißen Deckel gebacken",
+"s": "Die Zubereitung dauert Stunden; beliebt in Nordalbanien und im Kosovo.",
+"o": [
+"Ein Fischeintopf",
+"Eine Käsepastete",
+"Ein Obstbrand"
+]
+}
+},
+{
+"id": "albania-68",
+"c": "Albania",
+"l": "Medium",
+"q": "What does \"mirupafshim\" mean?",
+"a": "Goodbye",
+"s": "Literally \"may we see each other well\".",
+"o": [
+"Good morning",
+"Thank you",
+"Welcome"
+],
+"de": {
+"q": "Was bedeutet „mirupafshim“?",
+"a": "Auf Wiedersehen",
+"s": "Wörtlich „mögen wir uns gut wiedersehen“.",
+"o": [
+"Guten Morgen",
+"Danke",
+"Willkommen"
+]
+}
+},
+{
+"id": "albania-69",
+"c": "Albania",
+"l": "Easy",
+"q": "What does the Albanian word \"po\" mean?",
+"a": "Yes",
+"s": "\"Jo\" means no.",
+"o": [
+"No",
+"Please",
+"Maybe"
+],
+"de": {
+"q": "Was bedeutet das albanische Wort „po“?",
+"a": "Ja",
+"s": "„Jo“ heißt nein.",
+"o": [
+"Nein",
+"Bitte",
+"Vielleicht"
+]
+}
+},
+{
+"id": "albania-70",
+"c": "Albania",
+"l": "Medium",
+"q": "What does the Albanian word \"ujë\" mean?",
+"a": "Water",
+"s": "\"Ujë\" sounds a bit like \"oo-yuh\".",
+"o": [
+"Bread",
+"Wine",
+"Milk"
+],
+"de": {
+"q": "Was bedeutet das albanische Wort „ujë“?",
+"a": "Wasser",
+"s": "„Ujë“ klingt ungefähr wie „u-jö“.",
+"o": [
+"Brot",
+"Wein",
+"Milch"
+]
+}
+},
+{
+"id": "albania-71",
+"c": "Albania",
+"l": "Medium",
+"q": "What is the Albanian word for \"brother\"?",
+"a": "Vëlla",
+"s": "\"Motër\" means sister.",
+"o": [
+"Baba",
+"Shok",
+"Djalë"
+],
+"de": {
+"q": "Wie heißt „Bruder“ auf Albanisch?",
+"a": "Vëlla",
+"s": "„Motër“ bedeutet Schwester.",
+"o": [
+"Baba",
+"Shok",
+"Djalë"
+]
+}
+},
+{
+"id": "albania-72",
+"c": "Albania",
+"l": "Medium",
+"q": "Which actress of Albanian descent played Faith in \"Buffy the Vampire Slayer\"?",
+"a": "Eliza Dushku",
+"s": "Her father was Albanian-American; she has campaigned for Albanian causes.",
+"o": [
+"Alyson Hannigan",
+"Michelle Trachtenberg",
+"Charisma Carpenter"
+],
+"de": {
+"q": "Welche Schauspielerin albanischer Herkunft spielte Faith in „Buffy“?",
+"a": "Eliza Dushku",
+"s": "Ihr Vater war Albano-Amerikaner; sie engagiert sich für albanische Anliegen.",
+"o": [
+"Alyson Hannigan",
+"Michelle Trachtenberg",
+"Charisma Carpenter"
+]
+}
+},
+{
+"id": "albania-73",
+"c": "Albania",
+"l": "Medium",
+"q": "Which singer of Albanian descent had a hit with \"Meant to Be\" with Florida Georgia Line?",
+"a": "Bebe Rexha",
+"s": "Born in New York to Albanian parents from North Macedonia.",
+"o": [
+"Dua Lipa",
+"Rita Ora",
+"Ava Max"
+],
+"de": {
+"q": "Welche Sängerin albanischer Herkunft hatte mit Florida Georgia Line einen Hit mit „Meant to Be“?",
+"a": "Bebe Rexha",
+"s": "Geboren in New York als Tochter albanischer Eltern aus Nordmazedonien.",
+"o": [
+"Dua Lipa",
+"Rita Ora",
+"Ava Max"
+]
+}
+},
+{
+"id": "albania-74",
+"c": "Albania",
+"l": "Medium",
+"q": "Which singer from Kosovo had a viral hit with \"BonBon\"?",
+"a": "Era Istrefi",
+"s": "She sang it in Albanian, and it went viral worldwide.",
+"o": [
+"Dafina Zeqiri",
+"Elvana Gjata",
+"Dua Lipa"
+],
+"de": {
+"q": "Welche Sängerin aus dem Kosovo hatte einen viralen Hit mit „BonBon“?",
+"a": "Era Istrefi",
+"s": "Sie sang ihn auf Albanisch, und er ging weltweit viral.",
+"o": [
+"Dafina Zeqiri",
+"Elvana Gjata",
+"Dua Lipa"
+]
+}
+},
+{
+"id": "albania-75",
+"c": "Albania",
+"l": "Medium",
+"q": "Which Swiss footballer of Kosovo-Albanian descent is nicknamed \"the Alpine Messi\"?",
+"a": "Xherdan Shaqiri",
+"s": "He won the Champions League with Bayern Munich and Liverpool.",
+"o": [
+"Granit Xhaka",
+"Admir Mehmedi",
+"Blerim Džemaili"
+],
+"de": {
+"q": "Welcher Schweizer Fußballer mit kosovo-albanischen Wurzeln heißt „Alpen-Messi“?",
+"a": "Xherdan Shaqiri",
+"s": "Er gewann die Champions League mit Bayern München und Liverpool.",
+"o": [
+"Granit Xhaka",
+"Admir Mehmedi",
+"Blerim Džemaili"
+]
+}
+},
+{
+"id": "albania-76",
+"c": "Albania",
+"l": "Medium",
+"q": "In which year did Kosovo declare independence?",
+"a": "2008",
+"s": "On 17 February 2008; most EU countries recognise it.",
+"o": [
+"1999",
+"2004",
+"2012"
+],
+"de": {
+"q": "In welchem Jahr erklärte der Kosovo seine Unabhängigkeit?",
+"a": "2008",
+"s": "Am 17. Februar 2008; die meisten EU-Länder erkennen ihn an.",
+"o": [
+"1999",
+"2004",
+"2012"
+]
+}
+},
+{
+"id": "albania-77",
+"c": "Albania",
+"l": "Medium",
+"q": "Which pyramid-shaped building in Tirana was built as a museum to Enver Hoxha?",
+"a": "The Pyramid of Tirana",
+"s": "Opened in 1988, it has been rebuilt as a tech and youth centre.",
+"o": [
+"The Palace of Culture",
+"The Clock Tower",
+"The National Theatre"
+],
+"de": {
+"q": "Welches pyramidenförmige Gebäude in Tirana wurde als Museum für Enver Hoxha gebaut?",
+"a": "Die Pyramide von Tirana",
+"s": "1988 eröffnet; heute umgebaut zu einem Technik- und Jugendzentrum.",
+"o": [
+"Der Kulturpalast",
+"Der Uhrturm",
+"Das Nationaltheater"
+]
+}
+},
+{
+"id": "albania-78",
+"c": "Albania",
+"l": "Medium",
+"q": "What is \"Bunk'Art\" in Tirana?",
+"a": "A museum inside a huge Cold War bunker",
+"s": "Built for Hoxha and the leadership, with over 100 rooms.",
+"o": [
+"An art school",
+"A street-art festival",
+"A nightclub"
+],
+"de": {
+"q": "Was ist „Bunk'Art“ in Tirana?",
+"a": "Ein Museum in einem riesigen Bunker aus dem Kalten Krieg",
+"s": "Gebaut für Hoxha und die Führung, mit über 100 Räumen.",
+"o": [
+"Eine Kunsthochschule",
+"Ein Street-Art-Festival",
+"Ein Nachtclub"
+]
+}
+},
+{
+"id": "albania-79",
+"c": "Albania",
+"l": "Medium",
+"q": "Which Tirana district, once closed to ordinary people, is now known for bars and cafés?",
+"a": "Blloku",
+"s": "Under communism only the party elite could enter.",
+"o": [
+"Kombinat",
+"Ali Demi",
+"Komuna e Parisit"
+],
+"de": {
+"q": "Welches Viertel in Tirana, früher für normale Bürger gesperrt, ist heute für Bars und Cafés bekannt?",
+"a": "Blloku",
+"s": "Im Kommunismus durfte nur die Parteielite hinein.",
+"o": [
+"Kombinat",
+"Ali Demi",
+"Komuna e Parisit"
+]
+}
+},
+{
+"id": "albania-80",
+"c": "Albania",
+"l": "Medium",
+"q": "Which mountain above Tirana can you reach by cable car?",
+"a": "Mount Dajti",
+"s": "The Dajti Ekspres cable car is one of the longest in the Balkans.",
+"o": [
+"Mount Tomorr",
+"Mount Korab",
+"Mount Llogara"
+],
+"de": {
+"q": "Auf welchen Berg über Tirana kommt man mit der Seilbahn?",
+"a": "Den Dajti",
+"s": "Die Seilbahn Dajti Ekspres gehört zu den längsten des Balkans.",
+"o": [
+"Den Tomorr",
+"Den Korab",
+"Den Llogara"
+]
+}
+},
+{
+"id": "albania-81",
+"c": "Albania",
+"l": "Medium",
+"q": "Which village near Sarandë is famous for its small islands and turquoise water?",
+"a": "Ksamil",
+"s": "Its beaches face the island of Corfu.",
+"o": [
+"Dhërmi",
+"Himarë",
+"Borsh"
+],
+"de": {
+"q": "Welcher Ort bei Saranda ist für seine kleinen Inseln und sein türkisfarbenes Wasser bekannt?",
+"a": "Ksamil",
+"s": "Seine Strände blicken auf Korfu.",
+"o": [
+"Dhërmi",
+"Himara",
+"Borsh"
+]
+}
+},
+{
+"id": "albania-82",
+"c": "Albania",
+"l": "Hard",
+"q": "Which Illyrian queen fought against Rome in the 3rd century BC?",
+"a": "Teuta",
+"s": "Her navy's raids led to the First Illyrian War in 229 BC.",
+"o": [
+"Rozafa",
+"Mirdita",
+"Andromache"
+],
+"de": {
+"q": "Welche illyrische Königin kämpfte im 3. Jahrhundert v. Chr. gegen Rom?",
+"a": "Teuta",
+"s": "Die Überfälle ihrer Flotte führten 229 v. Chr. zum Ersten Illyrischen Krieg.",
+"o": [
+"Rozafa",
+"Mirdita",
+"Andromache"
+]
+}
+},
+{
+"id": "albania-83",
+"c": "Albania",
+"l": "Medium",
+"q": "Which ancient people of the western Balkans are often linked to the Albanians' ancestry?",
+"a": "The Illyrians",
+"s": "Historians still debate the exact link.",
+"o": [
+"The Thracians",
+"The Celts",
+"The Dacians"
+],
+"de": {
+"q": "Welches antike Volk des westlichen Balkans wird oft mit der Herkunft der Albaner verbunden?",
+"a": "Die Illyrer",
+"s": "Historiker diskutieren die genaue Verbindung bis heute.",
+"o": [
+"Die Thraker",
+"Die Kelten",
+"Die Daker"
+]
+}
+},
+{
+"id": "albania-84",
+"c": "Albania",
+"l": "Hard",
+"q": "What is the name of the giant mosaic on the front of the National History Museum in Tirana?",
+"a": "The Albanians",
+"s": "It shows Albanian figures from ancient times to the 20th century.",
+"o": [
+"The Eagle",
+"Rilindja",
+"Skanderbeg's Return"
+],
+"de": {
+"q": "Wie heißt das riesige Mosaik an der Front des Nationalen Geschichtsmuseums in Tirana?",
+"a": "Die Albaner (Shqiptarët)",
+"s": "Es zeigt albanische Figuren von der Antike bis ins 20. Jahrhundert.",
+"o": [
+"Der Adler",
+"Rilindja",
+"Skanderbegs Rückkehr"
+]
+}
+},
+{
+"id": "albania-85",
+"c": "Albania",
+"l": "Hard",
+"q": "Which marine national park near Vlorë includes a peninsula and Albania's largest island?",
+"a": "Karaburun-Sazan",
+"s": "Albania's first marine protected area, created in 2010.",
+"o": [
+"Divjaka-Karavasta",
+"Butrint",
+"Llogara"
+],
+"de": {
+"q": "Welcher Meeresnationalpark bei Vlora umfasst eine Halbinsel und Albaniens größte Insel?",
+"a": "Karaburun-Sazan",
+"s": "Albaniens erstes Meeresschutzgebiet, 2010 eingerichtet.",
+"o": [
+"Divjaka-Karavasta",
+"Butrint",
+"Llogara"
+]
+}
+},
+{
+"id": "albania-86",
+"c": "Albania",
+"l": "Medium",
+"q": "What is Albania's largest island?",
+"a": "Sazan",
+"s": "A former military base at the mouth of the Bay of Vlorë.",
+"o": [
+"Ksamil",
+"Zvërnec",
+"Lezhë"
+],
+"de": {
+"q": "Was ist Albaniens größte Insel?",
+"a": "Sazan",
+"s": "Eine frühere Militärbasis am Eingang der Bucht von Vlora.",
+"o": [
+"Ksamil",
+"Zvërnec",
+"Lezha"
+]
+}
+},
+{
+"id": "albania-87",
+"c": "Albania",
+"l": "Hard",
+"q": "Which lagoon near Vlorë is known for its flamingos?",
+"a": "Narta Lagoon",
+"s": "The monastery on Zvërnec island sits in the lagoon.",
+"o": [
+"Karavasta Lagoon",
+"Patok Lagoon",
+"Butrint Lagoon"
+],
+"de": {
+"q": "Welche Lagune bei Vlora ist für ihre Flamingos bekannt?",
+"a": "Die Lagune von Narta",
+"s": "In der Lagune liegt das Kloster auf der Insel Zvërnec.",
+"o": [
+"Die Lagune von Karavasta",
+"Die Lagune von Patok",
+"Die Lagune von Butrint"
+]
+}
+},
+{
+"id": "albania-88",
+"c": "Albania",
+"l": "Hard",
+"q": "Which mosque in Vlorë is attributed to the great Ottoman architect Mimar Sinan?",
+"a": "The Muradie Mosque",
+"s": "Built in the 1530s and 1540s.",
+"o": [
+"The Et'hem Bey Mosque",
+"The Lead Mosque",
+"The King's Mosque"
+],
+"de": {
+"q": "Welche Moschee in Vlora wird dem großen osmanischen Baumeister Mimar Sinan zugeschrieben?",
+"a": "Die Muradie-Moschee",
+"s": "Erbaut in den 1530er und 1540er Jahren.",
+"o": [
+"Die Et'hem-Bey-Moschee",
+"Die Bleimoschee",
+"Die Königsmoschee"
+]
+}
+},
+{
+"id": "albania-89",
+"c": "Albania",
+"l": "Medium",
+"q": "Which small river flows through the centre of Tirana?",
+"a": "The Lana",
+"s": "It runs alongside one of the city's main boulevards.",
+"o": [
+"The Ishëm",
+"The Erzen",
+"The Drin"
+],
+"de": {
+"q": "Welcher kleine Fluss fließt durch das Zentrum von Tirana?",
+"a": "Die Lana",
+"s": "Sie verläuft entlang eines der Hauptboulevards der Stadt.",
+"o": [
+"Der Ishëm",
+"Der Erzen",
+"Der Drin"
+]
+}
+},
+{
+"id": "albania-90",
+"c": "Albania",
+"l": "Medium",
+"q": "What is Albania's longest river?",
+"a": "The Drin",
+"s": "Formed by the White and Black Drin, it flows into the Adriatic.",
+"o": [
+"The Vjosa",
+"The Shkumbin",
+"The Seman"
+],
+"de": {
+"q": "Was ist Albaniens längster Fluss?",
+"a": "Der Drin",
+"s": "Entsteht aus dem Weißen und dem Schwarzen Drin und mündet in die Adria.",
+"o": [
+"Die Vjosa",
+"Der Shkumbin",
+"Der Seman"
+]
+}
+},
+{
+"id": "albania-91",
+"c": "Albania",
+"l": "Hard",
+"q": "Which natural hot springs near Përmet are popular for bathing?",
+"a": "Benjë (Bënja) thermal baths",
+"s": "The warm pools sit beside an old Ottoman bridge.",
+"o": [
+"The Blue Eye",
+"Llixhat e Elbasanit",
+"Syri i Ciklopit"
+],
+"de": {
+"q": "Welche natürlichen heißen Quellen bei Përmet sind zum Baden beliebt?",
+"a": "Die Thermalquellen von Bënja",
+"s": "Die warmen Becken liegen neben einer alten osmanischen Brücke.",
+"o": [
+"Das Blaue Auge",
+"Llixhat e Elbasanit",
+"Syri i Ciklopit"
+]
+}
+},
+{
+"id": "albania-92",
+"c": "Albania",
+"l": "Medium",
+"q": "Which major folk festival is held in Gjirokastër's castle?",
+"a": "The National Folklore Festival",
+"s": "Groups from all over Albania perform there every few years.",
+"o": [
+"The Kala Festival",
+"The Butrint Summer Festival",
+"Tirana Jazz Festival"
+],
+"de": {
+"q": "Welches große Volksmusikfestival findet in der Burg von Gjirokastra statt?",
+"a": "Das Nationale Folklorefestival",
+"s": "Gruppen aus ganz Albanien treten dort alle paar Jahre auf.",
+"o": [
+"Das Kala Festival",
+"Das Butrint-Sommerfestival",
+"Das Tirana Jazz Festival"
+]
+}
+},
+{
+"id": "albania-93",
+"c": "Albania",
+"l": "Medium",
+"q": "Who is Tirana International Airport named after?",
+"a": "Mother Teresa",
+"s": "It is officially called Nënë Tereza and lies at Rinas.",
+"o": [
+"Skanderbeg",
+"Ismail Qemali",
+"Naim Frashëri"
+],
+"de": {
+"q": "Nach wem ist der internationale Flughafen Tirana benannt?",
+"a": "Nach Mutter Teresa",
+"s": "Offiziell heißt er Nënë Tereza und liegt in Rinas.",
+"o": [
+"Nach Skanderbeg",
+"Nach Ismail Qemali",
+"Nach Naim Frashëri"
+]
+}
+},
+{
+"id": "albania-94",
+"c": "Albania",
+"l": "Hard",
+"q": "How many counties (qarqe) is Albania divided into?",
+"a": "12",
+"s": "Each is named after its main city, such as Tirana or Vlorë.",
+"o": [
+"8",
+"16",
+"36"
+],
+"de": {
+"q": "In wie viele Kreise (Qarqe) ist Albanien gegliedert?",
+"a": "12",
+"s": "Jeder ist nach seiner Hauptstadt benannt, etwa Tirana oder Vlora.",
+"o": [
+"8",
+"16",
+"36"
+]
+}
+},
+{
+"id": "albania-95",
+"c": "Albania",
+"l": "Medium",
+"q": "What is the international dialling code for Albania?",
+"a": "+355",
+"s": "From abroad, a Tirana number starts with +355 4.",
+"o": [
+"+353",
+"+381",
+"+389"
+],
+"de": {
+"q": "Was ist die internationale Vorwahl für Albanien?",
+"a": "+355",
+"s": "Aus dem Ausland beginnt eine Nummer in Tirana mit +355 4.",
+"o": [
+"+353",
+"+381",
+"+389"
+]
+}
+},
+{
+"id": "albania-96",
+"c": "Albania",
+"l": "Easy",
+"q": "What is Albania's internet country domain?",
+"a": ".al",
+"s": "Albanian websites end in .al.",
+"o": [
+".ab",
+".an",
+".alb"
+],
+"de": {
+"q": "Wie lautet Albaniens Länderdomain im Internet?",
+"a": ".al",
+"s": "Albanische Webseiten enden auf .al.",
+"o": [
+".ab",
+".an",
+".alb"
+]
+}
+},
+{
+"id": "albania-97",
+"c": "Albania",
+"l": "Medium",
+"q": "What does \"Shqipëria e Mesme\" refer to?",
+"a": "Central Albania",
+"s": "Albania is often split into north, central and south regions.",
+"o": [
+"The Albanian Riviera",
+"The Albanian Alps",
+"Kosovo"
+],
+"de": {
+"q": "Was bezeichnet „Shqipëria e Mesme“?",
+"a": "Mittelalbanien",
+"s": "Albanien wird oft in Nord, Mitte und Süd eingeteilt.",
+"o": [
+"Die albanische Riviera",
+"Die albanischen Alpen",
+"Den Kosovo"
+]
+}
+},
+{
+"id": "albania-98",
+"c": "Albania",
+"l": "Medium",
+"q": "Which Albanian city on the Shkumbin river is known for \"ballokume\" cookies?",
+"a": "Elbasan",
+"s": "Ballokume are baked for the spring festival Dita e Verës on 14 March.",
+"o": [
+"Berat",
+"Fier",
+"Kavajë"
+],
+"de": {
+"q": "Welche albanische Stadt am Shkumbin ist für „Ballokume“-Kekse bekannt?",
+"a": "Elbasan",
+"s": "Ballokume werden zum Frühlingsfest Dita e Verës am 14. März gebacken.",
+"o": [
+"Berat",
+"Fier",
+"Kavaja"
+]
+}
+},
+{
+"id": "albania-99",
+"c": "Albania",
+"l": "Medium",
+"q": "What is \"Dita e Verës\", celebrated on 14 March?",
+"a": "The Summer Day spring festival",
+"s": "A pagan-rooted festival marking the end of winter, now a public holiday.",
+"o": [
+"Independence Day",
+"Teachers' Day",
+"Flag Day"
+],
+"de": {
+"q": "Was ist „Dita e Verës“, gefeiert am 14. März?",
+"a": "Der Sommertag, ein Frühlingsfest",
+"s": "Ein Fest mit vorchristlichen Wurzeln, das das Ende des Winters feiert; heute Feiertag.",
+"o": [
+"Der Unabhängigkeitstag",
+"Der Lehrertag",
+"Der Flaggentag"
+]
+}
+},
+{
+"id": "albania-100",
+"c": "Albania",
+"l": "Medium",
+"q": "Berat's old town is split into which two historic quarters, facing each other across the river?",
+"a": "Mangalem and Gorica",
+"s": "They face each other across the Osum, linked by the Gorica Bridge.",
+"o": [
+"Kala and Pazar",
+"Varosh and Kalaja",
+"Blloku and Kombinat"
+],
+"de": {
+"q": "In welche zwei historischen Viertel teilt sich Berats Altstadt, die sich am Fluss gegenüberliegen?",
+"a": "Mangalem und Gorica",
+"s": "Sie liegen sich am Osum gegenüber, verbunden durch die Gorica-Brücke.",
+"o": [
+"Kala und Pazar",
+"Varosh und Kalaja",
+"Blloku und Kombinat"
 ]
 }
 }
