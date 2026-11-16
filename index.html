@@ -31,6 +31,7 @@
       --easy:#6fc39a;--medium:#e0b14c;--hard:#ef7f7f;--good:#6fc39a;--bad:#ef7f7f;--shadow:0 1px 2px rgba(0,0,0,.4)}
   }
   *{box-sizing:border-box}
+  [hidden]{display:none !important}
   html,body{margin:0}
   body{background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   a{color:inherit}
@@ -153,6 +154,50 @@
   .team .sc{width:34px;text-align:center;font-weight:700}
   .team button{padding:3px 9px}
   @media (max-width:700px){#teams{position:absolute;right:0;top:0;bottom:0;z-index:3;width:min(300px,85vw);box-shadow:var(--shadow)}}
+
+  /* Layout: sidebar + content */
+  header.app .top{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
+  .layout{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:start}
+  .side{position:sticky;top:70px;max-height:calc(100vh - 86px);overflow:auto;padding-right:4px}
+  .side section{margin-bottom:18px}
+  .side h3{font:700 .72rem system-ui;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 6px 10px}
+  .sidehead{display:none}
+  .navlist{display:flex;flex-direction:column;gap:2px}
+  .navitem{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;text-align:left;border:none;background:none;border-radius:9px;padding:6px 10px;font-size:.9rem;color:var(--ink)}
+  .navitem:hover{background:var(--panel)}
+  .navitem[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+  .navitem .n{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .navitem[aria-pressed=true] .n{color:inherit;opacity:.8}
+  .side .stats{margin:8px 10px 0;display:flex;flex-direction:column;gap:4px}
+  .toolbar{position:sticky;top:57px;z-index:4;display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 0;background:var(--bg)}
+  .toolbar input[type=search]{flex:1 1 240px}
+  .summary{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:2px 0 14px;font-size:.9rem;color:var(--muted)}
+  .summary b{color:var(--ink)}
+  #openSide{display:none}
+  .pill{display:inline-flex;align-items:center;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:.8rem;color:var(--ink)}
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr}
+    .side{display:none;position:fixed;inset:0 auto 0 0;top:0;width:min(320px,88vw);max-height:none;z-index:30;background:var(--bg);padding:16px;box-shadow:0 0 0 100vmax rgba(0,0,0,.35)}
+    .side.open{display:block}
+    .sidehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    #openSide{display:inline-block}
+    .toolbar{top:0}
+  }
+  /* Builder */
+  fieldset{border:none;border-top:1px solid var(--line);margin:0;padding:12px 0 6px}
+  legend{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:0 6px 0 0}
+  .step{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:.78rem}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end}
+  .pair label{display:flex;flex-direction:column;gap:4px}
+  .pair input,.pair select{width:100%}
+  .btn.wide{width:100%;padding:11px;margin-top:8px;font-size:.95rem}
+  .quizbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .quizbar .group{display:inline-flex;align-items:center;gap:6px}
+  /* Host bar */
+  .hostctl{display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:4px 6px}
+  .hostctl .btn{border:none;padding:6px 10px}
+  .hostctl .btn[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+  .hostctl select{border:none;padding:4px 6px}
   /* Print */
   #printArea{display:none}
   @media print{
@@ -170,77 +215,83 @@
     #printArea .key{font-weight:700}
     #printArea .sm{font-size:10pt;color:#444}
   }
-  @media (max-width:560px){.card{height:240px}h1{font-size:1.15rem}.tabs{margin-left:0}}
-  @media (max-width:700px){header.app{position:static}}
+  @media (max-width:560px){.card{height:240px}h1{font-size:1rem}.tabs{margin-left:0;gap:0}.tab{padding:6px 7px;font-size:.9rem}header.app .top{gap:6px}}
+  
 </style>
 </head>
 <body>
 <header class="app">
-  <div class="wrap">
-    <div class="top">
-      <h1>Pub Quiz <span>Cards</span></h1>
-      <nav class="tabs" aria-label="Views">
-        <button class="tab" id="tabCards" data-i18n="cards"></button>
-        <button class="tab" id="tabRounds" data-i18n="rounds"></button>
-      </nav>
-      <span class="spacer"></span>
-      <span class="count" id="count"></span>
-      <button class="btn small" id="langBtn" aria-label="Language"></button>
-    </div>
-    <div id="cardControls">
-      <div class="row">
-        <input type="search" id="search" aria-label="Search">
-        <div class="seg" role="group" aria-label="Mode">
-          <button id="modeFlip" data-i18n="flip"></button><button id="modeMC" data-i18n="mc"></button>
-        </div>
-        <button class="btn" id="shuffle" data-i18n="shuffle"></button>
-        <button class="btn" id="flipAll"></button>
-        <button class="btn primary" id="hostBtn" data-i18n="host"></button>
-      </div>
-      <div class="row chips" id="cats" role="group" aria-label="Category"></div>
-      <div class="row">
-        <div class="row" id="lvls" role="group" aria-label="Level" style="margin:0"></div>
-        <span class="spacer"></span>
-        <div class="row" id="statusChips" role="group" aria-label="Progress" style="margin:0"></div>
-      </div>
-      <div class="row stats" id="stats"></div>
-    </div>
+  <div class="wrap top">
+    <h1>Pub Quiz <span>Cards</span></h1>
+    <nav class="tabs" aria-label="Views">
+      <button class="tab" id="tabCards" data-i18n="cards"></button>
+      <button class="tab" id="tabRounds" data-i18n="rounds"></button>
+    </nav>
+    <span class="spacer"></span>
+    <button class="btn small" id="langBtn" aria-label="Language"></button>
   </div>
 </header>
 
 <main>
-  <div class="wrap" id="cardsView">
-    <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" hidden></div>
-    <button class="btn more" id="more" hidden></button>
+  <div class="wrap layout" id="cardsView">
+    <aside class="side" id="side" aria-label="Filters">
+      <div class="sidehead"><strong data-i18n="filters"></strong><button class="linkbtn" id="closeSide" data-i18n="done"></button></div>
+      <section><h3 data-i18n="category"></h3><div class="navlist" id="cats"></div></section>
+      <section><h3 data-i18n="difficulty"></h3><div class="navlist" id="lvls"></div></section>
+      <section><h3 data-i18n="progress"></h3><div class="navlist" id="statusChips"></div><div class="stats" id="stats"></div></section>
+    </aside>
+    <div class="content">
+      <div class="toolbar" id="cardControls">
+        <input type="search" id="search" aria-label="Search">
+        <div class="seg" role="group" aria-label="Mode">
+          <button id="modeFlip" data-i18n="flip"></button><button id="modeMC" data-i18n="mc"></button>
+        </div>
+        <button class="btn primary" id="hostBtn" data-i18n="host"></button>
+      </div>
+      <div class="summary">
+        <button class="btn small" id="openSide" data-i18n="filters"></button>
+        <span id="count"></span>
+        <button class="linkbtn" id="clearFilters" data-i18n="clear"></button>
+        <span class="spacer"></span>
+        <button class="btn small" id="shuffle" data-i18n="shuffle"></button>
+        <button class="btn small" id="flipAll"></button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden></div>
+      <button class="btn more" id="more" hidden></button>
+    </div>
   </div>
   <div class="wrap" id="roundsView" hidden>
     <div class="builder">
       <form class="panel" id="builderForm">
         <h2 data-i18n="buildTitle"></h2>
-        <div class="field"><label for="nRounds" class="label" data-i18n="numRounds"></label>
-          <input type="number" id="nRounds" min="1" max="10" value="5" style="width:90px"></div>
-        <div class="field"><label for="perRound" class="label" data-i18n="perRound"></label>
-          <select id="perRound"><option>5</option><option>8</option><option selected>10</option><option>12</option><option>15</option><option>20</option></select></div>
-        <div class="field"><span class="label" data-i18n="difficulty"></span>
-          <div class="row" id="diffChips" style="margin:0"></div></div>
-        <div class="field"><span class="label" data-i18n="roundCats"></span>
-          <div class="roundsel" id="roundSel"></div></div>
-        <label class="check"><input type="checkbox" id="avoidUsed" checked> <span data-i18n="avoidUsed"></span></label>
-        <div class="stats" id="usedInfo"></div>
-        <label class="check"><input type="checkbox" id="printChoices"> <span data-i18n="printChoices"></span></label>
-        <button class="btn primary" type="submit" data-i18n="generate"></button>
+        <fieldset><legend><span class="step">1</span><span data-i18n="stepSize"></span></legend>
+          <div class="pair">
+            <label><span class="label" data-i18n="numRounds"></span><input type="number" id="nRounds" min="1" max="10" value="5"></label>
+            <label><span class="label" data-i18n="perRound"></span><select id="perRound"><option>5</option><option>8</option><option selected>10</option><option>12</option><option>15</option><option>20</option></select></label>
+          </div></fieldset>
+        <fieldset><legend><span class="step">2</span><span data-i18n="difficulty"></span></legend>
+          <div class="row" id="diffChips" style="margin:0"></div></fieldset>
+        <fieldset><legend><span class="step">3</span><span data-i18n="roundCats"></span></legend>
+          <div class="roundsel" id="roundSel"></div></fieldset>
+        <fieldset><legend><span class="step">4</span><span data-i18n="options"></span></legend>
+          <label class="check"><input type="checkbox" id="avoidUsed" checked> <span data-i18n="avoidUsed"></span></label>
+          <div class="stats" id="usedInfo" style="margin-left:26px"></div>
+          <label class="check"><input type="checkbox" id="printChoices"> <span data-i18n="printChoices"></span></label></fieldset>
+        <button class="btn primary wide" type="submit" data-i18n="generate"></button>
         <div class="msg" id="buildMsg"></div>
       </form>
       <div class="panel" id="quizPanel">
         <h2 data-i18n="yourQuiz"></h2>
         <div id="quizEmpty" class="stats" data-i18n="noQuiz"></div>
         <div id="quizBody" hidden>
-          <div class="row">
+          <div class="quizbar">
             <button class="btn primary" id="hostQuiz" data-i18n="hostQuiz"></button>
-            <button class="btn" id="printSheets" data-i18n="printSheets"></button>
-            <button class="btn" id="printKey" data-i18n="printKey"></button>
-            <button class="btn" id="toggleAns"></button>
+            <span class="group"><span class="label" data-i18n="print"></span>
+              <button class="btn small" id="printSheets" data-i18n="printSheets"></button>
+              <button class="btn small" id="printKey" data-i18n="printKey"></button></span>
+            <span class="spacer"></span>
+            <button class="linkbtn" id="toggleAns"></button>
           </div>
           <div class="quiz hide-ans" id="quizList"></div>
         </div>
@@ -254,13 +305,13 @@
     <button class="btn" id="hostClose"></button>
     <span class="pos" id="hostPos"></span>
     <span class="spacer"></span>
-    <span class="timer"><label class="label" for="timerSel" data-i18n="timer"></label>
+    <div class="hostctl"><span class="timer"><label class="label" for="timerSel" data-i18n="timer"></label>
       <select id="timerSel"><option value="0"></option><option value="15">15 s</option><option value="30">30 s</option><option value="60">60 s</option></select>
       <span class="ring" id="ring" hidden title=""><svg width="46" height="46" viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="none" stroke="var(--line)" stroke-width="4"/><circle id="ringArc" cx="23" cy="23" r="20" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="0"/></svg><span id="ringNum"></span></span>
     </span>
     <button class="btn" id="choicesBtn" aria-pressed="false" data-i18n="showChoices"></button>
     <button class="btn" id="teamsBtn" data-i18n="teams"></button>
-    <button class="btn" id="fsBtn" data-i18n="fullscreen"></button>
+    <button class="btn" id="fsBtn" data-i18n="fullscreen"></button></div>
   </div>
   <div class="body" style="position:relative">
     <div class="stage" id="stage"></div>
@@ -291,29 +342,29 @@ const STR = {
     stAll:"All",stNew:"Not tried",stMissed:"Missed",stGot:"Got it",of:"of",questions:"questions",tap:"Tap to reveal",
     got:"✓ Got it",missed:"✗ Missed",report:"Report a mistake",gotN:"Got it",missedN:"Missed",reset:"Reset progress",resetSure:"Click again to reset",
     none:"No questions match.",more:"Show more",left:"left",correct:"Correct!",wrong:"Not quite – the answer is",
-    buildTitle:"Build a quiz",numRounds:"Number of rounds",perRound:"Questions per round",difficulty:"Difficulty",roundCats:"Category for each round",
+    buildTitle:"Build a quiz",numRounds:"Rounds",perRound:"Questions each",difficulty:"Difficulty",roundCats:"Category for each round",
     random:"Random category",mixed:"Mixed categories",avoidUsed:"Avoid questions from my earlier quizzes",printChoices:"Print multiple-choice options on answer sheets",
-    generate:"Generate quiz",yourQuiz:"Your quiz",noQuiz:"Choose your settings and press “Generate quiz”.",hostQuiz:"Host this quiz",printSheets:"Print answer sheets",
-    printKey:"Print answer key",showAns:"Show answers",hideAns:"Hide answers",round:"Round",notEnough:"Not enough questions for these settings – try fewer questions, other categories or more difficulty levels.",
+    generate:"Generate quiz",yourQuiz:"Your quiz",noQuiz:"Choose your settings and press “Generate quiz”.",hostQuiz:"Host this quiz",printSheets:"Answer sheets",
+    printKey:"Answer key",showAns:"Show answers",hideAns:"Hide answers",round:"Round",notEnough:"Not enough questions for these settings – try fewer questions, other categories or more difficulty levels.",
     used:"questions used in earlier quizzes",clearUsed:"Clear history",timer:"Timer",off:"Off",showChoices:"Show choices",teams:"Teams",fullscreen:"Full screen",
     scoreboard:"Scoreboard",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
     close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
     leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
-    answerSheet:"Answer sheet",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
+    answerSheet:"Answer sheet",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
   de:{cards:"Karten",rounds:"Runden-Planer",flip:"Umdrehen",mc:"Multiple Choice",shuffle:"Mischen",showAll:"Alle Antworten zeigen",hideAll:"Antworten verbergen",
     host:"Moderationsmodus",search:"Fragen, Antworten, Erklärungen suchen …",all:"Alle",Easy:"Leicht",Medium:"Mittel",Hard:"Schwer",
     stAll:"Alle",stNew:"Noch nicht versucht",stMissed:"Falsch",stGot:"Gewusst",of:"von",questions:"Fragen",tap:"Tippen zum Aufdecken",
     got:"✓ Gewusst",missed:"✗ Falsch",report:"Fehler melden",gotN:"Gewusst",missedN:"Falsch",reset:"Fortschritt zurücksetzen",resetSure:"Zum Bestätigen erneut klicken",
     none:"Keine passenden Fragen.",more:"Mehr anzeigen",left:"übrig",correct:"Richtig!",wrong:"Leider nicht – richtig ist",
-    buildTitle:"Quiz zusammenstellen",numRounds:"Anzahl der Runden",perRound:"Fragen pro Runde",difficulty:"Schwierigkeit",roundCats:"Kategorie pro Runde",
+    buildTitle:"Quiz zusammenstellen",numRounds:"Runden",perRound:"Fragen pro Runde",difficulty:"Schwierigkeit",roundCats:"Kategorie pro Runde",
     random:"Zufällige Kategorie",mixed:"Gemischte Kategorien",avoidUsed:"Fragen aus früheren Quizzen vermeiden",printChoices:"Antwortoptionen auf die Antwortbögen drucken",
-    generate:"Quiz erstellen",yourQuiz:"Dein Quiz",noQuiz:"Wähle die Einstellungen und klicke auf „Quiz erstellen“.",hostQuiz:"Dieses Quiz moderieren",printSheets:"Antwortbögen drucken",
-    printKey:"Lösungsblatt drucken",showAns:"Antworten zeigen",hideAns:"Antworten verbergen",round:"Runde",notEnough:"Nicht genug Fragen für diese Einstellungen – versuche weniger Fragen, andere Kategorien oder mehr Schwierigkeitsstufen.",
+    generate:"Quiz erstellen",yourQuiz:"Dein Quiz",noQuiz:"Wähle die Einstellungen und klicke auf „Quiz erstellen“.",hostQuiz:"Dieses Quiz moderieren",printSheets:"Antwortbögen",
+    printKey:"Lösungsblatt",showAns:"Antworten zeigen",hideAns:"Antworten verbergen",round:"Runde",notEnough:"Nicht genug Fragen für diese Einstellungen – versuche weniger Fragen, andere Kategorien oder mehr Schwierigkeitsstufen.",
     used:"Fragen in früheren Quizzen verwendet",clearUsed:"Verlauf löschen",timer:"Timer",off:"Aus",showChoices:"Optionen zeigen",teams:"Teams",fullscreen:"Vollbild",
     scoreboard:"Punktestand",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
     close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
     leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
-    answerSheet:"Antwortbogen",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
+    answerSheet:"Antwortbogen",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
 };
 const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}}};
 const $ = id => document.getElementById(id);
@@ -340,7 +391,7 @@ function reportURL(d){
   const body=`**Question (${d.id}):** ${d.q}\n**Answer shown:** ${d.a}\n**German:** ${d.de.q} → ${d.de.a}\n\n**What's wrong?**\n\n**Source (if you have one):**\n`;
   return `${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=mistake`;
 }
-function setMark(id,val){ if(S.progress[id]===val) delete S.progress[id]; else S.progress[id]=val; LS.set("progress",S.progress); renderStats(); }
+function setMark(id,val){ if(S.progress[id]===val) delete S.progress[id]; else S.progress[id]=val; LS.set("progress",S.progress); renderStats(); renderChips(); }
 
 /* ---------- i18n static text ---------- */
 function applyI18n(){
@@ -358,25 +409,28 @@ function applyI18n(){
 
 /* ---------- Cards view ---------- */
 function chip(label,on,fn,cls="chip"){const b=document.createElement("button");b.className=cls;b.textContent=label;b.setAttribute("aria-pressed",on);b.onclick=fn;return b}
+function navItem(label,n,on,fn){const b=document.createElement("button");b.className="navitem";b.setAttribute("aria-pressed",on);b.innerHTML=`<span>${esc(label)}</span><span class="n">${n}</span>`;b.onclick=fn;return b}
 function renderChips(){
-  $("cats").replaceChildren(chip(t("all"),S.cat==="all",()=>setCat("all")),...CATS.map(c=>chip(catName(c),S.cat===c.slug,()=>setCat(c.slug))));
-  $("lvls").replaceChildren(...["all","Easy","Medium","Hard"].map(l=>chip(l==="all"?t("all"):lvlName(l),S.lvl===l,()=>{S.lvl=l;S.shown=120;renderChips();render()})));
-  $("statusChips").replaceChildren(...[["all","stAll"],["new","stNew"],["missed","stMissed"],["got","stGot"]].map(([v,k])=>chip(t(k),S.status===v,()=>{S.status=v;S.shown=120;renderChips();render()})));
+  const cnt=f=>DATA.filter(f).length;
+  $("cats").replaceChildren(navItem(t("all"),cnt(d=>match(d,"cat")),S.cat==="all",()=>setCat("all")),
+    ...CATS.map(c=>navItem(catName(c),cnt(d=>catOf(d).slug===c.slug&&match(d,"cat")),S.cat===c.slug,()=>setCat(c.slug))));
+  $("lvls").replaceChildren(...["all","Easy","Medium","Hard"].map(l=>navItem(l==="all"?t("all"):lvlName(l),cnt(d=>(l==="all"||d.l===l)&&match(d,"lvl")),S.lvl===l,()=>{S.lvl=l;S.shown=120;renderChips();render()})));
+  const st={all:()=>true,new:d=>!S.progress[d.id],missed:d=>S.progress[d.id]==="missed",got:d=>S.progress[d.id]==="got"};
+  $("statusChips").replaceChildren(...[["all","stAll"],["new","stNew"],["missed","stMissed"],["got","stGot"]].map(([v,k])=>navItem(t(k),cnt(d=>st[v](d)&&match(d,"status")),S.status===v,()=>{S.status=v;S.shown=120;renderChips();render()})));
   $("modeFlip").setAttribute("aria-pressed",S.mode==="flip"); $("modeMC").setAttribute("aria-pressed",S.mode==="mc");
   $("flipAll").hidden=S.mode==="mc";
 }
 function setCat(slug){S.cat=slug;S.shown=120;const h=slug==="all"?"":"#"+slug;if(location.hash!==h){history.replaceState(null,"",h||location.pathname+location.search)}renderChips();render()}
-function filtered(){
+function match(d,skip){
+  if(skip!=="cat"&&S.cat!=="all"&&catOf(d).slug!==S.cat) return false;
+  if(skip!=="lvl"&&S.lvl!=="all"&&d.l!==S.lvl) return false;
+  const p=S.progress[d.id];
+  if(skip!=="status"){if(S.status==="new"&&p) return false; if(S.status==="missed"&&p!=="missed") return false; if(S.status==="got"&&p!=="got") return false}
   const q=S.q.toLowerCase();
-  return S.order.map(i=>DATA[i]).filter(d=>{
-    if(S.cat!=="all"&&catOf(d).slug!==S.cat) return false;
-    if(S.lvl!=="all"&&d.l!==S.lvl) return false;
-    const p=S.progress[d.id];
-    if(S.status==="new"&&p) return false; if(S.status==="missed"&&p!=="missed") return false; if(S.status==="got"&&p!=="got") return false;
-    if(q && !(d.q+" "+d.a+" "+d.s+" "+d.de.q+" "+d.de.a+" "+d.de.s).toLowerCase().includes(q)) return false;
-    return true;
-  });
+  if(q && !(d.q+" "+d.a+" "+d.s+" "+d.de.q+" "+d.de.a+" "+d.de.s).toLowerCase().includes(q)) return false;
+  return true;
 }
+function filtered(){return S.order.map(i=>DATA[i]).filter(d=>match(d))}
 function numOf(d){return d.id.split("-").pop()}
 function markHTML(d){const p=S.progress[d.id];return p?`<span class="mark ${p}">${p==="got"?"✓":"✗"}</span>`:""}
 function flipCard(d){
@@ -410,14 +464,17 @@ function mcCard(d){
     el.querySelectorAll(".opt").forEach(x=>{if(x.dataset.ok==="true")x.classList.add("right")}); if(!ok) b.classList.add("wrong");
     const s=el.querySelector(".s"); s.hidden=false; s.innerHTML=`<b>${ok?t("correct"):t("wrong")+" "+esc(F(d,"a"))+"."}</b> ${esc(F(d,"s"))}`;
     el.querySelector(".actions").hidden=false;
-    S.progress[d.id]=ok?"got":"missed"; LS.set("progress",S.progress); renderStats();
+    S.progress[d.id]=ok?"got":"missed"; LS.set("progress",S.progress); renderStats(); renderChips();
     el.querySelector(".meta span").innerHTML=`${esc(catName(c))} · #${numOf(d)}${markHTML(d)}`;
   });
   return el;
 }
 function render(){
   const list=filtered();
-  $("count").textContent=`${list.length} ${t("of")} ${DATA.length} ${t("questions")}`;
+  const pills=[];const c=CATS.find(c=>c.slug===S.cat);if(c)pills.push(catName(c));if(S.lvl!=="all")pills.push(lvlName(S.lvl));
+  if(S.status!=="all")pills.push(t({new:"stNew",missed:"stMissed",got:"stGot"}[S.status]));if(S.q)pills.push(`“${S.q}”`);
+  $("count").innerHTML=`${t("showing")} <b>${list.length}</b> ${t("of")} ${DATA.length} ${t("questions")} `+pills.map(x=>`<span class="pill">${esc(x)}</span>`).join(" ");
+  $("clearFilters").hidden=!pills.length;
   const frag=document.createDocumentFragment();
   list.slice(0,S.shown).forEach(d=>frag.appendChild(S.mode==="mc"?mcCard(d):flipCard(d)));
   $("grid").replaceChildren(frag);
@@ -426,10 +483,10 @@ function render(){
 }
 function renderStats(){
   const v=Object.values(S.progress); const g=v.filter(x=>x==="got").length, m=v.filter(x=>x==="missed").length;
-  const box=$("stats"); box.innerHTML=`<span><b class="good">${g}</b> ${t("gotN")} · <b class="bad">${m}</b> ${t("missedN")}</span>`;
+  const box=$("stats"); box.innerHTML=g+m?`<span><b class="good">${g}</b> ${t("gotN")} · <b class="bad">${m}</b> ${t("missedN")}</span>`:`<span>${t("noProgress")}</span>`;
   if(g+m){const b=document.createElement("button");b.className="linkbtn";b.textContent=t("reset");let armed=false;
     b.onclick=()=>{if(!armed){armed=true;b.textContent=t("resetSure");setTimeout(()=>{armed=false;b.textContent=t("reset")},3000);return}
-      S.progress={};LS.set("progress",S.progress);renderStats();render()};box.append(b)}
+      S.progress={};LS.set("progress",S.progress);renderStats();renderChips();render()};box.append(b)}
 }
 
 /* ---------- Round builder ---------- */
@@ -573,7 +630,7 @@ $("showBoard").onclick=()=>{stopTimer();$("stage").innerHTML=`<div class="slide"
   S.teams.forEach(x=>x.s=0);saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
 
 /* ---------- Views, hash links, language ---------- */
-function setView(v){S.view=v;$("cardsView").hidden=v!=="cards";$("cardControls").hidden=v!=="cards";$("roundsView").hidden=v!=="rounds";$("count").hidden=v!=="cards";
+function setView(v){S.view=v;$("cardsView").hidden=v!=="cards";$("roundsView").hidden=v!=="rounds";
   $("tabCards").setAttribute("aria-current",v==="cards");$("tabRounds").setAttribute("aria-current",v==="rounds");if(v==="rounds")renderBuilder()}
 $("tabCards").onclick=()=>{if(location.hash==="#rounds")history.replaceState(null,"",S.cat==="all"?location.pathname+location.search:"#"+S.cat);setView("cards")};
 $("tabRounds").onclick=()=>{history.replaceState(null,"","#rounds");setView("rounds")};
@@ -585,7 +642,9 @@ $("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";LS.set("lang",S.lang);a
 $("modeFlip").onclick=()=>{S.mode="flip";LS.set("mode",S.mode);renderChips();render()};
 $("modeMC").onclick=()=>{S.mode="mc";LS.set("mode",S.mode);renderChips();render()};
 $("more").onclick=()=>{S.shown+=120;render()};
-$("search").oninput=e=>{S.q=e.target.value.trim();S.shown=120;render()};
+$("search").oninput=e=>{S.q=e.target.value.trim();S.shown=120;renderChips();render()};
+$("clearFilters").onclick=()=>{S.lvl="all";S.status="all";S.q="";$("search").value="";setCat("all")};
+$("openSide").onclick=()=>$("side").classList.add("open"); $("closeSide").onclick=()=>$("side").classList.remove("open");
 $("shuffle").onclick=()=>{shuffle(S.order);render()};
 $("flipAll").onclick=()=>{S.allFlipped=!S.allFlipped;applyI18n();render()};
 $("nRounds").oninput=renderBuilder;
