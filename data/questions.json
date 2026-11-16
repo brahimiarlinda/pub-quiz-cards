@@ -51,6 +51,11 @@
 "slug": "germany-europe"
 },
 {
+"en": "Politics",
+"de": "Politik",
+"slug": "politics"
+},
+{
 "en": "90s",
 "de": "90er",
 "slug": "90s"
@@ -23064,6 +23069,1156 @@
 "Spanien",
 "Frankreich",
 "Deutschland"
+]
+}
+},
+{
+"id": "politics-1",
+"c": "Politics",
+"l": "Easy",
+"q": "How many years is one term of a US president?",
+"a": "4",
+"s": "A president can be elected twice at most, under the 22nd Amendment.",
+"o": [
+"5",
+"6",
+"8"
+],
+"de": {
+"q": "Wie viele Jahre dauert eine Amtszeit des US-Präsidenten?",
+"a": "4",
+"s": "Nach dem 22. Verfassungszusatz kann ein Präsident höchstens zweimal gewählt werden.",
+"o": [
+"5",
+"6",
+"8"
+]
+}
+},
+{
+"id": "politics-2",
+"c": "Politics",
+"l": "Easy",
+"q": "In which building does the US president live and work?",
+"a": "The White House",
+"s": "At 1600 Pennsylvania Avenue in Washington, D.C.",
+"o": [
+"The Capitol",
+"The Pentagon",
+"Camp David"
+],
+"de": {
+"q": "In welchem Gebäude lebt und arbeitet der US-Präsident?",
+"a": "Im Weißen Haus",
+"s": "An der 1600 Pennsylvania Avenue in Washington, D.C.",
+"o": [
+"Im Kapitol",
+"Im Pentagon",
+"In Camp David"
+]
+}
+},
+{
+"id": "politics-3",
+"c": "Politics",
+"l": "Medium",
+"q": "How many senators does each US state send to the Senate?",
+"a": "2",
+"s": "So the Senate has 100 members, whatever a state's population.",
+"o": [
+"1",
+"3",
+"4"
+],
+"de": {
+"q": "Wie viele Senatoren schickt jeder US-Bundesstaat in den Senat?",
+"a": "2",
+"s": "Der Senat hat daher 100 Mitglieder, unabhängig von der Einwohnerzahl eines Staates.",
+"o": [
+"1",
+"3",
+"4"
+]
+}
+},
+{
+"id": "politics-4",
+"c": "Politics",
+"l": "Hard",
+"q": "How many voting members does the US House of Representatives have?",
+"a": "435",
+"s": "Seats are shared out between the states by population after each census.",
+"o": [
+"100",
+"350",
+"538"
+],
+"de": {
+"q": "Wie viele stimmberechtigte Mitglieder hat das US-Repräsentantenhaus?",
+"a": "435",
+"s": "Die Sitze werden nach jeder Volkszählung entsprechend der Bevölkerung auf die Staaten verteilt.",
+"o": [
+"100",
+"350",
+"538"
+]
+}
+},
+{
+"id": "politics-5",
+"c": "Politics",
+"l": "Hard",
+"q": "How many Electoral College votes does a candidate need to win the US presidency?",
+"a": "270",
+"s": "That is a majority of the 538 electors.",
+"o": [
+"218",
+"300",
+"538"
+],
+"de": {
+"q": "Wie viele Wahlleute-Stimmen braucht ein Kandidat, um US-Präsident zu werden?",
+"a": "270",
+"s": "Das ist die Mehrheit der 538 Wahlleute.",
+"o": [
+"218",
+"300",
+"538"
+]
+}
+},
+{
+"id": "politics-6",
+"c": "Politics",
+"l": "Medium",
+"q": "Who became UK Prime Minister in July 2026, after Keir Starmer resigned?",
+"a": "Andy Burnham",
+"s": "He took office on 20 July 2026 without a general election, after becoming Labour leader.",
+"o": [
+"Rachel Reeves",
+"Angela Rayner",
+"Wes Streeting"
+],
+"de": {
+"q": "Wer wurde im Juli 2026 nach dem Rücktritt von Keir Starmer britischer Premierminister?",
+"a": "Andy Burnham",
+"s": "Er trat sein Amt am 20. Juli 2026 ohne Parlamentswahl an, nachdem er Labour-Vorsitzender geworden war.",
+"o": [
+"Rachel Reeves",
+"Angela Rayner",
+"Wes Streeting"
+]
+}
+},
+{
+"id": "politics-7",
+"c": "Politics",
+"l": "Easy",
+"q": "What is the famous address of the UK Prime Minister's residence?",
+"a": "10 Downing Street",
+"s": "Its black front door is one of the most photographed in the world.",
+"o": [
+"11 Downing Street",
+"221B Baker Street",
+"1 Whitehall"
+],
+"de": {
+"q": "Wie lautet die berühmte Adresse des Amtssitzes des britischen Premierministers?",
+"a": "10 Downing Street",
+"s": "Die schwarze Haustür gehört zu den meistfotografierten der Welt.",
+"o": [
+"11 Downing Street",
+"221B Baker Street",
+"1 Whitehall"
+]
+}
+},
+{
+"id": "politics-8",
+"c": "Politics",
+"l": "Medium",
+"q": "What are the two houses of the UK Parliament?",
+"a": "The House of Commons and the House of Lords",
+"s": "Members of the Commons are elected; members of the Lords are appointed or hold hereditary or church seats.",
+"o": [
+"The Senate and the House of Commons",
+"The House of Lords and the Privy Council",
+"The Commons and the Cabinet"
+],
+"de": {
+"q": "Welche zwei Kammern hat das britische Parlament?",
+"a": "Unterhaus (House of Commons) und Oberhaus (House of Lords)",
+"s": "Die Mitglieder des Unterhauses werden gewählt, die des Oberhauses ernannt oder haben erbliche bzw. kirchliche Sitze.",
+"o": [
+"Senat und Unterhaus",
+"Oberhaus und Kronrat",
+"Unterhaus und Kabinett"
+]
+}
+},
+{
+"id": "politics-9",
+"c": "Politics",
+"l": "Easy",
+"q": "Who has been Germany's Federal Chancellor since May 2025?",
+"a": "Friedrich Merz",
+"s": "The CDU leader was elected on 6 May 2025, needing a second round – a first for a German chancellor.",
+"o": [
+"Olaf Scholz",
+"Markus Söder",
+"Lars Klingbeil"
+],
+"de": {
+"q": "Wer ist seit Mai 2025 deutscher Bundeskanzler?",
+"a": "Friedrich Merz",
+"s": "Der CDU-Vorsitzende wurde am 6. Mai 2025 gewählt und brauchte einen zweiten Wahlgang – eine Premiere für einen Kanzler.",
+"o": [
+"Olaf Scholz",
+"Markus Söder",
+"Lars Klingbeil"
+]
+}
+},
+{
+"id": "politics-10",
+"c": "Politics",
+"l": "Medium",
+"q": "What is the title of Germany's head of state?",
+"a": "Federal President (Bundespräsident)",
+"s": "The role is mostly ceremonial; the chancellor leads the government.",
+"o": [
+"Federal Chancellor",
+"Minister-President",
+"President of the Bundestag"
+],
+"de": {
+"q": "Wie heißt das deutsche Staatsoberhaupt?",
+"a": "Bundespräsident",
+"s": "Das Amt ist überwiegend repräsentativ; die Regierung führt der Bundeskanzler.",
+"o": [
+"Bundeskanzler",
+"Ministerpräsident",
+"Bundestagspräsident"
+]
+}
+},
+{
+"id": "politics-11",
+"c": "Politics",
+"l": "Medium",
+"q": "What is Germany's constitution called?",
+"a": "The Basic Law (Grundgesetz)",
+"s": "It was meant as temporary until reunification, but stayed after 1990.",
+"o": [
+"The Weimar Constitution",
+"The Reich Charter",
+"The Federal Code"
+],
+"de": {
+"q": "Wie heißt die deutsche Verfassung?",
+"a": "Grundgesetz",
+"s": "Es sollte bis zur Wiedervereinigung vorläufig gelten, blieb aber nach 1990 bestehen.",
+"o": [
+"Weimarer Reichsverfassung",
+"Reichscharta",
+"Bundesgesetzbuch"
+]
+}
+},
+{
+"id": "politics-12",
+"c": "Politics",
+"l": "Hard",
+"q": "In which year was Germany's Basic Law adopted?",
+"a": "1949",
+"s": "It came into force on 23 May 1949, founding the Federal Republic.",
+"o": [
+"1945",
+"1952",
+"1990"
+],
+"de": {
+"q": "In welchem Jahr wurde das Grundgesetz verabschiedet?",
+"a": "1949",
+"s": "Es trat am 23. Mai 1949 in Kraft und begründete die Bundesrepublik.",
+"o": [
+"1945",
+"1952",
+"1990"
+]
+}
+},
+{
+"id": "politics-13",
+"c": "Politics",
+"l": "Medium",
+"q": "What share of the vote does a party normally need to get into the Bundestag?",
+"a": "5%",
+"s": "A party can also get in by winning enough constituency seats.",
+"o": [
+"3%",
+"7.5%",
+"10%"
+],
+"de": {
+"q": "Welchen Stimmenanteil braucht eine Partei normalerweise, um in den Bundestag einzuziehen?",
+"a": "5 %",
+"s": "Eine Partei kann auch über genügend gewonnene Direktmandate einziehen.",
+"o": [
+"3 %",
+"7,5 %",
+"10 %"
+]
+}
+},
+{
+"id": "politics-14",
+"c": "Politics",
+"l": "Medium",
+"q": "Which German body represents the 16 federal states in national law-making?",
+"a": "The Bundesrat",
+"s": "Its members are sent by the state governments, not directly elected.",
+"o": [
+"The Bundestag",
+"The Bundesversammlung",
+"The Landtag"
+],
+"de": {
+"q": "Welches Organ vertritt die 16 Bundesländer bei der Gesetzgebung des Bundes?",
+"a": "Der Bundesrat",
+"s": "Seine Mitglieder werden von den Landesregierungen entsandt, nicht direkt gewählt.",
+"o": [
+"Der Bundestag",
+"Die Bundesversammlung",
+"Der Landtag"
+]
+}
+},
+{
+"id": "politics-15",
+"c": "Politics",
+"l": "Medium",
+"q": "In which city is Germany's Federal Constitutional Court?",
+"a": "Karlsruhe",
+"s": "Deliberately placed away from the government in Berlin.",
+"o": [
+"Berlin",
+"Bonn",
+"Leipzig"
+],
+"de": {
+"q": "In welcher Stadt sitzt das Bundesverfassungsgericht?",
+"a": "Karlsruhe",
+"s": "Bewusst getrennt vom Regierungssitz in Berlin.",
+"o": [
+"Berlin",
+"Bonn",
+"Leipzig"
+]
+}
+},
+{
+"id": "politics-16",
+"c": "Politics",
+"l": "Medium",
+"q": "Who has been President of the European Commission since 2019?",
+"a": "Ursula von der Leyen",
+"s": "A former German defence minister and the first woman in the role.",
+"o": [
+"Roberta Metsola",
+"Christine Lagarde",
+"Charles Michel"
+],
+"de": {
+"q": "Wer ist seit 2019 Präsidentin der Europäischen Kommission?",
+"a": "Ursula von der Leyen",
+"s": "Eine frühere deutsche Verteidigungsministerin und die erste Frau in diesem Amt.",
+"o": [
+"Roberta Metsola",
+"Christine Lagarde",
+"Charles Michel"
+]
+}
+},
+{
+"id": "politics-17",
+"c": "Politics",
+"l": "Medium",
+"q": "How often are European Parliament elections held?",
+"a": "Every 5 years",
+"s": "The most recent were in June 2024.",
+"o": [
+"Every 4 years",
+"Every 6 years",
+"Every 3 years"
+],
+"de": {
+"q": "Wie oft finden Europawahlen statt?",
+"a": "Alle 5 Jahre",
+"s": "Zuletzt im Juni 2024.",
+"o": [
+"Alle 4 Jahre",
+"Alle 6 Jahre",
+"Alle 3 Jahre"
+]
+}
+},
+{
+"id": "politics-18",
+"c": "Politics",
+"l": "Hard",
+"q": "Which EU body brings together the heads of state or government of the member countries?",
+"a": "The European Council",
+"s": "Not to be confused with the Council of the EU (ministers) or the Council of Europe.",
+"o": [
+"The Council of Europe",
+"The European Commission",
+"The European Parliament"
+],
+"de": {
+"q": "Welches EU-Organ vereint die Staats- und Regierungschefs der Mitgliedstaaten?",
+"a": "Der Europäische Rat",
+"s": "Nicht zu verwechseln mit dem Rat der EU (Minister) oder dem Europarat.",
+"o": [
+"Der Europarat",
+"Die Europäische Kommission",
+"Das Europäische Parlament"
+]
+}
+},
+{
+"id": "politics-19",
+"c": "Politics",
+"l": "Easy",
+"q": "In which city is the headquarters of the United Nations?",
+"a": "New York",
+"s": "On land by the East River in Manhattan, opened in 1952.",
+"o": [
+"Geneva",
+"Vienna",
+"Brussels"
+],
+"de": {
+"q": "In welcher Stadt ist der Hauptsitz der Vereinten Nationen?",
+"a": "New York",
+"s": "Am East River in Manhattan, eröffnet 1952.",
+"o": [
+"Genf",
+"Wien",
+"Brüssel"
+]
+}
+},
+{
+"id": "politics-20",
+"c": "Politics",
+"l": "Medium",
+"q": "How many member states does the United Nations have?",
+"a": "193",
+"s": "South Sudan became the newest member in 2011.",
+"o": [
+"150",
+"185",
+"201"
+],
+"de": {
+"q": "Wie viele Mitgliedstaaten haben die Vereinten Nationen?",
+"a": "193",
+"s": "Südsudan wurde 2011 das jüngste Mitglied.",
+"o": [
+"150",
+"185",
+"201"
+]
+}
+},
+{
+"id": "politics-21",
+"c": "Politics",
+"l": "Medium",
+"q": "How many permanent members does the UN Security Council have?",
+"a": "5",
+"s": "The USA, Russia, China, the UK and France.",
+"o": [
+"3",
+"7",
+"10"
+],
+"de": {
+"q": "Wie viele ständige Mitglieder hat der UN-Sicherheitsrat?",
+"a": "5",
+"s": "USA, Russland, China, Großbritannien und Frankreich.",
+"o": [
+"3",
+"7",
+"10"
+]
+}
+},
+{
+"id": "politics-22",
+"c": "Politics",
+"l": "Medium",
+"q": "Which of these countries is a permanent member of the UN Security Council?",
+"a": "France",
+"s": "Germany, Japan and India have long campaigned for permanent seats.",
+"o": [
+"Germany",
+"Japan",
+"India"
+],
+"de": {
+"q": "Welches dieser Länder ist ständiges Mitglied im UN-Sicherheitsrat?",
+"a": "Frankreich",
+"s": "Deutschland, Japan und Indien bemühen sich seit Langem um einen ständigen Sitz.",
+"o": [
+"Deutschland",
+"Japan",
+"Indien"
+]
+}
+},
+{
+"id": "politics-23",
+"c": "Politics",
+"l": "Medium",
+"q": "What is the power of a permanent Security Council member to block a resolution called?",
+"a": "The veto",
+"s": "Latin for \"I forbid\".",
+"o": [
+"The filibuster",
+"The quorum",
+"The mandate"
+],
+"de": {
+"q": "Wie heißt das Recht eines ständigen Sicherheitsratsmitglieds, eine Resolution zu blockieren?",
+"a": "Das Veto",
+"s": "Lateinisch für „ich verbiete“.",
+"o": [
+"Der Filibuster",
+"Das Quorum",
+"Das Mandat"
+]
+}
+},
+{
+"id": "politics-24",
+"c": "Politics",
+"l": "Medium",
+"q": "Which former Portuguese prime minister is UN Secretary-General until the end of 2026?",
+"a": "António Guterres",
+"s": "He has served two five-year terms since 2017; his successor takes over in January 2027.",
+"o": [
+"Ban Ki-moon",
+"Kofi Annan",
+"José Manuel Barroso"
+],
+"de": {
+"q": "Welcher frühere portugiesische Premierminister ist bis Ende 2026 UN-Generalsekretär?",
+"a": "António Guterres",
+"s": "Er amtiert seit 2017 zwei fünfjährige Amtszeiten; sein Nachfolger übernimmt im Januar 2027.",
+"o": [
+"Ban Ki-moon",
+"Kofi Annan",
+"José Manuel Barroso"
+]
+}
+},
+{
+"id": "politics-25",
+"c": "Politics",
+"l": "Medium",
+"q": "In which city is NATO's headquarters?",
+"a": "Brussels",
+"s": "NATO moved there from Paris in 1967.",
+"o": [
+"The Hague",
+"Washington, D.C.",
+"Geneva"
+],
+"de": {
+"q": "In welcher Stadt ist das NATO-Hauptquartier?",
+"a": "Brüssel",
+"s": "Die NATO zog 1967 von Paris dorthin.",
+"o": [
+"Den Haag",
+"Washington, D.C.",
+"Genf"
+]
+}
+},
+{
+"id": "politics-26",
+"c": "Politics",
+"l": "Hard",
+"q": "Which article of the NATO treaty says an attack on one member is an attack on all?",
+"a": "Article 5",
+"s": "It was first invoked after the 9/11 attacks in 2001.",
+"o": [
+"Article 1",
+"Article 10",
+"Article 50"
+],
+"de": {
+"q": "Welcher Artikel des NATO-Vertrags besagt, dass ein Angriff auf ein Mitglied ein Angriff auf alle ist?",
+"a": "Artikel 5",
+"s": "Er wurde erstmals nach den Anschlägen vom 11. September 2001 ausgerufen.",
+"o": [
+"Artikel 1",
+"Artikel 10",
+"Artikel 50"
+]
+}
+},
+{
+"id": "politics-27",
+"c": "Politics",
+"l": "Medium",
+"q": "What does the \"G7\" stand for?",
+"a": "Group of Seven",
+"s": "Canada, France, Germany, Italy, Japan, the UK and the USA; the EU also takes part.",
+"o": [
+"Global Seven",
+"Government of Seven",
+"Grand Seven"
+],
+"de": {
+"q": "Wofür steht „G7“?",
+"a": "Gruppe der Sieben",
+"s": "Kanada, Frankreich, Deutschland, Italien, Japan, Großbritannien und die USA; die EU ist ebenfalls dabei.",
+"o": [
+"Globale Sieben",
+"Regierung der Sieben",
+"Große Sieben"
+]
+}
+},
+{
+"id": "politics-28",
+"c": "Politics",
+"l": "Easy",
+"q": "What is a referendum?",
+"a": "A direct public vote on a single question",
+"s": "Switzerland holds them several times a year.",
+"o": [
+"A vote of MPs on a new leader",
+"A court ruling on an election",
+"A survey by a polling company"
+],
+"de": {
+"q": "Was ist ein Referendum?",
+"a": "Eine direkte Volksabstimmung über eine einzelne Frage",
+"s": "Die Schweiz hält mehrmals im Jahr Volksabstimmungen ab.",
+"o": [
+"Eine Abstimmung der Abgeordneten über eine neue Führung",
+"Ein Gerichtsurteil über eine Wahl",
+"Eine Umfrage eines Meinungsforschungsinstituts"
+]
+}
+},
+{
+"id": "politics-29",
+"c": "Politics",
+"l": "Easy",
+"q": "What is a government formed by two or more parties called?",
+"a": "A coalition",
+"s": "Most German federal governments have been coalitions.",
+"o": [
+"A caucus",
+"A cabinet reshuffle",
+"A minority government"
+],
+"de": {
+"q": "Wie nennt man eine Regierung aus zwei oder mehr Parteien?",
+"a": "Eine Koalition",
+"s": "Die meisten deutschen Bundesregierungen waren Koalitionen.",
+"o": [
+"Ein Caucus",
+"Eine Kabinettsumbildung",
+"Eine Minderheitsregierung"
+]
+}
+},
+{
+"id": "politics-30",
+"c": "Politics",
+"l": "Medium",
+"q": "What is the US Senate tactic of talking at length to delay a vote called?",
+"a": "A filibuster",
+"s": "The longest Senate speech on record is Cory Booker's, at over 25 hours in 2025.",
+"o": [
+"A gerrymander",
+"A lame duck",
+"A pork barrel"
+],
+"de": {
+"q": "Wie heißt die Taktik im US-Senat, eine Abstimmung durch Dauerreden zu verzögern?",
+"a": "Filibuster",
+"s": "Die längste Rede im Senat hielt Cory Booker 2025 mit über 25 Stunden.",
+"o": [
+"Gerrymandering",
+"Lame Duck",
+"Pork Barrel"
+]
+}
+},
+{
+"id": "politics-31",
+"c": "Politics",
+"l": "Medium",
+"q": "What is \"gerrymandering\"?",
+"a": "Drawing voting districts to favour one party",
+"s": "Named after Governor Elbridge Gerry, whose 1812 district map looked like a salamander.",
+"o": [
+"Buying votes",
+"Counting votes twice",
+"Delaying an election"
+],
+"de": {
+"q": "Was ist „Gerrymandering“?",
+"a": "Wahlkreise so zuschneiden, dass eine Partei profitiert",
+"s": "Benannt nach Gouverneur Elbridge Gerry, dessen Wahlkreiskarte von 1812 wie ein Salamander aussah.",
+"o": [
+"Stimmenkauf",
+"Doppeltes Auszählen",
+"Das Verschieben einer Wahl"
+]
+}
+},
+{
+"id": "politics-32",
+"c": "Politics",
+"l": "Hard",
+"q": "What does it mean when a US president is impeached?",
+"a": "The House of Representatives formally charges them",
+"s": "Removal needs a two-thirds vote in the Senate, which has never happened.",
+"o": [
+"They are removed from office",
+"They lose an election",
+"They resign"
+],
+"de": {
+"q": "Was bedeutet es, wenn gegen einen US-Präsidenten ein Impeachment beschlossen wird?",
+"a": "Das Repräsentantenhaus erhebt formell Anklage",
+"s": "Für eine Amtsenthebung braucht es zwei Drittel im Senat – das ist noch nie geschehen.",
+"o": [
+"Er wird aus dem Amt entfernt",
+"Er verliert eine Wahl",
+"Er tritt zurück"
+]
+}
+},
+{
+"id": "politics-33",
+"c": "Politics",
+"l": "Easy",
+"q": "Which ancient city is called the birthplace of democracy?",
+"a": "Athens",
+"s": "Citizens voted directly in an assembly from around 508 BC – though women and enslaved people could not.",
+"o": [
+"Rome",
+"Sparta",
+"Babylon"
+],
+"de": {
+"q": "Welche antike Stadt gilt als Wiege der Demokratie?",
+"a": "Athen",
+"s": "Bürger stimmten ab etwa 508 v. Chr. direkt in einer Versammlung ab – Frauen und Sklaven aber nicht.",
+"o": [
+"Rom",
+"Sparta",
+"Babylon"
+]
+}
+},
+{
+"id": "politics-34",
+"c": "Politics",
+"l": "Easy",
+"q": "Which word from Greek means \"rule by the people\"?",
+"a": "Democracy",
+"s": "From \"demos\" (people) and \"kratos\" (power).",
+"o": [
+"Aristocracy",
+"Monarchy",
+"Oligarchy"
+],
+"de": {
+"q": "Welches Wort aus dem Griechischen bedeutet „Herrschaft des Volkes“?",
+"a": "Demokratie",
+"s": "Von „demos“ (Volk) und „kratos“ (Macht).",
+"o": [
+"Aristokratie",
+"Monarchie",
+"Oligarchie"
+]
+}
+},
+{
+"id": "politics-35",
+"c": "Politics",
+"l": "Medium",
+"q": "Who wrote \"The Prince\", a famous book on how rulers keep power?",
+"a": "Niccolò Machiavelli",
+"s": "Written in Florence in 1513; \"Machiavellian\" now means cunning and scheming.",
+"o": [
+"Thomas Hobbes",
+"John Locke",
+"Dante Alighieri"
+],
+"de": {
+"q": "Wer schrieb „Der Fürst“, ein berühmtes Buch darüber, wie Herrscher ihre Macht erhalten?",
+"a": "Niccolò Machiavelli",
+"s": "1513 in Florenz geschrieben; „machiavellistisch“ bedeutet heute listig und skrupellos.",
+"o": [
+"Thomas Hobbes",
+"John Locke",
+"Dante Alighieri"
+]
+}
+},
+{
+"id": "politics-36",
+"c": "Politics",
+"l": "Hard",
+"q": "Which French thinker set out the separation of powers in 1748?",
+"a": "Montesquieu",
+"s": "In \"The Spirit of the Laws\", which influenced the US Constitution.",
+"o": [
+"Voltaire",
+"Jean-Jacques Rousseau",
+"Denis Diderot"
+],
+"de": {
+"q": "Welcher französische Denker beschrieb 1748 die Gewaltenteilung?",
+"a": "Montesquieu",
+"s": "In „Vom Geist der Gesetze“, das die US-Verfassung beeinflusste.",
+"o": [
+"Voltaire",
+"Jean-Jacques Rousseau",
+"Denis Diderot"
+]
+}
+},
+{
+"id": "politics-37",
+"c": "Politics",
+"l": "Medium",
+"q": "What are the three branches of government in the separation of powers?",
+"a": "Legislative, executive and judicial",
+"s": "They make the laws, carry them out and interpret them.",
+"o": [
+"Federal, state and local",
+"Parliament, president and party",
+"Military, police and courts"
+],
+"de": {
+"q": "Was sind die drei Gewalten bei der Gewaltenteilung?",
+"a": "Legislative, Exekutive und Judikative",
+"s": "Sie beschließen Gesetze, führen sie aus und legen sie aus.",
+"o": [
+"Bund, Länder und Gemeinden",
+"Parlament, Präsident und Partei",
+"Militär, Polizei und Gerichte"
+]
+}
+},
+{
+"id": "politics-38",
+"c": "Politics",
+"l": "Hard",
+"q": "Which country had the world's first female prime minister, in 1960?",
+"a": "Sri Lanka (then Ceylon)",
+"s": "Sirimavo Bandaranaike served three terms as prime minister.",
+"o": [
+"India",
+"Israel",
+"The United Kingdom"
+],
+"de": {
+"q": "Welches Land hatte 1960 die erste Premierministerin der Welt?",
+"a": "Sri Lanka (damals Ceylon)",
+"s": "Sirimavo Bandaranaike war dreimal Premierministerin.",
+"o": [
+"Indien",
+"Israel",
+"Großbritannien"
+]
+}
+},
+{
+"id": "politics-39",
+"c": "Politics",
+"l": "Medium",
+"q": "Which country's parliament is called the Knesset?",
+"a": "Israel",
+"s": "It has 120 members and meets in Jerusalem.",
+"o": [
+"Iran",
+"Turkey",
+"Egypt"
+],
+"de": {
+"q": "Wie heißt das Parlament welches Landes Knesset?",
+"a": "Israel",
+"s": "Es hat 120 Mitglieder und tagt in Jerusalem.",
+"o": [
+"Iran",
+"Türkei",
+"Ägypten"
+]
+}
+},
+{
+"id": "politics-40",
+"c": "Politics",
+"l": "Medium",
+"q": "Which country's lower house of parliament is called the State Duma?",
+"a": "Russia",
+"s": "\"Duma\" comes from the Russian word for \"to think\".",
+"o": [
+"Ukraine",
+"Poland",
+"Bulgaria"
+],
+"de": {
+"q": "In welchem Land heißt das Unterhaus des Parlaments Staatsduma?",
+"a": "Russland",
+"s": "„Duma“ kommt vom russischen Wort für „denken“.",
+"o": [
+"Ukraine",
+"Polen",
+"Bulgarien"
+]
+}
+},
+{
+"id": "politics-41",
+"c": "Politics",
+"l": "Hard",
+"q": "Which country's parliament is called the Storting?",
+"a": "Norway",
+"s": "It meets in Oslo and has 169 members.",
+"o": [
+"Sweden",
+"Denmark",
+"Iceland"
+],
+"de": {
+"q": "Wie heißt das Parlament welches Landes Storting?",
+"a": "Norwegen",
+"s": "Es tagt in Oslo und hat 169 Mitglieder.",
+"o": [
+"Schweden",
+"Dänemark",
+"Island"
+]
+}
+},
+{
+"id": "politics-42",
+"c": "Politics",
+"l": "Hard",
+"q": "What is Albania's parliament called in Albanian?",
+"a": "Kuvendi",
+"s": "The Assembly of Albania has 140 members and sits in Tirana.",
+"o": [
+"Sabor",
+"Skupština",
+"Vouli"
+],
+"de": {
+"q": "Wie heißt Albaniens Parlament auf Albanisch?",
+"a": "Kuvendi",
+"s": "Die Versammlung Albaniens hat 140 Mitglieder und tagt in Tirana.",
+"o": [
+"Sabor",
+"Skupština",
+"Vouli"
+]
+}
+},
+{
+"id": "politics-43",
+"c": "Politics",
+"l": "Medium",
+"q": "In which year did women in Germany win the right to vote?",
+"a": "1918",
+"s": "They first voted in the National Assembly election of January 1919.",
+"o": [
+"1908",
+"1925",
+"1949"
+],
+"de": {
+"q": "In welchem Jahr erhielten Frauen in Deutschland das Wahlrecht?",
+"a": "1918",
+"s": "Sie wählten erstmals bei der Wahl zur Nationalversammlung im Januar 1919.",
+"o": [
+"1908",
+"1925",
+"1949"
+]
+}
+},
+{
+"id": "politics-44",
+"c": "Politics",
+"l": "Hard",
+"q": "In which year could women in Switzerland first vote in national elections?",
+"a": "1971",
+"s": "The last canton gave women the vote locally only in 1990.",
+"o": [
+"1919",
+"1945",
+"1981"
+],
+"de": {
+"q": "In welchem Jahr durften Frauen in der Schweiz erstmals auf Bundesebene wählen?",
+"a": "1971",
+"s": "Der letzte Kanton führte das Frauenstimmrecht auf kantonaler Ebene erst 1990 ein.",
+"o": [
+"1919",
+"1945",
+"1981"
+]
+}
+},
+{
+"id": "politics-45",
+"c": "Politics",
+"l": "Hard",
+"q": "What is the minimum age to become US president?",
+"a": "35",
+"s": "A president must also be a natural-born citizen and have lived in the US for 14 years.",
+"o": [
+"30",
+"40",
+"45"
+],
+"de": {
+"q": "Wie alt muss man mindestens sein, um US-Präsident zu werden?",
+"a": "35",
+"s": "Außerdem muss man gebürtiger Staatsbürger sein und 14 Jahre in den USA gelebt haben.",
+"o": [
+"30",
+"40",
+"45"
+]
+}
+},
+{
+"id": "politics-46",
+"c": "Politics",
+"l": "Medium",
+"q": "Which animal is the traditional symbol of the US Democratic Party?",
+"a": "The donkey",
+"s": "The Republicans' symbol is the elephant; both were made famous by cartoonist Thomas Nast.",
+"o": [
+"The elephant",
+"The eagle",
+"The bull"
+],
+"de": {
+"q": "Welches Tier ist das traditionelle Symbol der US-Demokraten?",
+"a": "Der Esel",
+"s": "Das Symbol der Republikaner ist der Elefant; beide machte der Karikaturist Thomas Nast bekannt.",
+"o": [
+"Der Elefant",
+"Der Adler",
+"Der Stier"
+]
+}
+},
+{
+"id": "politics-47",
+"c": "Politics",
+"l": "Medium",
+"q": "What is a \"hung parliament\"?",
+"a": "One where no party has a majority",
+"s": "Parties then have to form a coalition or a minority government.",
+"o": [
+"One that has been dissolved",
+"One that meets in secret",
+"One with an equal number of men and women"
+],
+"de": {
+"q": "Was ist ein „hung parliament“?",
+"a": "Ein Parlament, in dem keine Partei die Mehrheit hat",
+"s": "Die Parteien müssen dann eine Koalition oder Minderheitsregierung bilden.",
+"o": [
+"Ein aufgelöstes Parlament",
+"Ein Parlament, das geheim tagt",
+"Ein Parlament mit gleich vielen Frauen und Männern"
+]
+}
+},
+{
+"id": "politics-48",
+"c": "Politics",
+"l": "Easy",
+"q": "Who is the head of state of the United Kingdom?",
+"a": "King Charles III",
+"s": "He became king in September 2022 after the death of Elizabeth II.",
+"o": [
+"The Prime Minister",
+"Prince William",
+"The Speaker of the House"
+],
+"de": {
+"q": "Wer ist Staatsoberhaupt des Vereinigten Königreichs?",
+"a": "König Charles III.",
+"s": "Er wurde im September 2022 nach dem Tod von Elisabeth II. König.",
+"o": [
+"Der Premierminister",
+"Prinz William",
+"Der Parlamentspräsident"
+]
+}
+},
+{
+"id": "politics-49",
+"c": "Politics",
+"l": "Medium",
+"q": "What do you call a politician still in office after their successor has been chosen?",
+"a": "A lame duck",
+"s": "Common in the US between the November election and the January handover.",
+"o": [
+"A dark horse",
+"A sitting duck",
+"A backbencher"
+],
+"de": {
+"q": "Wie nennt man einen Politiker, der noch im Amt ist, obwohl sein Nachfolger schon feststeht?",
+"a": "Eine „lahme Ente“ (lame duck)",
+"s": "In den USA typisch zwischen der Wahl im November und der Amtsübergabe im Januar.",
+"o": [
+"Ein „dark horse“",
+"Eine „sitting duck“",
+"Ein Hinterbänkler"
+]
+}
+},
+{
+"id": "politics-50",
+"c": "Politics",
+"l": "Medium",
+"q": "In parliament, what is the person who chairs debates in the UK House of Commons called?",
+"a": "The Speaker",
+"s": "They must stay politically neutral and are known for calling \"Order!\".",
+"o": [
+"The Chancellor",
+"The Whip",
+"The Chief Justice"
+],
+"de": {
+"q": "Wie heißt die Person, die im britischen Unterhaus die Debatten leitet?",
+"a": "The Speaker (Parlamentspräsident)",
+"s": "Er muss politisch neutral bleiben und ist für den Ruf „Order!“ bekannt.",
+"o": [
+"Der Chancellor",
+"Der Whip",
+"Der Oberste Richter"
 ]
 }
 },

@@ -1,7 +1,7 @@
 {
   "name": "Pub Quiz Cards",
   "short_name": "Pub Quiz",
-  "description": "1,150 pub quiz questions with answers, flip cards, multiple choice, round builder and host mode.",
+  "description": "1,200 pub quiz questions with answers, flip cards, multiple choice, round builder and host mode.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

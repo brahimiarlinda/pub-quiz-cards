@@ -2,14 +2,14 @@
 
 **Live app: https://brahimiarlinda.github.io/pub-quiz-cards/**
 
-1,150 pub quiz questions with answers and short explanations, as flip cards. Run a full quiz night with the round builder, team scoreboard and timer, or practise alone with multiple choice. In English and German.
+1,200 pub quiz questions with answers and short explanations, as flip cards. Run a full quiz night with the round builder, team scoreboard and timer, or practise alone with multiple choice. In English and German.
 
 ![Pub Quiz Cards](og.png)
 
 ## Features
 
 **Cards**
-- 13 categories: General knowledge, Geography, History, Science & nature, Film & TV, Music, Sport, Food & drink, Books, language & art, Germany & Europe (100 each), plus 90s, Kids and Albania (50 each)
+- 14 categories: General knowledge, Geography, History, Science & nature, Film & TV, Music, Sport, Food & drink, Books, language & art, Germany & Europe (100 each), plus Politics, 90s, Kids and Albania (50 each)
 - Every question has an answer, a short summary and a level (Easy, Medium, Hard)
 - **Flip mode**: tap a card to see the answer
 - **Multiple-choice mode**: pick from four options; every question has three wrong answers
@@ -41,7 +41,7 @@
 
 ## Category links
 
-`general` · `geography` · `history` · `science` · `film-tv` · `music` · `sport` · `food` · `books-art` · `germany-europe` · `90s` · `kids` · `albania`
+`general` · `geography` · `history` · `science` · `film-tv` · `music` · `sport` · `food` · `books-art` · `germany-europe` · `politics` · `90s` · `kids` · `albania`
 
 ## Project files
 
@@ -66,4 +66,4 @@ No dependencies or build tools are needed beyond Python 3.
 
 Use the **Report a mistake** link on the card, or [open an issue](https://github.com/brahimiarlinda/pub-quiz-cards/issues/new).
 
-Facts that change over time (World Cup results, euro members, UNESCO site counts, scoring records) were checked in November 2026.
+Facts that change over time (heads of government, World Cup results, euro members, UNESCO site counts, scoring records) were checked in November 2026.

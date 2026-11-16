@@ -1,5 +1,5 @@
 // Offline support: cache the app so it works without a connection.
-const CACHE = "pub-quiz-226f382040";
+const CACHE = "pub-quiz-24321b9197";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 
 self.addEventListener("install", e => {
