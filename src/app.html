@@ -140,21 +140,34 @@
   .slide h2{font:700 clamp(2rem,6vw,3.4rem)/1.1 Georgia,serif;margin:0 0 8px}
   .slide p{color:var(--muted);font-size:1.15rem;margin:0}
   .board{width:min(560px,100%);margin:18px auto 0;display:grid;gap:8px;text-align:left}
-  .board div{display:flex;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:1.2rem}
-  .board div:first-child{border-color:var(--accent);font-weight:700}
+  .board.two{width:min(980px,100%);grid-template-columns:1fr 1fr;grid-auto-flow:column;gap:6px 14px}
+  .board .bt{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:1.2rem}
+  .board.two .bt{font-size:1.02rem;padding:7px 12px}
+  .board .bt.top{border-color:var(--accent);font-weight:700}
+  .board .rk{min-width:2.1em;font-weight:700;color:var(--muted)}
+  .board .bt.top .rk{color:var(--ink)}
+  .board .tn{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .board .dl{font-size:.78em;color:var(--good);font-weight:600}
+  .board .pt{min-width:2.4em;text-align:right;font-weight:700}
+  .slide .sub{margin-top:6px;font-size:1rem}
   #host .nav{display:flex;justify-content:center;gap:10px;padding:0 18px 18px;flex-wrap:wrap}
   .timer{display:inline-flex;align-items:center;gap:6px}
   .ring{width:46px;height:46px;position:relative;cursor:pointer}
   .ring svg{transform:rotate(-90deg)}
   .ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem}
   .ring.done span{color:var(--bad)}
-  #teams{width:280px;border-left:1px solid var(--line);padding:14px;overflow:auto;display:none;background:var(--panel)}
+  #teams{width:310px;border-left:1px solid var(--line);padding:14px;overflow:auto;display:none;background:var(--panel)}
   #teams.on{display:block}
   #teams h3{margin:0 0 10px;font:700 1rem Georgia,serif}
   .team{display:flex;align-items:center;gap:6px;margin:6px 0}
   .team .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .team .sc{width:34px;text-align:center;font-weight:700}
+  .team .sc{width:52px;text-align:center;font-weight:700;padding:3px 2px}
   .team button{padding:3px 9px}
+  .team .rin{width:64px;padding:4px 6px;text-align:center}
+  #teams .meta2{color:var(--muted);font-size:.8rem;margin:-4px 0 8px}
+  #teams .sizeRow{display:flex;align-items:center;gap:8px;font-size:.85rem;margin:0 0 10px}
+  #teams .sizeRow input{width:60px}
+  #teams .hint{color:var(--muted);font-size:.78rem;margin:6px 0 0;text-align:left}
   @media (max-width:700px){#teams{position:absolute;right:0;top:0;bottom:0;z-index:3;width:min(300px,85vw);box-shadow:var(--shadow)}}
 
   /* Layout: sidebar + content */
@@ -348,8 +361,13 @@
     <div class="stage" id="stage"></div>
     <aside id="teams">
       <h3 data-i18n="scoreboard"></h3>
+      <p class="meta2" id="teamMeta"></p>
+      <label class="sizeRow"><span data-i18n="teamSize"></span><input type="number" id="teamSize" min="0" max="30" inputmode="numeric"></label>
       <div id="teamList"></div>
-      <form class="row" id="teamForm"><input type="text" id="teamName" style="flex:1;min-width:0" maxlength="30"><button class="btn small" type="submit" data-i18n="add"></button></form>
+      <div class="row" id="roundBtns" hidden><button class="btn small primary" id="roundSave" data-i18n="roundSave"></button><button class="btn small" id="roundCancel" data-i18n="cancel"></button></div>
+      <form class="row" id="teamForm"><input type="text" id="teamName" style="flex:1;min-width:0" maxlength="400"><button class="btn small" type="submit" data-i18n="add"></button></form>
+      <p class="hint" data-i18n="teamHint"></p>
+      <div class="row"><button class="btn small" id="roundEntry" data-i18n="roundEntry"></button><button class="btn small" id="undoRound" data-i18n="undoRound" hidden></button></div>
       <div class="row"><button class="btn small" id="showBoard" data-i18n="showBoard"></button><button class="btn small" id="resetScores"></button></div>
     </aside>
   </div>
@@ -436,7 +454,7 @@ const STR = {
     generate:"Generate quiz",yourQuiz:"Your quiz",noQuiz:"Choose your settings and press “Generate quiz”.",hostQuiz:"Host this quiz",printSheets:"Answer sheets",
     printKey:"Answer key",showAns:"Show answers",hideAns:"Hide answers",round:"Round",notEnough:"Not enough questions for these settings – try fewer questions, other categories or more difficulty levels.",
     used:"questions used in earlier quizzes",clearUsed:"Clear history",timer:"Timer",off:"Off",showChoices:"Show choices",teams:"Teams",fullscreen:"Full screen",
-    scoreboard:"Scoreboard",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
+    scoreboard:"Scoreboard",teamSize:"Max. players per team",teamHint:"Tip: add several teams at once, separated by commas.",roundEntry:"Enter round scores",roundSave:"Add to scores",cancel:"Cancel",undoRound:"Undo last round",teamsN:"teams",places:"places",upTo:"Teams of up to",players:"players",roundPts:"points this round",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
     close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
     leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
     answerSheet:"Answer sheet",signIn:"Sign in",acctShort:"Account",wTitle:"Welcome to Pub Quiz Cards",wSub:"1,400 questions for quiz nights and practice.",wB1:"Keep your progress on all your devices",wB2:"Save your quizzes and team lists",wB3:"No password – we email you a sign-in link",wSentHint:"Open the link on this device. You can close this page in the meantime.",wAgain:"Use a different email",or:"or",wSkip:"Continue without signing in",wSkipNote:"Everything works without an account. You can sign in later from the top of the page.",signInTitle:"Sign in to save your progress",signInWhy:"Optional. Your progress, quizzes and teams are saved to your account so they’re on all your devices.",email:"Email address",sendLink:"Email me a sign-in link",google:"Continue with Google",linkSent:"Check your inbox – we sent a sign-in link to",authError:"That didn’t work:",privacyNote:"We only store your email and quiz data.",privacy:"Privacy policy",account:"Your account",signedInAs:"Signed in as",signOut:"Sign out",deleteData:"Delete my saved data",deleteSure:"Click again to delete",deleted:"Your saved data was deleted.",synced:"Synced",syncing:"Saving…",syncFail:"Couldn’t save – will retry.",lastSync:"Last saved",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
@@ -450,7 +468,7 @@ const STR = {
     generate:"Quiz erstellen",yourQuiz:"Dein Quiz",noQuiz:"Wähle die Einstellungen und klicke auf „Quiz erstellen“.",hostQuiz:"Dieses Quiz moderieren",printSheets:"Antwortbögen",
     printKey:"Lösungsblatt",showAns:"Antworten zeigen",hideAns:"Antworten verbergen",round:"Runde",notEnough:"Nicht genug Fragen für diese Einstellungen – versuche weniger Fragen, andere Kategorien oder mehr Schwierigkeitsstufen.",
     used:"Fragen in früheren Quizzen verwendet",clearUsed:"Verlauf löschen",timer:"Timer",off:"Aus",showChoices:"Optionen zeigen",teams:"Teams",fullscreen:"Vollbild",
-    scoreboard:"Punktestand",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
+    scoreboard:"Punktestand",teamSize:"Max. Spieler pro Team",teamHint:"Tipp: Mehrere Teams auf einmal hinzufügen, mit Kommas getrennt.",roundEntry:"Rundenpunkte eintragen",roundSave:"Zu den Punkten addieren",cancel:"Abbrechen",undoRound:"Letzte Runde rückgängig",teamsN:"Teams",places:"Plätze",upTo:"Teams mit bis zu",players:"Spielern",roundPts:"Punkte in dieser Runde",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
     close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
     leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
     answerSheet:"Antwortbogen",signIn:"Anmelden",acctShort:"Konto",wTitle:"Willkommen bei Pub Quiz Cards",wSub:"1.400 Fragen für Quizabende und zum Üben.",wB1:"Dein Fortschritt auf all deinen Geräten",wB2:"Quizze und Teamlisten speichern",wB3:"Kein Passwort – du bekommst einen Anmeldelink per E-Mail",wSentHint:"Öffne den Link auf diesem Gerät. Du kannst diese Seite so lange schließen.",wAgain:"Andere E-Mail-Adresse verwenden",or:"oder",wSkip:"Ohne Anmeldung fortfahren",wSkipNote:"Alles funktioniert auch ohne Konto. Anmelden kannst du dich später oben auf der Seite.",signInTitle:"Anmelden und Fortschritt speichern",signInWhy:"Freiwillig. Dein Fortschritt, deine Quizze und Teams werden in deinem Konto gespeichert und sind auf allen Geräten verfügbar.",email:"E-Mail-Adresse",sendLink:"Anmeldelink per E-Mail senden",google:"Mit Google fortfahren",linkSent:"Schau in dein Postfach – wir haben einen Anmeldelink geschickt an",authError:"Das hat nicht geklappt:",privacyNote:"Wir speichern nur deine E-Mail-Adresse und deine Quizdaten.",privacy:"Datenschutzerklärung",account:"Dein Konto",signedInAs:"Angemeldet als",signOut:"Abmelden",deleteData:"Meine gespeicherten Daten löschen",deleteSure:"Zum Löschen erneut klicken",deleted:"Deine gespeicherten Daten wurden gelöscht.",synced:"Synchronisiert",syncing:"Wird gespeichert …",syncFail:"Speichern fehlgeschlagen – neuer Versuch folgt.",lastSync:"Zuletzt gespeichert",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
@@ -465,7 +483,7 @@ const S = {
   lang: LS.get("lang", (navigator.language||"").toLowerCase().startsWith("de")?"de":"en"),
   view:"cards", cat:"all", lvl:"all", status:"all", q:"", mode:LS.get("mode","flip"),
   order: DATA.map((_,i)=>i), allFlipped:false, shown:120,
-  progress: LS.get("progress",{}), teams: LS.get("teams",[]), used: LS.get("used",[]),
+  progress: LS.get("progress",{}), teams: LS.get("teams",[]), teamSize: LS.get("teamSize",0), used: LS.get("used",[]),
   quiz: LS.get("quiz",null), timer: LS.get("timer",0), choices: LS.get("choices",false)
 };
 const t = k => (STR[S.lang][k] ?? STR.en[k] ?? k);
@@ -672,13 +690,19 @@ function openHost(fromQuiz){
   $("timerSel").value=String(S.timer); $("choicesBtn").setAttribute("aria-pressed",S.choices); renderTeams(); showSlide();
 }
 function closeHost(){stopTimer();$("host").classList.remove("on");document.body.style.overflow="";if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
-function board(){const ts=[...S.teams].sort((a,b)=>b.s-a.s);return ts.length?`<div class="board">${ts.map((x,i)=>`<div><span>${i+1}. ${esc(x.n)}</span><span>${x.s}</span></div>`).join("")}</div>`:`<p>${t("noTeams")}</p>`}
+const fmt=n=>String(Math.round(n*2)/2).replace(".",S.lang==="de"?",":".");
+function board(){const ts=[...S.teams].sort((a,b)=>b.s-a.s);if(!ts.length)return `<p>${t("noTeams")}</p>`;
+  const medal=["🥇","🥈","🥉"];let rank=0;
+  const rows=ts.map((x,i)=>{if(i===0||x.s!==ts[i-1].s)rank=i+1;const r=x.r||[];const last=r.length?r[r.length-1]:null;
+    return `<div class="bt${rank===1?" top":""}"><span class="rk">${rank<=3?medal[rank-1]:rank+"."}</span><span class="tn">${esc(x.n)}</span>${last!=null&&last!==0?`<span class="dl" title="${t("roundPts")}">+${fmt(last)}</span>`:""}<span class="pt">${fmt(x.s)}</span></div>`}).join("");
+  return `<div class="board${ts.length>8?" two":""}" style="${ts.length>8?`grid-template-rows:repeat(${Math.ceil(ts.length/2)},auto)`:""}">${rows}</div>`}
+function teamLine(){const n=S.teams.length;return [n?`${n} ${t("teamsN")}`:"",S.teamSize?`${t("upTo")} ${S.teamSize} ${t("players")}`:""].filter(Boolean).join(" · ")}
 function showSlide(){
   stopTimer(); revealed=false; const s=slides[si]; const st=$("stage");
   $("reveal").hidden=s.type!=="q"; $("reveal").textContent=t("reveal");
   $("prev").disabled=si===0; $("next").disabled=si===slides.length-1;
   if(s.type==="title"){ $("hostPos").textContent=s.title;
-    st.innerHTML=`<div class="slide"><p>${t("ready")}</p><h2>${esc(s.title)}</h2><p>${s.n} ${t("qs")}</p></div>`; return }
+    st.innerHTML=`<div class="slide"><p>${t("ready")}</p><h2>${esc(s.title)}</h2><p>${s.n} ${t("qs")}</p>${s.ri===0&&teamLine()?`<p class="sub">${esc(teamLine())}</p>`:""}</div>`; return }
   if(s.type==="scores"){ $("hostPos").textContent=s.last?t("finalScores"):`${t("endRound")} ${s.ri+1}`;
     st.innerHTML=`<div class="slide"><h2>${s.last?t("finalScores"):t("leaderboard")}</h2>${board()}</div>`; return }
   const d=s.d, c=catOf(d), o=options(d);
@@ -711,16 +735,33 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="Escape"&&!document.fullscreenElement) closeHost();
   else if(e.key.toLowerCase()==="t") $("teams").classList.toggle("on");
 });
+let roundMode=false;
 function renderTeams(){
+  const n=S.teams.length;
+  $("teamMeta").textContent=n?`${n} ${t("teamsN")}`+(S.teamSize?` · ${n*S.teamSize} ${t("places")}`:""):"";
+  $("teamSize").value=S.teamSize||"";
+  $("roundBtns").hidden=!roundMode; $("teamForm").hidden=roundMode; $("roundEntry").hidden=roundMode||!n;
+  $("undoRound").hidden=roundMode||!S.teams.some(x=>(x.r||[]).length);
   $("teamList").replaceChildren(...S.teams.map((tm,i)=>{const r=document.createElement("div");r.className="team";
-    r.innerHTML=`<span class="nm" title="${esc(tm.n)}">${esc(tm.n)}</span><button aria-label="minus">−</button><span class="sc">${tm.s}</span><button aria-label="plus">+</button><button aria-label="remove" class="linkbtn">✕</button>`;
+    if(roundMode){r.innerHTML=`<span class="nm" title="${esc(tm.n)}">${esc(tm.n)}</span><input class="rin" type="number" step="0.5" inputmode="decimal" placeholder="0" aria-label="${esc(tm.n)}: ${t("roundPts")}">`;
+      const inp=r.querySelector("input");inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();const all=[...$("teamList").querySelectorAll(".rin")];const nx=all[all.indexOf(inp)+1];nx?nx.focus():$("roundSave").focus()}};return r}
+    r.innerHTML=`<span class="nm" title="${esc(tm.n)}">${esc(tm.n)}</span><button aria-label="minus">−</button><input class="sc" type="number" step="0.5" inputmode="decimal" aria-label="${esc(tm.n)}"><button aria-label="plus">+</button><button aria-label="remove" class="linkbtn">✕</button>`;
+    const sc=r.querySelector("input");sc.value=tm.s;sc.onchange=()=>{const v=parseFloat(String(sc.value).replace(",","."));tm.s=isNaN(v)?0:v;saveTeams()};
     const [m,p,x]=r.querySelectorAll("button"); m.onclick=()=>{tm.s--;saveTeams()}; p.onclick=()=>{tm.s++;saveTeams()}; x.onclick=()=>{S.teams.splice(i,1);saveTeams()}; return r}));
 }
+$("teamSize").onchange=e=>{const v=Math.max(0,Math.min(30,parseInt(e.target.value)||0));S.teamSize=v;LS.set("teamSize",v);renderTeams();const s=slides[si];if(s&&s.type==="title")showSlide()};
+$("roundEntry").onclick=()=>{roundMode=true;renderTeams();const f=$("teamList").querySelector(".rin");if(f)f.focus()};
+$("roundCancel").onclick=()=>{roundMode=false;renderTeams()};
+$("roundSave").onclick=()=>{const ins=[...$("teamList").querySelectorAll(".rin")];
+  S.teams.forEach((tm,i)=>{const v=parseFloat(String(ins[i]?.value||"0").replace(",","."))||0;tm.r=(tm.r||[]).concat(v);tm.s+=v});
+  roundMode=false;track("round-scores");saveTeams();stopTimer();$("stage").innerHTML=`<div class="slide"><h2>${t("leaderboard")}</h2>${board()}</div>`};
+$("undoRound").onclick=()=>{const L=Math.max(...S.teams.map(x=>(x.r||[]).length));if(!L)return;
+  S.teams.forEach(tm=>{if((tm.r||[]).length===L){tm.s-=tm.r.pop()}});saveTeams()};
 function saveTeams(){LS.set("teams",S.teams);renderTeams();const s=slides[si];if(s&&s.type==="scores")showSlide()}
-$("teamForm").onsubmit=e=>{e.preventDefault();const n=$("teamName").value.trim();if(!n)return;S.teams.push({n,s:0});$("teamName").value="";saveTeams()};
+$("teamForm").onsubmit=e=>{e.preventDefault();const names=$("teamName").value.split(/[,;\n]/).map(x=>x.trim().slice(0,30)).filter(Boolean);if(!names.length)return;names.forEach(n=>S.teams.push({n,s:0,r:[]}));$("teamName").value="";saveTeams()};
 $("showBoard").onclick=()=>{stopTimer();$("stage").innerHTML=`<div class="slide"><h2>${t("leaderboard")}</h2>${board()}</div>`};
 (()=>{let armed=false;$("resetScores").onclick=()=>{if(!armed){armed=true;$("resetScores").textContent=t("resetScoresSure");setTimeout(()=>{armed=false;$("resetScores").textContent=t("resetScores")},3000);return}
-  S.teams.forEach(x=>x.s=0);saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
+  S.teams.forEach(x=>{x.s=0;x.r=[]});saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
 
 /* ---------- Views, hash links, language ---------- */
 function setView(v){S.view=v;$("cardsView").hidden=v!=="cards";$("roundsView").hidden=v!=="rounds";
@@ -731,7 +772,7 @@ function fromHash(){const h=decodeURIComponent(location.hash.slice(1));
   if(h==="rounds"){setView("rounds");return}
   setView("cards"); const c=CATS.find(c=>c.slug===h); if(c&&S.cat!==c.slug){S.cat=c.slug;S.shown=120;renderChips();render()} else if(!h&&S.cat!=="all"){S.cat="all";renderChips();render()}}
 window.addEventListener("hashchange",fromHash);
-$("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";track("language-"+S.lang);LS.set("lang",S.lang);applyI18n();renderChips();render();renderStats();if(S.view==="rounds")renderBuilder();if($("host").classList.contains("on")){const r=revealed;showSlide();if(r)flip()}};
+$("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";track("language-"+S.lang);LS.set("lang",S.lang);applyI18n();renderChips();render();renderStats();renderTeams();if(S.view==="rounds")renderBuilder();if($("host").classList.contains("on")){const r=revealed;showSlide();if(r)flip()}};
 $("modeFlip").onclick=()=>{S.mode="flip";LS.set("mode",S.mode);renderChips();render()};
 $("modeMC").onclick=()=>{track("mode-multiple-choice");S.mode="mc";LS.set("mode",S.mode);renderChips();render()};
 $("more").onclick=()=>{S.shown+=120;render()};
