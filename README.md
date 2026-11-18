@@ -29,6 +29,7 @@
 - **Shareable links** to a category, e.g. [`#music`](https://brahimiarlinda.github.io/pub-quiz-cards/#music), [`#albania`](https://brahimiarlinda.github.io/pub-quiz-cards/#albania), or the round builder: [`#rounds`](https://brahimiarlinda.github.io/pub-quiz-cards/#rounds)
 - **Works offline** and can be **installed** on a phone's home screen
 - **Report a mistake** link on every card opens a pre-filled GitHub issue
+- **Welcome page** on first visit: sign in or skip with one tap
 - **Optional sign-in** by email link (Supabase, EU/Frankfurt): saves progress, quizzes and teams across devices. Everything still works without an account. See the [privacy policy](https://brahimiarlinda.github.io/pub-quiz-cards/privacy.html)
 - **Visitor stats** with [GoatCounter](https://www.goatcounter.com/) – cookie-free, no personal data; it also counts feature use (host mode, quiz generation, printing, categories)
 

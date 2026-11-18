@@ -207,6 +207,25 @@
   .small{font-size:.8rem}
   #accountBtn.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
   footer.site{text-align:center;color:var(--muted);font-size:.82rem;padding:24px 0 34px}
+  /* Welcome / sign-in page */
+  #welcome{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:24px 16px}
+  .wbox{width:min(440px,100%);margin:auto 0}
+  .wtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  .wbrand{font:700 1.25rem Georgia,serif}.wbrand span{color:var(--accent)}
+  .wcards{position:relative;height:120px;margin:4px 0 14px}
+  .wc{position:absolute;top:8px;width:84px;height:108px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:700 2.6rem Georgia,serif;box-shadow:var(--shadow)}
+  .wc.a{left:calc(50% - 76px);transform:rotate(-8deg);background:var(--panel);border:1px solid var(--line);color:var(--accent)}
+  .wc.b{left:calc(50% - 8px);transform:rotate(7deg);background:var(--back);color:var(--back-ink)}
+  #welcome h2{font:700 1.6rem/1.2 Georgia,serif;margin:0 0 6px;text-align:center}
+  .wsub{text-align:center;color:var(--muted);margin:0 0 14px}
+  .wlist{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:6px;font-size:.92rem}
+  .wlist li::before{content:"✓";color:var(--accent);font-weight:700;margin-right:8px}
+  #wEmail{width:100%;margin:4px 0 10px}
+  .wsent{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 6px}
+  .wor{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.82rem;margin:16px 0 10px}
+  .wor::before,.wor::after{content:"";flex:1;height:1px;background:var(--line)}
+  .wskip{font-weight:600}
+  .wfoot{text-align:center;margin-top:12px}
   /* Print */
   #printArea{display:none}
   @media print{
@@ -341,6 +360,35 @@
 
 <footer class="site"><a href="privacy.html" id="privacyLink"></a> · <a href="https://github.com/brahimiarlinda/pub-quiz-cards">GitHub</a></footer>
 
+<div id="welcome" hidden role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="wbox">
+    <div class="wtop"><span class="wbrand">Pub Quiz <span>Cards</span></span><button class="btn small" id="wLang"></button></div>
+    <div class="wcards" aria-hidden="true"><div class="wc a">?</div><div class="wc b">✓</div></div>
+    <h2 id="welcomeTitle" data-i18n="wTitle"></h2>
+    <p class="wsub" data-i18n="wSub"></p>
+    <ul class="wlist">
+      <li data-i18n="wB1"></li><li data-i18n="wB2"></li><li data-i18n="wB3"></li>
+    </ul>
+    <div id="wForm">
+      <form id="wAuthForm">
+        <label class="label" for="wEmail" data-i18n="email"></label>
+        <input type="email" id="wEmail" required autocomplete="email" placeholder="name@example.com">
+        <button class="btn primary wide" type="submit" data-i18n="sendLink"></button>
+      </form>
+      <button class="btn wide" id="wGoogle" hidden data-i18n="google"></button>
+    </div>
+    <div id="wSent" hidden>
+      <p class="wsent"><span data-i18n="linkSent"></span> <b id="wSentTo"></b></p>
+      <p class="stats" data-i18n="wSentHint"></p>
+      <button class="linkbtn" id="wAgain" data-i18n="wAgain"></button>
+    </div>
+    <p class="msg" id="wMsg" role="status"></p>
+    <div class="wor"><span data-i18n="or"></span></div>
+    <button class="btn wide wskip" id="wSkip" data-i18n="wSkip"></button>
+    <p class="stats small wfoot"><span data-i18n="wSkipNote"></span> <a href="privacy.html" data-i18n="privacy"></a></p>
+  </div>
+</div>
+
 <div id="authModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="authTitle">
   <div class="panel modalbox">
     <button class="linkbtn closex" id="authClose" aria-label="Close">✕</button>
@@ -389,7 +437,7 @@ const STR = {
     scoreboard:"Scoreboard",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
     close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
     leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
-    answerSheet:"Answer sheet",signIn:"Sign in",signInTitle:"Sign in to save your progress",signInWhy:"Optional. Your progress, quizzes and teams are saved to your account so they’re on all your devices.",email:"Email address",sendLink:"Email me a sign-in link",google:"Continue with Google",linkSent:"Check your inbox – we sent a sign-in link to",authError:"That didn’t work:",privacyNote:"We only store your email and quiz data.",privacy:"Privacy policy",account:"Your account",signedInAs:"Signed in as",signOut:"Sign out",deleteData:"Delete my saved data",deleteSure:"Click again to delete",deleted:"Your saved data was deleted.",synced:"Synced",syncing:"Saving…",syncFail:"Couldn’t save – will retry.",lastSync:"Last saved",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
+    answerSheet:"Answer sheet",signIn:"Sign in",wTitle:"Welcome to Pub Quiz Cards",wSub:"1,400 questions for quiz nights and practice.",wB1:"Keep your progress on all your devices",wB2:"Save your quizzes and team lists",wB3:"No password – we email you a sign-in link",wSentHint:"Open the link on this device. You can close this page in the meantime.",wAgain:"Use a different email",or:"or",wSkip:"Continue without signing in",wSkipNote:"Everything works without an account. You can sign in later from the top of the page.",signInTitle:"Sign in to save your progress",signInWhy:"Optional. Your progress, quizzes and teams are saved to your account so they’re on all your devices.",email:"Email address",sendLink:"Email me a sign-in link",google:"Continue with Google",linkSent:"Check your inbox – we sent a sign-in link to",authError:"That didn’t work:",privacyNote:"We only store your email and quiz data.",privacy:"Privacy policy",account:"Your account",signedInAs:"Signed in as",signOut:"Sign out",deleteData:"Delete my saved data",deleteSure:"Click again to delete",deleted:"Your saved data was deleted.",synced:"Synced",syncing:"Saving…",syncFail:"Couldn’t save – will retry.",lastSync:"Last saved",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
   de:{cards:"Karten",rounds:"Runden-Planer",flip:"Umdrehen",mc:"Multiple Choice",shuffle:"Mischen",showAll:"Alle Antworten zeigen",hideAll:"Antworten verbergen",
     host:"Moderationsmodus",search:"Fragen, Antworten, Erklärungen suchen …",all:"Alle",Easy:"Leicht",Medium:"Mittel",Hard:"Schwer",
     stAll:"Alle",stNew:"Noch nicht versucht",stMissed:"Falsch",stGot:"Gewusst",of:"von",questions:"Fragen",tap:"Tippen zum Aufdecken",
@@ -403,7 +451,7 @@ const STR = {
     scoreboard:"Punktestand",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
     close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
     leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
-    answerSheet:"Antwortbogen",signIn:"Anmelden",signInTitle:"Anmelden und Fortschritt speichern",signInWhy:"Freiwillig. Dein Fortschritt, deine Quizze und Teams werden in deinem Konto gespeichert und sind auf allen Geräten verfügbar.",email:"E-Mail-Adresse",sendLink:"Anmeldelink per E-Mail senden",google:"Mit Google fortfahren",linkSent:"Schau in dein Postfach – wir haben einen Anmeldelink geschickt an",authError:"Das hat nicht geklappt:",privacyNote:"Wir speichern nur deine E-Mail-Adresse und deine Quizdaten.",privacy:"Datenschutzerklärung",account:"Dein Konto",signedInAs:"Angemeldet als",signOut:"Abmelden",deleteData:"Meine gespeicherten Daten löschen",deleteSure:"Zum Löschen erneut klicken",deleted:"Deine gespeicherten Daten wurden gelöscht.",synced:"Synchronisiert",syncing:"Wird gespeichert …",syncFail:"Speichern fehlgeschlagen – neuer Versuch folgt.",lastSync:"Zuletzt gespeichert",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
+    answerSheet:"Antwortbogen",signIn:"Anmelden",wTitle:"Willkommen bei Pub Quiz Cards",wSub:"1.400 Fragen für Quizabende und zum Üben.",wB1:"Dein Fortschritt auf all deinen Geräten",wB2:"Quizze und Teamlisten speichern",wB3:"Kein Passwort – du bekommst einen Anmeldelink per E-Mail",wSentHint:"Öffne den Link auf diesem Gerät. Du kannst diese Seite so lange schließen.",wAgain:"Andere E-Mail-Adresse verwenden",or:"oder",wSkip:"Ohne Anmeldung fortfahren",wSkipNote:"Alles funktioniert auch ohne Konto. Anmelden kannst du dich später oben auf der Seite.",signInTitle:"Anmelden und Fortschritt speichern",signInWhy:"Freiwillig. Dein Fortschritt, deine Quizze und Teams werden in deinem Konto gespeichert und sind auf allen Geräten verfügbar.",email:"E-Mail-Adresse",sendLink:"Anmeldelink per E-Mail senden",google:"Mit Google fortfahren",linkSent:"Schau in dein Postfach – wir haben einen Anmeldelink geschickt an",authError:"Das hat nicht geklappt:",privacyNote:"Wir speichern nur deine E-Mail-Adresse und deine Quizdaten.",privacy:"Datenschutzerklärung",account:"Dein Konto",signedInAs:"Angemeldet als",signOut:"Abmelden",deleteData:"Meine gespeicherten Daten löschen",deleteSure:"Zum Löschen erneut klicken",deleted:"Deine gespeicherten Daten wurden gelöscht.",synced:"Synchronisiert",syncing:"Wird gespeichert …",syncFail:"Speichern fehlgeschlagen – neuer Versuch folgt.",lastSync:"Zuletzt gespeichert",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
 };
 const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}try{if(SYNC_KEYS.includes(k))Sync.schedule()}catch(e){}}};
 const SYNC_KEYS=["progress","quiz","teams","used"];
@@ -447,7 +495,7 @@ function applyI18n(){
   $("hostClose").textContent=t("close"); $("prev").textContent=t("prev"); $("next").textContent=t("next");
   $("resetScores").textContent=t("resetScores");
   $("flipAll").textContent=S.allFlipped?t("hideAll"):t("showAll");
-  $("privacyLink").textContent=t("privacy"); $("deleteData").textContent=t("deleteData"); if(window.Sync)Sync.paint();
+  $("privacyLink").textContent=t("privacy"); $("wLang").textContent=S.lang==="de"?"EN":"DE"; $("deleteData").textContent=t("deleteData"); if(window.Sync)Sync.paint();
 }
 
 /* ---------- Cards view ---------- */
@@ -729,16 +777,18 @@ const Sync = (()=>{
       sb=mod.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{flowType:"pkce",detectSessionInUrl:true,persistSession:true}})}catch(e){return}
     paintBtn();
     sb.auth.onAuthStateChange((ev,session)=>{const was=user?.id;user=session?.user||null;paintBtn();
+      if(ev==="INITIAL_SESSION")setTimeout(()=>Welcome.maybeShow(!!user),0);
+      if(user){LS.set("welcomed",true);Welcome.hide()}
       if(user&&user.id!==was){track("sign-in");pull()}
       if(location.search.includes("code="))history.replaceState(null,"",location.pathname+location.hash)});
   }
   async function sendLink(email){
     const {error}=await sb.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+location.pathname}});
-    $("authMsg").textContent=error?`${t("authError")} ${error.message}`:`${t("linkSent")} ${email}.`}
+    $("authMsg").textContent=error?`${t("authError")} ${error.message}`:`${t("linkSent")} ${email}.`;return error}
   async function google(){await sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}})}
   async function signOut(){await sb.auth.signOut();user=null;paintBtn();closeAuth()}
   async function wipe(){if(!ready())return;await sb.from("user_data").delete().eq("user_id",user.id);$("syncInfo").textContent=t("deleted");track("delete-data");await sb.auth.signOut();user=null;paintBtn()}
-  return {init,schedule,sendLink,google,signOut,wipe,paint:paintBtn};
+  return {init,schedule,sendLink,google,signOut,wipe,paint:paintBtn,get signedIn(){return !!user}};
 })();
 function openAuth(){$("authModal").hidden=false;$("authMsg").textContent="";Sync.paint();setTimeout(()=>($("authOut").hidden?$("signOut"):$("authEmail")).focus(),30)}
 function closeAuth(){$("authModal").hidden=true}
@@ -749,6 +799,20 @@ $("authForm").onsubmit=e=>{e.preventDefault();const em=$("authEmail").value.trim
 $("googleBtn").onclick=()=>Sync.google();
 $("signOut").onclick=()=>Sync.signOut();
 (()=>{let armed=false;const b=$("deleteData");b.onclick=()=>{if(!armed){armed=true;b.textContent=t("deleteSure");setTimeout(()=>{armed=false;b.textContent=t("deleteData")},3000);return}armed=false;b.textContent=t("deleteData");Sync.wipe()}})();
+const Welcome={
+  maybeShow(signedIn){ if(signedIn||LS.get("welcomed",false)||location.search.includes("code=")) return;
+    $("wForm").hidden=false;$("wSent").hidden=true;$("wMsg").textContent="";$("wGoogle").hidden=!GOOGLE_LOGIN;
+    $("welcome").hidden=false;document.body.style.overflow="hidden";track("welcome-shown");if(matchMedia("(pointer:fine)").matches)setTimeout(()=>$("wEmail").focus(),50)},
+  hide(){if($("welcome").hidden)return;$("welcome").hidden=true;document.body.style.overflow=""}
+};
+$("wAuthForm").onsubmit=async e=>{e.preventDefault();const em=$("wEmail").value.trim();if(!em)return;
+  const btn=e.target.querySelector("button");btn.disabled=true;const err=await Sync.sendLink(em);btn.disabled=false;
+  if(err){$("wMsg").textContent=`${t("authError")} ${err.message}`;return}
+  $("wMsg").textContent="";$("wSentTo").textContent=em;$("wForm").hidden=true;$("wSent").hidden=false;track("welcome-link-sent")};
+$("wAgain").onclick=()=>{$("wSent").hidden=true;$("wForm").hidden=false;$("wEmail").select()};
+$("wGoogle").onclick=()=>Sync.google();
+$("wSkip").onclick=()=>{LS.set("welcomed",true);track("welcome-skip");Welcome.hide()};
+$("wLang").onclick=()=>$("langBtn").click();
 Sync.init();
 
 applyI18n(); renderChips(); renderStats();
