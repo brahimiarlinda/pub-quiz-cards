@@ -7,6 +7,8 @@
 <meta name="description" content="1,400 pub quiz questions with answers and short explanations, as flip cards. Multiple choice, round builder, team scoreboard, timer, printable answer sheets, English and German.">
 <meta name="theme-color" content="#1f5d47">
 <link rel="manifest" href="manifest.webmanifest">
+<!-- Visitor stats (cookie-free): https://abrahimi.goatcounter.com -->
+<script data-goatcounter="https://abrahimi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta property="og:type" content="website">
@@ -368,6 +370,8 @@ const STR = {
 };
 const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}}};
 const $ = id => document.getElementById(id);
+// Count feature use in GoatCounter (no cookies, no personal data). Only on the live site.
+function track(name){try{if(location.hostname.endsWith("github.io")&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:name,title:name,event:true})}catch(e){}}
 const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const S = {
   lang: LS.get("lang", (navigator.language||"").toLowerCase().startsWith("de")?"de":"en"),
@@ -420,7 +424,7 @@ function renderChips(){
   $("modeFlip").setAttribute("aria-pressed",S.mode==="flip"); $("modeMC").setAttribute("aria-pressed",S.mode==="mc");
   $("flipAll").hidden=S.mode==="mc";
 }
-function setCat(slug){S.cat=slug;S.shown=120;const h=slug==="all"?"":"#"+slug;if(location.hash!==h){history.replaceState(null,"",h||location.pathname+location.search)}renderChips();render()}
+function setCat(slug){S.cat=slug;if(slug!=="all")track("category-"+slug);S.shown=120;const h=slug==="all"?"":"#"+slug;if(location.hash!==h){history.replaceState(null,"",h||location.pathname+location.search)}renderChips();render()}
 function match(d,skip){
   if(skip!=="cat"&&S.cat!=="all"&&catOf(d).slug!==S.cat) return false;
   if(skip!=="lvl"&&S.lvl!=="all"&&d.l!==S.lvl) return false;
@@ -527,7 +531,7 @@ function generate(e){
     cand.forEach(d=>taken.add(d.id));
     rounds.push({cat,ids:cand.map(d=>d.id)});
   }
-  S.quiz={rounds,created:Date.now()}; LS.set("quiz",S.quiz);
+  S.quiz={rounds,created:Date.now()}; LS.set("quiz",S.quiz); track("generate-quiz");
   S.used=[...new Set([...S.used,...taken])]; LS.set("used",S.used);
   renderBuilder();
 }
@@ -558,7 +562,7 @@ function doPrint(kind){
   window.addEventListener("afterprint",done);
   try{window.print()}catch(e){} setTimeout(()=>{if(!matchMedia("print").matches)done()},1500);
 }
-$("printSheets").onclick=()=>doPrint("sheets"); $("printKey").onclick=()=>doPrint("key");
+$("printSheets").onclick=()=>{track("print-sheets");doPrint("sheets")}; $("printKey").onclick=()=>{track("print-key");doPrint("key")};
 
 /* ---------- Host mode ---------- */
 let slides=[], si=0, revealed=false, tmr=null, tLeft=0, audio=null;
@@ -609,7 +613,7 @@ $("timerSel").onchange=e=>{S.timer=+e.target.value;LS.set("timer",S.timer);if(au
 $("choicesBtn").onclick=()=>{S.choices=!S.choices;LS.set("choices",S.choices);$("choicesBtn").setAttribute("aria-pressed",S.choices);const r=revealed;showSlide();if(r)flip()};
 $("teamsBtn").onclick=()=>$("teams").classList.toggle("on");
 $("fsBtn").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():$("host").requestFullscreen()}catch(e){}};
-$("hostBtn").onclick=()=>openHost(false); $("hostQuiz").onclick=()=>openHost(true);
+$("hostBtn").onclick=()=>{track("host-cards");openHost(false)}; $("hostQuiz").onclick=()=>{track("host-quiz");openHost(true)};
 $("hostClose").onclick=closeHost; $("reveal").onclick=flip; $("next").onclick=()=>move(1); $("prev").onclick=()=>move(-1);
 document.addEventListener("keydown",e=>{
   if(!$("host").classList.contains("on")||e.target.matches("input,select,textarea")) return;
@@ -638,9 +642,9 @@ function fromHash(){const h=decodeURIComponent(location.hash.slice(1));
   if(h==="rounds"){setView("rounds");return}
   setView("cards"); const c=CATS.find(c=>c.slug===h); if(c&&S.cat!==c.slug){S.cat=c.slug;S.shown=120;renderChips();render()} else if(!h&&S.cat!=="all"){S.cat="all";renderChips();render()}}
 window.addEventListener("hashchange",fromHash);
-$("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";LS.set("lang",S.lang);applyI18n();renderChips();render();renderStats();if(S.view==="rounds")renderBuilder();if($("host").classList.contains("on")){const r=revealed;showSlide();if(r)flip()}};
+$("langBtn").onclick=()=>{S.lang=S.lang==="de"?"en":"de";track("language-"+S.lang);LS.set("lang",S.lang);applyI18n();renderChips();render();renderStats();if(S.view==="rounds")renderBuilder();if($("host").classList.contains("on")){const r=revealed;showSlide();if(r)flip()}};
 $("modeFlip").onclick=()=>{S.mode="flip";LS.set("mode",S.mode);renderChips();render()};
-$("modeMC").onclick=()=>{S.mode="mc";LS.set("mode",S.mode);renderChips();render()};
+$("modeMC").onclick=()=>{track("mode-multiple-choice");S.mode="mc";LS.set("mode",S.mode);renderChips();render()};
 $("more").onclick=()=>{S.shown+=120;render()};
 $("search").oninput=e=>{S.q=e.target.value.trim();S.shown=120;renderChips();render()};
 $("clearFilters").onclick=()=>{S.lvl="all";S.status="all";S.q="";$("search").value="";setCat("all")};

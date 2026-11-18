@@ -29,6 +29,7 @@
 - **Shareable links** to a category, e.g. [`#music`](https://brahimiarlinda.github.io/pub-quiz-cards/#music), [`#albania`](https://brahimiarlinda.github.io/pub-quiz-cards/#albania), or the round builder: [`#rounds`](https://brahimiarlinda.github.io/pub-quiz-cards/#rounds)
 - **Works offline** and can be **installed** on a phone's home screen
 - **Report a mistake** link on every card opens a pre-filled GitHub issue
+- **Visitor stats** with [GoatCounter](https://www.goatcounter.com/) – cookie-free, no personal data; it also counts feature use (host mode, quiz generation, printing, categories)
 
 ### Keyboard shortcuts in host mode
 
