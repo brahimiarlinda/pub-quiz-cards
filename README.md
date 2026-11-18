@@ -29,6 +29,7 @@
 - **Shareable links** to a category, e.g. [`#music`](https://brahimiarlinda.github.io/pub-quiz-cards/#music), [`#albania`](https://brahimiarlinda.github.io/pub-quiz-cards/#albania), or the round builder: [`#rounds`](https://brahimiarlinda.github.io/pub-quiz-cards/#rounds)
 - **Works offline** and can be **installed** on a phone's home screen
 - **Report a mistake** link on every card opens a pre-filled GitHub issue
+- **Optional sign-in** by email link (Supabase, EU/Frankfurt): saves progress, quizzes and teams across devices. Everything still works without an account. See the [privacy policy](https://brahimiarlinda.github.io/pub-quiz-cards/privacy.html)
 - **Visitor stats** with [GoatCounter](https://www.goatcounter.com/) – cookie-free, no personal data; it also counts feature use (host mode, quiz generation, printing, categories)
 
 ### Keyboard shortcuts in host mode
@@ -51,6 +52,8 @@
 | `index.html` | The built app (generated – don't edit by hand) |
 | `src/app.html` | The app source, with a `__DATA__` placeholder |
 | `data/questions.json` | All questions: `q`, `a`, `s` (summary), `o` (three wrong options), `l` (level), `c` (category) and `de` (German versions) |
+| `supabase/schema.sql` | Database table and access rules for the optional sign-in |
+| `privacy.html` | Privacy policy (English and German) |
 | `build.py` | Builds `index.html` and `sw.js` |
 | `src/sw.js` | Service worker source for offline use |
 | `manifest.webmanifest`, `icons/`, `og.png` | App install details, icons and the link preview image |

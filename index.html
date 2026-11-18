@@ -48,7 +48,7 @@
   .spacer{flex:1}
   .count{color:var(--muted);font-size:.88rem}
   .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px;align-items:center}
-  input[type=search],input[type=text],input[type=number],select{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit;font-size:.95rem}
+  input[type=search],input[type=text],input[type=number],input[type=email],select{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit;font-size:.95rem}
   input[type=search]{flex:1 1 220px;min-width:0}
   button,.chip{font:inherit;font-size:.86rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
   button:hover,.chip:hover{border-color:var(--accent)}
@@ -200,6 +200,13 @@
   .hostctl .btn{border:none;padding:6px 10px}
   .hostctl .btn[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
   .hostctl select{border:none;padding:4px 6px}
+  /* Account */
+  .modal{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;padding:16px}
+  .modalbox{width:min(420px,100%);position:relative}
+  .closex{position:absolute;right:14px;top:12px;text-decoration:none;font-size:1.1rem}
+  .small{font-size:.8rem}
+  #accountBtn.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  footer.site{text-align:center;color:var(--muted);font-size:.82rem;padding:24px 0 34px}
   /* Print */
   #printArea{display:none}
   @media print{
@@ -230,6 +237,7 @@
       <button class="tab" id="tabRounds" data-i18n="rounds"></button>
     </nav>
     <span class="spacer"></span>
+    <button class="btn small" id="accountBtn" hidden></button>
     <button class="btn small" id="langBtn" aria-label="Language"></button>
   </div>
 </header>
@@ -331,6 +339,35 @@
   </div>
 </div>
 
+<footer class="site"><a href="privacy.html" id="privacyLink"></a> · <a href="https://github.com/brahimiarlinda/pub-quiz-cards">GitHub</a></footer>
+
+<div id="authModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="panel modalbox">
+    <button class="linkbtn closex" id="authClose" aria-label="Close">✕</button>
+    <div id="authOut">
+      <h2 id="authTitle" data-i18n="signInTitle"></h2>
+      <p class="stats" data-i18n="signInWhy"></p>
+      <form id="authForm">
+        <label class="label" for="authEmail" data-i18n="email"></label>
+        <input type="email" id="authEmail" required autocomplete="email" style="width:100%;margin:4px 0 10px">
+        <button class="btn primary wide" type="submit" data-i18n="sendLink"></button>
+      </form>
+      <button class="btn wide" id="googleBtn" hidden data-i18n="google"></button>
+      <p class="stats" id="authMsg" role="status"></p>
+      <p class="stats small"><span data-i18n="privacyNote"></span> <a href="privacy.html" data-i18n="privacy"></a></p>
+    </div>
+    <div id="authIn" hidden>
+      <h2 data-i18n="account"></h2>
+      <p><span data-i18n="signedInAs"></span> <b id="authWho"></b></p>
+      <p class="stats" id="syncInfo"></p>
+      <div class="row">
+        <button class="btn" id="signOut" data-i18n="signOut"></button>
+        <button class="btn" id="deleteData"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="printArea"></div>
 
 <script>
@@ -352,7 +389,7 @@ const STR = {
     scoreboard:"Scoreboard",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
     close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
     leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
-    answerSheet:"Answer sheet",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
+    answerSheet:"Answer sheet",signIn:"Sign in",signInTitle:"Sign in to save your progress",signInWhy:"Optional. Your progress, quizzes and teams are saved to your account so they’re on all your devices.",email:"Email address",sendLink:"Email me a sign-in link",google:"Continue with Google",linkSent:"Check your inbox – we sent a sign-in link to",authError:"That didn’t work:",privacyNote:"We only store your email and quiz data.",privacy:"Privacy policy",account:"Your account",signedInAs:"Signed in as",signOut:"Sign out",deleteData:"Delete my saved data",deleteSure:"Click again to delete",deleted:"Your saved data was deleted.",synced:"Synced",syncing:"Saving…",syncFail:"Couldn’t save – will retry.",lastSync:"Last saved",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
   de:{cards:"Karten",rounds:"Runden-Planer",flip:"Umdrehen",mc:"Multiple Choice",shuffle:"Mischen",showAll:"Alle Antworten zeigen",hideAll:"Antworten verbergen",
     host:"Moderationsmodus",search:"Fragen, Antworten, Erklärungen suchen …",all:"Alle",Easy:"Leicht",Medium:"Mittel",Hard:"Schwer",
     stAll:"Alle",stNew:"Noch nicht versucht",stMissed:"Falsch",stGot:"Gewusst",of:"von",questions:"Fragen",tap:"Tippen zum Aufdecken",
@@ -366,9 +403,10 @@ const STR = {
     scoreboard:"Punktestand",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
     close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
     leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
-    answerSheet:"Antwortbogen",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
+    answerSheet:"Antwortbogen",signIn:"Anmelden",signInTitle:"Anmelden und Fortschritt speichern",signInWhy:"Freiwillig. Dein Fortschritt, deine Quizze und Teams werden in deinem Konto gespeichert und sind auf allen Geräten verfügbar.",email:"E-Mail-Adresse",sendLink:"Anmeldelink per E-Mail senden",google:"Mit Google fortfahren",linkSent:"Schau in dein Postfach – wir haben einen Anmeldelink geschickt an",authError:"Das hat nicht geklappt:",privacyNote:"Wir speichern nur deine E-Mail-Adresse und deine Quizdaten.",privacy:"Datenschutzerklärung",account:"Dein Konto",signedInAs:"Angemeldet als",signOut:"Abmelden",deleteData:"Meine gespeicherten Daten löschen",deleteSure:"Zum Löschen erneut klicken",deleted:"Deine gespeicherten Daten wurden gelöscht.",synced:"Synchronisiert",syncing:"Wird gespeichert …",syncFail:"Speichern fehlgeschlagen – neuer Versuch folgt.",lastSync:"Zuletzt gespeichert",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
 };
-const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}}};
+const LS = {get(k,d){try{const v=localStorage.getItem("pq-"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("pq-"+k,JSON.stringify(v))}catch(e){}try{if(SYNC_KEYS.includes(k))Sync.schedule()}catch(e){}}};
+const SYNC_KEYS=["progress","quiz","teams","used"];
 const $ = id => document.getElementById(id);
 // Count feature use in GoatCounter (no cookies, no personal data). Only on the live site.
 function track(name){try{if(location.hostname.endsWith("github.io")&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:name,title:name,event:true})}catch(e){}}
@@ -409,6 +447,7 @@ function applyI18n(){
   $("hostClose").textContent=t("close"); $("prev").textContent=t("prev"); $("next").textContent=t("next");
   $("resetScores").textContent=t("resetScores");
   $("flipAll").textContent=S.allFlipped?t("hideAll"):t("showAll");
+  $("privacyLink").textContent=t("privacy"); $("deleteData").textContent=t("deleteData"); if(window.Sync)Sync.paint();
 }
 
 /* ---------- Cards view ---------- */
@@ -654,6 +693,63 @@ $("flipAll").onclick=()=>{S.allFlipped=!S.allFlipped;applyI18n();render()};
 $("nRounds").oninput=renderBuilder;
 $("builderForm").onsubmit=generate;
 $("printChoices").onchange=e=>LS.set("printChoices",e.target.checked);
+
+/* ---------- Optional account & sync (Supabase) ---------- */
+// Public project settings (safe to publish). Leave empty to hide sign-in.
+const SUPABASE_URL = "https://agzlgiawgooihoejxiid.supabase.co";
+const SUPABASE_KEY = "sb_publishable_BV7qFikqtnYjOOjp8oZGkQ_iI99dirt";
+const GOOGLE_LOGIN = false;
+const Sync = (()=>{
+  let sb=null, user=null, timer=null, last=null, state="";
+  const ready=()=>!!(sb&&user);
+  function info(){const el=$("syncInfo");if(!el)return;el.textContent=state==="saving"?t("syncing"):state==="fail"?t("syncFail"):last?`${t("lastSync")}: ${last.toLocaleTimeString(S.lang==="de"?"de-DE":"en-GB",{hour:"2-digit",minute:"2-digit"})}`:""}
+  function paintBtn(){const b=$("accountBtn");b.hidden=!sb;b.classList.toggle("on",!!user);b.textContent=user?(user.email||"").slice(0,1).toUpperCase()+" ✓":t("signIn");b.title=user?user.email:t("signIn");
+    $("authOut").hidden=!!user;$("authIn").hidden=!user;if(user)$("authWho").textContent=user.email;$("googleBtn").hidden=!GOOGLE_LOGIN;info()}
+  async function save(){if(!ready())return;state="saving";info();
+    const {error}=await sb.from("user_data").upsert({user_id:user.id,progress:S.progress,quiz:S.quiz,teams:S.teams,used:S.used,updated_at:new Date().toISOString()});
+    if(error){state="fail";info();clearTimeout(timer);timer=setTimeout(save,15000);return}
+    state="";last=new Date();info()}
+  function schedule(){if(!ready())return;clearTimeout(timer);timer=setTimeout(save,1500)}
+  async function pull(){
+    const {data,error}=await sb.from("user_data").select("*").eq("user_id",user.id).maybeSingle();
+    if(error){state="fail";info();return}
+    if(data){ // merge: keep everything from both; this device wins on conflicts
+      S.progress={...(data.progress||{}),...S.progress};
+      S.used=[...new Set([...(data.used||[]),...S.used])];
+      if(data.quiz&&(!S.quiz||(data.quiz.created||0)>(S.quiz.created||0)))S.quiz=data.quiz;
+      if(!S.teams.length&&Array.isArray(data.teams))S.teams=data.teams;
+      for(const k of SYNC_KEYS){try{localStorage.setItem("pq-"+k,JSON.stringify(S[k]))}catch(e){}}
+      renderStats();renderChips();render();if(S.view==="rounds")renderBuilder();renderTeams();
+    }
+    await save();
+  }
+  async function init(){
+    if(!SUPABASE_URL||!SUPABASE_KEY)return;
+    try{const mod=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
+      sb=mod.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{flowType:"pkce",detectSessionInUrl:true,persistSession:true}})}catch(e){return}
+    paintBtn();
+    sb.auth.onAuthStateChange((ev,session)=>{const was=user?.id;user=session?.user||null;paintBtn();
+      if(user&&user.id!==was){track("sign-in");pull()}
+      if(location.search.includes("code="))history.replaceState(null,"",location.pathname+location.hash)});
+  }
+  async function sendLink(email){
+    const {error}=await sb.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+location.pathname}});
+    $("authMsg").textContent=error?`${t("authError")} ${error.message}`:`${t("linkSent")} ${email}.`}
+  async function google(){await sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}})}
+  async function signOut(){await sb.auth.signOut();user=null;paintBtn();closeAuth()}
+  async function wipe(){if(!ready())return;await sb.from("user_data").delete().eq("user_id",user.id);$("syncInfo").textContent=t("deleted");track("delete-data");await sb.auth.signOut();user=null;paintBtn()}
+  return {init,schedule,sendLink,google,signOut,wipe,paint:paintBtn};
+})();
+function openAuth(){$("authModal").hidden=false;$("authMsg").textContent="";Sync.paint();setTimeout(()=>($("authOut").hidden?$("signOut"):$("authEmail")).focus(),30)}
+function closeAuth(){$("authModal").hidden=true}
+$("accountBtn").onclick=openAuth; $("authClose").onclick=closeAuth;
+$("authModal").onclick=e=>{if(e.target===$("authModal"))closeAuth()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("authModal").hidden)closeAuth()});
+$("authForm").onsubmit=e=>{e.preventDefault();const em=$("authEmail").value.trim();if(em)Sync.sendLink(em)};
+$("googleBtn").onclick=()=>Sync.google();
+$("signOut").onclick=()=>Sync.signOut();
+(()=>{let armed=false;const b=$("deleteData");b.onclick=()=>{if(!armed){armed=true;b.textContent=t("deleteSure");setTimeout(()=>{armed=false;b.textContent=t("deleteData")},3000);return}armed=false;b.textContent=t("deleteData");Sync.wipe()}})();
+Sync.init();
 
 applyI18n(); renderChips(); renderStats();
 {const h=location.hash.slice(1);const c=CATS.find(c=>c.slug===h);if(c)S.cat=c.slug;renderChips()}
