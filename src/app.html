@@ -196,6 +196,16 @@
   #teams .meta2{color:var(--muted);font-size:.8rem;margin:-4px 0 8px}
   #teams .sizeRow{display:flex;align-items:center;gap:8px;font-size:.85rem;margin:0 0 10px}
   #teams .sizeRow input{width:60px}
+  .whoright{width:min(780px,100%);display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center}
+  .whoright .lbl{width:100%;text-align:center;font-weight:700;font-size:.9rem;color:var(--muted)}
+  .whoright button{background:transparent;color:var(--snug-ink);border-color:color-mix(in srgb,var(--snug-ink) 30%,transparent)}
+  .whoright button[aria-pressed=true]{background:var(--brass);color:var(--brass-ink);border-color:var(--brass);font-weight:700}
+  #reportModal .modalbox{width:min(760px,100%);max-height:calc(100vh - 32px);overflow:auto;color:var(--ink)}
+  .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .rgrid label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.85rem}
+  .rgrid textarea,#rOut{font:inherit;font-size:.88rem;font-weight:400;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--panel);color:var(--ink);resize:vertical}
+  #rOut{width:100%;min-height:300px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;margin-top:12px}
+  @media (max-width:640px){.rgrid{grid-template-columns:1fr}}
   #teams .hint{color:var(--muted);font-size:.78rem;margin:6px 0 0;text-align:left}
   @media (max-width:700px){#teams{position:absolute;right:0;top:0;bottom:0;z-index:3;width:min(300px,85vw);box-shadow:var(--shadow)}}
 
@@ -403,6 +413,7 @@
       <p class="hint" data-i18n="teamHint"></p>
       <div class="row"><button class="btn small" id="roundEntry" data-i18n="roundEntry"></button><button class="btn small" id="undoRound" data-i18n="undoRound" hidden></button></div>
       <div class="row"><button class="btn small" id="showBoard" data-i18n="showBoard"></button><button class="btn small" id="resetScores"></button></div>
+      <div class="row"><button class="btn small primary" id="reportBtn" data-i18n="reportBtn"></button></div>
     </aside>
   </div>
   <div class="nav">
@@ -443,6 +454,21 @@
   </div>
 </div>
 
+<div id="reportModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+  <div class="panel modalbox">
+    <button class="linkbtn closex" id="reportClose" aria-label="Close">✕</button>
+    <h2 id="reportTitle" data-i18n="reportTitle"></h2>
+    <p class="stats" data-i18n="reportWhy"></p>
+    <div class="rgrid">
+      <label><span data-i18n="rIntro"></span><textarea id="rIntro" rows="3"></textarea></label>
+      <label><span data-i18n="rSingles"></span><textarea id="rSingles" rows="3" placeholder="York – 37&#10;Aleksandr – 34"></textarea></label>
+      <label><span data-i18n="rNotes"></span><textarea id="rNotes" rows="3"></textarea></label>
+      <label><span data-i18n="rOutro"></span><textarea id="rOutro" rows="3"></textarea></label>
+    </div>
+    <textarea id="rOut" aria-label="Message" spellcheck="false"></textarea>
+    <div class="row"><button class="btn primary" id="rCopy" data-i18n="rCopy"></button><button class="btn" id="rRegen" data-i18n="rRegen"></button><span class="stats" id="rMsg" role="status"></span></div>
+  </div>
+</div>
 <div id="authModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="authTitle">
   <div class="panel modalbox">
     <button class="linkbtn closex" id="authClose" aria-label="Close">✕</button>
@@ -492,7 +518,7 @@ const STR = {
     generate:"Generate quiz",yourQuiz:"Your quiz",noQuiz:"Choose your settings and press “Generate quiz”.",hostQuiz:"Host this quiz",printSheets:"Answer sheets",
     printKey:"Answer key",showAns:"Show answers",hideAns:"Hide answers",round:"Round",notEnough:"Not enough questions for these settings – try fewer questions, other categories or more difficulty levels.",
     used:"questions used in earlier quizzes",clearUsed:"Clear history",timer:"Timer",off:"Off",showChoices:"Show choices",teams:"Teams",fullscreen:"Full screen",
-    scoreboard:"Scoreboard",teamSize:"Max. players per team",teamHint:"Tip: add several teams at once, separated by commas.",roundEntry:"Enter round scores",roundSave:"Add to scores",cancel:"Cancel",undoRound:"Undo last round",teamsN:"teams",places:"places",upTo:"Teams of up to",players:"players",roundPts:"points this round",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
+    scoreboard:"Scoreboard",whoRight:"Which teams got it right?",reportBtn:"Results message for Slack",reportTitle:"Results message",reportWhy:"Built from this quiz’s scores. Edit the boxes, then copy and paste it into Slack or Teams.",rIntro:"Intro",rSingles:"Single competition (optional: one “Name – points” per line)",rNotes:"Fun facts and notes",rOutro:"Closing line",rCopy:"Copy message",rRegen:"Rebuild from scores",rCopied:"Copied – paste it into Slack.",rCopyFail:"Select the text and copy it yourself.",introDef:"As promised – here’s a detailed update on the results.",outroDef:"Thanks to everyone who played – see you at the next pub quiz!",rTeam:"Team Competition",rSingle:"Single Competition – Top 10",rRounds:"Rounds",rAvg:"Average",rBest:"Best Result",rOutOf:"out of",rQs:"Questions – Team Competition",rKnew:"knew",rOfTeams:"teams",rTie:"Same score, same place.",teamSize:"Max. players per team",teamHint:"Tip: add several teams at once, separated by commas.",roundEntry:"Enter round scores",roundSave:"Add to scores",cancel:"Cancel",undoRound:"Undo last round",teamsN:"teams",places:"places",upTo:"Teams of up to",players:"players",roundPts:"points this round",add:"Add",teamPh:"Team name",showBoard:"Show leaderboard",resetScores:"Reset scores",resetScoresSure:"Click again",
     close:"✕ Close",prev:"← Previous",next:"Next →",reveal:"Reveal answer",hideAnswer:"Hide answer",question:"Question",endRound:"End of round",
     leaderboard:"Leaderboard",noTeams:"Add teams in the scoreboard to keep score.",finalScores:"Final scores",start:"Start",quizTitle:"Pub Quiz",
     answerSheet:"Answer sheet",signIn:"Sign in",acctShort:"Account",wTitle:"Welcome to Pub Quiz Cards",wSub:"1,400 questions for quiz nights and practice.",wB1:"Keep your progress on all your devices",wB2:"Save your quizzes and team lists",wB3:"No password – we email you a sign-in link",wSentHint:"Open the link on this device. You can close this page in the meantime.",wAgain:"Use a different email",or:"or",wSkip:"Continue without signing in",wSkipNote:"Everything works without an account. You can sign in later from the top of the page.",signInTitle:"Sign in to save your progress",signInWhy:"Optional. Your progress, quizzes and teams are saved to your account so they’re on all your devices.",email:"Email address",sendLink:"Email me a sign-in link",google:"Continue with Google",linkSent:"Check your inbox – we sent a sign-in link to",authError:"That didn’t work:",privacyNote:"We only store your email and quiz data.",privacy:"Privacy policy",account:"Your account",signedInAs:"Signed in as",signOut:"Sign out",deleteData:"Delete my saved data",deleteSure:"Click again to delete",deleted:"Your saved data was deleted.",synced:"Synced",syncing:"Saving…",syncFail:"Couldn’t save – will retry.",lastSync:"Last saved",filters:"Filters",done:"Done",category:"Category",progress:"Your progress",clear:"Clear filters",stepSize:"Size",options:"Options",print:"Print:",showing:"Showing",noProgress:"Mark cards as “Got it” or “Missed” to track your progress.",answerKey:"Answer key",team:"Team",total:"Total",ready:"Get ready!",qs:"questions",timeUp:"Time's up!"},
@@ -506,7 +532,7 @@ const STR = {
     generate:"Quiz erstellen",yourQuiz:"Dein Quiz",noQuiz:"Wähle die Einstellungen und klicke auf „Quiz erstellen“.",hostQuiz:"Dieses Quiz moderieren",printSheets:"Antwortbögen",
     printKey:"Lösungsblatt",showAns:"Antworten zeigen",hideAns:"Antworten verbergen",round:"Runde",notEnough:"Nicht genug Fragen für diese Einstellungen – versuche weniger Fragen, andere Kategorien oder mehr Schwierigkeitsstufen.",
     used:"Fragen in früheren Quizzen verwendet",clearUsed:"Verlauf löschen",timer:"Timer",off:"Aus",showChoices:"Optionen zeigen",teams:"Teams",fullscreen:"Vollbild",
-    scoreboard:"Punktestand",teamSize:"Max. Spieler pro Team",teamHint:"Tipp: Mehrere Teams auf einmal hinzufügen, mit Kommas getrennt.",roundEntry:"Rundenpunkte eintragen",roundSave:"Zu den Punkten addieren",cancel:"Abbrechen",undoRound:"Letzte Runde rückgängig",teamsN:"Teams",places:"Plätze",upTo:"Teams mit bis zu",players:"Spielern",roundPts:"Punkte in dieser Runde",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
+    scoreboard:"Punktestand",whoRight:"Welche Teams hatten es richtig?",reportBtn:"Ergebnis-Nachricht für Slack",reportTitle:"Ergebnis-Nachricht",reportWhy:"Aus den Punkten dieses Quiz erstellt. Felder anpassen, dann kopieren und in Slack oder Teams einfügen.",rIntro:"Einleitung",rSingles:"Einzelwertung (optional: eine Zeile „Name – Punkte“)",rNotes:"Fun Facts und Notizen",rOutro:"Schlusssatz",rCopy:"Nachricht kopieren",rRegen:"Neu aus Punkten erstellen",rCopied:"Kopiert – jetzt in Slack einfügen.",rCopyFail:"Text markieren und selbst kopieren.",introDef:"Wie versprochen – hier die ausführlichen Ergebnisse.",outroDef:"Danke an alle fürs Mitspielen – bis zum nächsten Pub Quiz!",rTeam:"Teamwertung",rSingle:"Einzelwertung – Top 10",rRounds:"Runden",rAvg:"Durchschnitt",rBest:"Bestes Ergebnis",rOutOf:"von",rQs:"Fragen – Teamwertung",rKnew:"wussten",rOfTeams:"Teams",rTie:"Gleiche Punktzahl, gleicher Platz.",teamSize:"Max. Spieler pro Team",teamHint:"Tipp: Mehrere Teams auf einmal hinzufügen, mit Kommas getrennt.",roundEntry:"Rundenpunkte eintragen",roundSave:"Zu den Punkten addieren",cancel:"Abbrechen",undoRound:"Letzte Runde rückgängig",teamsN:"Teams",places:"Plätze",upTo:"Teams mit bis zu",players:"Spielern",roundPts:"Punkte in dieser Runde",add:"Hinzufügen",teamPh:"Teamname",showBoard:"Rangliste zeigen",resetScores:"Punkte zurücksetzen",resetScoresSure:"Erneut klicken",
     close:"✕ Schließen",prev:"← Zurück",next:"Weiter →",reveal:"Antwort zeigen",hideAnswer:"Antwort verbergen",question:"Frage",endRound:"Ende von Runde",
     leaderboard:"Rangliste",noTeams:"Füge Teams im Punktestand hinzu, um mitzuzählen.",finalScores:"Endstand",start:"Start",quizTitle:"Kneipenquiz",
     answerSheet:"Antwortbogen",signIn:"Anmelden",acctShort:"Konto",wTitle:"Willkommen bei Pub Quiz Cards",wSub:"1.400 Fragen für Quizabende und zum Üben.",wB1:"Dein Fortschritt auf all deinen Geräten",wB2:"Quizze und Teamlisten speichern",wB3:"Kein Passwort – du bekommst einen Anmeldelink per E-Mail",wSentHint:"Öffne den Link auf diesem Gerät. Du kannst diese Seite so lange schließen.",wAgain:"Andere E-Mail-Adresse verwenden",or:"oder",wSkip:"Ohne Anmeldung fortfahren",wSkipNote:"Alles funktioniert auch ohne Konto. Anmelden kannst du dich später oben auf der Seite.",signInTitle:"Anmelden und Fortschritt speichern",signInWhy:"Freiwillig. Dein Fortschritt, deine Quizze und Teams werden in deinem Konto gespeichert und sind auf allen Geräten verfügbar.",email:"E-Mail-Adresse",sendLink:"Anmeldelink per E-Mail senden",google:"Mit Google fortfahren",linkSent:"Schau in dein Postfach – wir haben einen Anmeldelink geschickt an",authError:"Das hat nicht geklappt:",privacyNote:"Wir speichern nur deine E-Mail-Adresse und deine Quizdaten.",privacy:"Datenschutzerklärung",account:"Dein Konto",signedInAs:"Angemeldet als",signOut:"Abmelden",deleteData:"Meine gespeicherten Daten löschen",deleteSure:"Zum Löschen erneut klicken",deleted:"Deine gespeicherten Daten wurden gelöscht.",synced:"Synchronisiert",syncing:"Wird gespeichert …",syncFail:"Speichern fehlgeschlagen – neuer Versuch folgt.",lastSync:"Zuletzt gespeichert",filters:"Filter",done:"Fertig",category:"Kategorie",progress:"Dein Fortschritt",clear:"Filter zurücksetzen",stepSize:"Umfang",options:"Optionen",print:"Drucken:",showing:"Zeige",noProgress:"Markiere Karten als „Gewusst“ oder „Falsch“, um deinen Fortschritt zu sehen.",answerKey:"Lösungsblatt",team:"Team",total:"Gesamt",ready:"Seid ihr bereit?",qs:"Fragen",timeUp:"Zeit ist um!"}
@@ -521,7 +547,7 @@ const S = {
   lang: LS.get("lang", (navigator.language||"").toLowerCase().startsWith("de")?"de":"en"),
   view:"cards", cat:"all", lvl:"all", status:"all", q:"", mode:LS.get("mode","flip"),
   order: DATA.map((_,i)=>i), allFlipped:false, shown:120,
-  progress: LS.get("progress",{}), teams: LS.get("teams",[]), teamSize: LS.get("teamSize",0), used: LS.get("used",[]),
+  progress: LS.get("progress",{}), teams: LS.get("teams",[]), teamSize: LS.get("teamSize",0), qmarks: LS.get("qmarks",{}), report: LS.get("report",{}), used: LS.get("used",[]),
   quiz: LS.get("quiz",null), timer: LS.get("timer",0), choices: LS.get("choices",false)
 };
 const t = k => (STR[S.lang][k] ?? STR.en[k] ?? k);
@@ -751,9 +777,15 @@ function showSlide(){
     <div class="face front"><div class="meta"><span>${esc(catName(c))}</span>${lvlHTML(d.l)}</div><div class="q">${esc(F(d,"q"))}</div>${optsHTML(false)}</div>
     <div class="face back"><div class="meta"><span>${esc(catName(c))}</span>${lvlHTML(d.l)}</div><div class="bq">${esc(F(d,"q"))}</div>
       <div class="a">${esc(F(d,"a"))}</div>${optsHTML(true)}<div class="s">${esc(F(d,"s"))}</div></div></div></div>`;
+  if(S.teams.length){const w=document.createElement("div");w.className="whoright";w.id="whoRight";w.hidden=true;st.append(w);paintWho(d.id)}
   $("hostCard").onclick=flip; startTimer();
 }
-function flip(){const c=$("hostCard");if(!c)return;revealed=!revealed;c.classList.toggle("flipped",revealed);$("reveal").textContent=revealed?t("hideAnswer"):t("reveal");if(revealed)stopTimer(true)}
+function teamId(tm){if(!tm.id)tm.id=Math.random().toString(36).slice(2,9);return tm.id}
+function paintWho(qid){const w=$("whoRight");if(!w)return;const on=S.qmarks[qid]||[];
+  const lb=document.createElement("span");lb.className="lbl";lb.textContent=t("whoRight");
+  w.replaceChildren(lb,...S.teams.map(tm=>{const b=document.createElement("button");const id=teamId(tm);b.textContent=tm.n;b.setAttribute("aria-pressed",on.includes(id));
+    b.onclick=e=>{e.stopPropagation();const cur=new Set(S.qmarks[qid]||[]);cur.has(id)?cur.delete(id):cur.add(id);S.qmarks[qid]=[...cur];LS.set("qmarks",S.qmarks);LS.set("teams",S.teams);paintWho(qid)};return b}))}
+function flip(){const c=$("hostCard");if(!c)return;revealed=!revealed;c.classList.toggle("flipped",revealed);if($("whoRight")){$("whoRight").hidden=!revealed;const q=slides[si].d.id;if(revealed&&!S.qmarks[q]){S.qmarks[q]=[];LS.set("qmarks",S.qmarks)}}$("reveal").textContent=revealed?t("hideAnswer"):t("reveal");if(revealed)stopTimer(true)}
 function move(n){const j=si+n;if(j<0||j>=slides.length)return;si=j;showSlide()}
 function beep(){try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();const o=audio.createOscillator(),g=audio.createGain();o.connect(g);g.connect(audio.destination);o.frequency.value=880;g.gain.setValueAtTime(.2,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.6);o.start();o.stop(audio.currentTime+.6)}catch(e){}}
 function drawRing(total){const f=total?tLeft/total:0;$("ringArc").setAttribute("stroke-dashoffset",(125.66*(1-f)).toFixed(2));$("ringNum").textContent=tLeft;$("ring").classList.toggle("done",tLeft===0)}
@@ -768,7 +800,7 @@ $("fsBtn").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen()
 $("hostBtn").onclick=()=>{track("host-cards");openHost(false)}; $("hostQuiz").onclick=()=>{track("host-quiz");openHost(true)};
 $("hostClose").onclick=closeHost; $("reveal").onclick=flip; $("next").onclick=()=>move(1); $("prev").onclick=()=>move(-1);
 document.addEventListener("keydown",e=>{
-  if(!$("host").classList.contains("on")||e.target.matches("input,select,textarea")) return;
+  if(!$("host").classList.contains("on")||e.target.matches("input,select,textarea")||!$("reportModal").hidden||e.target.closest(".whoright,#teams")) return;
   if(e.key==="ArrowRight") move(1); else if(e.key==="ArrowLeft") move(-1);
   else if(e.key===" "||e.key==="Enter"){e.preventDefault();if(slides[si].type==="q")flip();else move(1)}
   else if(e.key==="Escape"&&!document.fullscreenElement) closeHost();
@@ -789,7 +821,11 @@ function renderTeams(){
     const [m,p,x]=r.querySelectorAll("button"); m.onclick=()=>{tm.s--;saveTeams()}; p.onclick=()=>{tm.s++;saveTeams()}; x.onclick=()=>{S.teams.splice(i,1);saveTeams()}; return r}));
 }
 $("teamSize").onchange=e=>{const v=Math.max(0,Math.min(30,parseInt(e.target.value)||0));S.teamSize=v;LS.set("teamSize",v);renderTeams();const s=slides[si];if(s&&s.type==="title")showSlide()};
-$("roundEntry").onclick=()=>{roundMode=true;renderTeams();const f=$("teamList").querySelector(".rin");if(f)f.focus()};
+$("roundEntry").onclick=()=>{roundMode=true;renderTeams();
+  const cur=slides[si];let ri=cur&&cur.ri;if(ri==null&&cur){for(let j=si;j>=0;j--)if(slides[j].ri!=null){ri=slides[j].ri;break}}
+  if(ri!=null&&S.quiz&&S.quiz.rounds[ri]){const ids=S.quiz.rounds[ri].ids;const ins=[...$("teamList").querySelectorAll(".rin")];
+    S.teams.forEach((tm,i)=>{const n=ids.filter(q=>(S.qmarks[q]||[]).includes(tm.id)).length;if(n&&ins[i])ins[i].value=n})}
+  const f=$("teamList").querySelector(".rin");if(f)f.focus()};
 $("roundCancel").onclick=()=>{roundMode=false;renderTeams()};
 $("roundSave").onclick=()=>{const ins=[...$("teamList").querySelectorAll(".rin")];
   S.teams.forEach((tm,i)=>{const v=parseFloat(String(ins[i]?.value||"0").replace(",","."))||0;tm.r=(tm.r||[]).concat(v);tm.s+=v});
@@ -800,7 +836,44 @@ function saveTeams(){LS.set("teams",S.teams);renderTeams();const s=slides[si];if
 $("teamForm").onsubmit=e=>{e.preventDefault();const names=$("teamName").value.split(/[,;\n]/).map(x=>x.trim().slice(0,30)).filter(Boolean);if(!names.length)return;names.forEach(n=>S.teams.push({n,s:0,r:[]}));$("teamName").value="";saveTeams()};
 $("showBoard").onclick=()=>{stopTimer();$("stage").innerHTML=`<div class="slide"><h2>${t("leaderboard")}</h2>${board()}</div>`};
 (()=>{let armed=false;$("resetScores").onclick=()=>{if(!armed){armed=true;$("resetScores").textContent=t("resetScoresSure");setTimeout(()=>{armed=false;$("resetScores").textContent=t("resetScores")},3000);return}
-  S.teams.forEach(x=>{x.s=0;x.r=[]});saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
+  S.teams.forEach(x=>{x.s=0;x.r=[]});S.qmarks={};LS.set("qmarks",S.qmarks);saveTeams();armed=false;$("resetScores").textContent=t("resetScores")}})();
+
+/* ---------- Results message (Slack) ---------- */
+const PLACE=[":first_place_medal:",":second_place_medal:",":third_place_medal:",":four:",":five:",":six:",":seven:",":eight:",":nine:",":keycap_ten:"];
+const CATEMO={general:":bulb:",geography:":earth_africa:",history:":scroll:",science:":microscope:","film-tv":":clapper:",music:":musical_note:",sport:":soccer:",food:":knife_fork_plate:","books-art":":books:","germany-europe":":flag-de:",politics:":classical_building:","90s":":cd:",kids:":teddy_bear:",albania:":flag-al:"};
+const place=r=>r<=10?PLACE[r-1]:`${r}.`;
+function ranked(list){const a=[...list].sort((x,y)=>y.s-x.s);let r=0;return a.map((x,i)=>{if(i===0||x.s!==a[i-1].s)r=i+1;return {...x,rank:r}})}
+function buildReport(){
+  const R=S.report, out=[], nT=S.teams.length;
+  out.push((R.intro??t("introDef")).trim(),"");
+  if(nT){out.push(`*${t("rTeam")}*`,"");ranked(S.teams).forEach(x=>out.push(`${place(x.rank)} ${fmt(x.s)} - ${x.n}`));out.push("")}
+  const singles=(R.singles||"").split("\n").map(l=>{const m=l.match(/^\s*(.+?)\s*[-–:|,;\t]\s*(-?\d+(?:[.,]\d+)?)\s*$/)||l.match(/^\s*(-?\d+(?:[.,]\d+)?)\s*[-–:|,;\t]\s*(.+?)\s*$/)||l.match(/^\s*(.+?)\s+(-?\d+(?:[.,]\d+)?)\s*$/);
+    if(!m)return null;const num=/^-?\d/.test(m[1])?m[1]:m[2];const nm=num===m[1]?m[2]:m[1];return {n:nm,s:parseFloat(num.replace(",","."))}}).filter(Boolean);
+  if(singles.length){const rs=ranked(singles).filter(x=>x.rank<=10);out.push(`*${t("rSingle")}*`,"");rs.forEach(x=>out.push(`${place(x.rank)} ${fmt(x.s)} - ${x.n}`));
+    if(rs.some((x,i)=>i&&x.rank===rs[i-1].rank))out.push(`_${t("rTie")}_`);out.push("")}
+  const rounds=S.quiz?S.quiz.rounds:[]; const nR=Math.max(0,...S.teams.map(x=>(x.r||[]).length));
+  if(nT&&nR){out.push(`*${t("rRounds")}*`,"");
+    for(let i=0;i<nR;i++){const vals=S.teams.map(x=>({n:x.n,v:(x.r||[])[i]})).filter(x=>x.v!=null);if(!vals.length)continue;
+      const avg=vals.reduce((a,x)=>a+x.v,0)/vals.length, best=Math.max(...vals.map(x=>x.v)), r=rounds[i];
+      const rc=r&&CATS.find(c=>c.slug===r.cat), name=`${t("round")} ${i+1} – ${rc?catName(rc):r?t("mixed"):""}`.replace(/ – $/,""), emo=r&&CATEMO[r.cat]||":question:";
+      const avgS=(Math.round(avg*10)/10).toFixed(1).replace(".",S.lang==="de"?",":".");
+      out.push(`${emo} ${name}: ${t("rAvg")} = ${avgS}${r?` (${t("rOutOf")} ${r.ids.length})`:""} / ${t("rBest")} = ${fmt(best)} (${vals.filter(x=>x.v===best).map(x=>x.n).join(", ")})`)}
+    out.push("")}
+  const ids=Object.keys(S.qmarks).filter(id=>idx[id]!=null);
+  const known=new Set(S.teams.map(teamId));
+  if(nT&&ids.length){const qs=ids.map(id=>({d:DATA[idx[id]],k:S.qmarks[id].filter(x=>known.has(x)).length})).sort((a,b)=>b.k-a.k);
+    const pick=qs.length>10?[...qs.slice(0,5),...qs.slice(-5)]:qs;
+    out.push(`*${t("rQs")}*`,"");pick.forEach(x=>out.push(`${x.k===nT?":white_check_mark:":x.k===0?":exploding_head:":":thinking_face:"} ${x.k} / ${nT} ${t("rOfTeams")} ${t("rKnew")}: ${F(x.d,"q")} → ${F(x.d,"a")}`));out.push("")}
+  if((R.notes||"").trim())out.push(R.notes.trim(),"");
+  out.push((R.outro??t("outroDef")).trim());
+  return out.join("\n").replace(/\n{3,}/g,"\n\n").trim()}
+function openReport(){const R=S.report;$("rIntro").value=R.intro??t("introDef");$("rSingles").value=R.singles||"";$("rNotes").value=R.notes||"";$("rOutro").value=R.outro??t("outroDef");
+  S.teams.forEach(teamId);$("rOut").value=buildReport();$("rMsg").textContent="";$("reportModal").hidden=false;track("results-message")}
+["rIntro","rSingles","rNotes","rOutro"].forEach(k=>$(k).oninput=()=>{S.report={intro:$("rIntro").value,singles:$("rSingles").value,notes:$("rNotes").value,outro:$("rOutro").value};LS.set("report",S.report);$("rOut").value=buildReport()});
+$("rRegen").onclick=()=>{$("rOut").value=buildReport();$("rMsg").textContent=""};
+$("rCopy").onclick=async()=>{const v=$("rOut").value;try{await navigator.clipboard.writeText(v);$("rMsg").textContent=t("rCopied")}catch(e){$("rOut").select();try{document.execCommand("copy");$("rMsg").textContent=t("rCopied")}catch(e2){$("rMsg").textContent=t("rCopyFail")}}};
+$("reportBtn").onclick=openReport; $("reportClose").onclick=()=>{$("reportModal").hidden=true};
+$("reportModal").onclick=e=>{if(e.target.id==="reportModal")$("reportModal").hidden=true};
 
 /* ---------- Views, hash links, language ---------- */
 function setView(v){S.view=v;$("cardsView").hidden=v!=="cards";$("roundsView").hidden=v!=="rounds";
@@ -876,7 +949,7 @@ function openAuth(){$("authModal").hidden=false;$("authMsg").textContent="";Sync
 function closeAuth(){$("authModal").hidden=true}
 $("accountBtn").onclick=openAuth; $("authClose").onclick=closeAuth;
 $("authModal").onclick=e=>{if(e.target===$("authModal"))closeAuth()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("authModal").hidden)closeAuth()});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(!$("authModal").hidden)closeAuth();if(!$("reportModal").hidden)$("reportModal").hidden=true});
 $("authForm").onsubmit=e=>{e.preventDefault();const em=$("authEmail").value.trim();if(em)Sync.sendLink(em)};
 $("googleBtn").onclick=()=>Sync.google();
 $("signOut").onclick=()=>Sync.signOut();

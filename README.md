@@ -8,6 +8,8 @@
 
 ## Features
 
+**Results message for Slack** – after hosting a quiz, open *Teams → Results message for Slack*. It builds a ready-to-paste message with the team ranking (medal emojis), an optional single-player top 10, each round's average and best team, and how many teams knew the easiest and hardest questions (tap the teams that got it right after revealing each answer). Add your own intro, fun facts and closing line, then copy.
+
 **Cards**
 - 14 categories: General knowledge, Geography, History, Science & nature, Film & TV, Music, Sport, Food & drink, Books, language & art, Germany & Europe, Politics, 90s, Kids and Albania – 100 each
 - Every question has an answer, a short summary and a level (Easy, Medium, Hard)
