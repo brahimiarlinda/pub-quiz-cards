@@ -72,3 +72,7 @@ No dependencies or build tools are needed beyond Python 3.
 Use the **Report a mistake** link on the card, or [open an issue](https://github.com/brahimiarlinda/pub-quiz-cards/issues/new).
 
 Facts that change over time (heads of government, World Cup results, euro members, UNESCO site counts, scoring records) were checked in November 2026.
+
+## Fonts
+
+Zilla Slab and Figtree are self-hosted in `fonts/` under the SIL Open Font License (see the licence files in that folder).
